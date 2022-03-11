@@ -47,6 +47,13 @@ http://themeforest.net/licenses
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
+        <!-- Site config : put launching date here
+             data-date="01/31/2015 23:00:00"        Launching date
+             data-date-timezone="+0"                Lanching date time zone
+-->
+        
+        
+
         <!-- Page Loader -->
         <div class="page-loader" id="page-loader">
             <div><i class="ion ion-loading-d"></i><p>loading</p></div>
@@ -123,19 +130,28 @@ http://themeforest.net/licenses
             <!-- END OF Slideshow Background -->
             
             <!--BEGIN OF Static video bg  - uncomment below to use Video as Background-->
-            <!--<div id="container" class="video-container show-for-medium-up">
-                <video autoplay="autoplay" loop="loop" autobuffer="autobuffer" muted="muted"
+            <div id="container" class="video-container">
+                <video autoplay="autoplay" loop="loop"  muted="muted"
                        width="640" height="360">
                     <source src="vid/flower_loop.mp4" type="video/mp4">
                 </video>
-            </div>-->
+            </div>
             <!--END OF Static video bg-->
-			
+          
+            <!-- BEGIN OF Youtube video -->
+            <!--<div class='youtube-container video-container show-for-medium-up'>
+				<iframe frameborder="0"
+				src="https://youtube.com/embed/Z4C82eyhwgU?autoplay=1&loop=1&controls=0&showinfo=0&autohide=1">
+				</iframe>
+			</div>-->
+		    <!-- END OF Youtube video -->	
+          
+          
 			<!-- Solid color as background -->
-<!--            <div class="cover-bg pos-abs full-size bg-color" data-bgcolor="rgba(51, 2, 48, 0.12)"></div>-->
-			
-			<!-- Solid color as filter -->
 <!--            <div class="cover-bg-mask pos-abs full-size bg-color" data-bgcolor="rgba(62, 24, 219, 0.41)"></div>-->
+			<!-- Solid color as filter -->
+            <div class="cover-bg-mask pos-abs full-size bg-color" data-bgcolor="rgba(183, 42, 161, 0.5)"></div>
+<!--            <div class="cover-bg-mask pos-abs full-size bg-color" data-bgcolor="rgba(235, 25, 219, 0.41)"></div>-->
             
         </div>
         <!--END OF site Cover -->
@@ -145,7 +161,6 @@ http://themeforest.net/licenses
             
 			<!-- Begin of home page -->
 			<div class="section page-home page page-cent" data-section="home">
-				
 				<!-- Logo -->
 				<div class="logo-container">
 					<img class="h-logo" src="img/logo_only.png" alt="Logo">
@@ -182,7 +197,7 @@ http://themeforest.net/licenses
                 <section class="content">
                     <div class="clock clock-countdown">
 						<div class="site-config"
-							 data-date="10/31/2017 23:00:00" 
+							 data-date="10/31/2018 23:00:00" 
 							 data-date-timezone="+0"
 							 ></div>
 						<header class="header">
@@ -236,7 +251,7 @@ http://themeforest.net/licenses
             <!-- End of timer page -->
             
             <!-- Begin of register page -->
-            <div class="section page-register page page-cent"  data-section="register">
+            <div class="section page-register page page-cent" data-section="register">
                 <section class="content">
                     <header class="p-title">
                         <h3>Register <i class="ion ion-compose"></i></h3> 
@@ -296,7 +311,7 @@ http://themeforest.net/licenses
             <!-- End of about us page -->
                 
             <!-- Begin of Contact page   -->
-            <div class="section page-contact page page-cent  bg-color" data-bgcolor="rgba(95, 25, 208, 0.88)s" data-section="contact">
+            <div class="section page-contact page page-cent  bg-color" data-bgcolor="rgba(10, 10, 10, 0.7)" data-section="contact">
 				<!-- Begin of contact information -->
 				<div class="slide" id="information" data-anchor="information">
 					<section class="content">
@@ -447,7 +462,6 @@ http://themeforest.net/licenses
 <!--        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
         
         <!-- All Javascript plugins goes here -->
-<!--		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>-->
         <script src="./js/vendor/jquery-1.11.2.min.js"></script>
 		<!-- All vendor scripts -->
         <script src="./js/vendor/all.js"></script>
