@@ -442,20 +442,22 @@ strong,
 	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2), 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
-	.header-top>div{
+	/* .header-top>div{
 		display: inline-block;
 		float: left;
-	}
+	} */
 	.header-top .logo img{
-		height: 56px;
+		height: 90px;
 		width: auto;
-		padding: 8px 16px;
+		padding: 13px 16px;
+		/* background-color: #d5dfd5; */
 	}
 	.header-top .logo{
 		transition: 0.3s;
 	}
 	.header-top .logo:hover{
-		background: rgba(255, 255, 255, 0.15);
+		background: rgba(0, 142, 137, 0.075);
+		/* background: rgba(255, 255, 255, 0.15); */
 	}
 
 	.header-top.material .menu{
@@ -547,7 +549,7 @@ strong,
 		transition: 0.3s;
 	}
 #fp-nav li .active span, .fp-slidesNav .active span{
-    background: #fff;
+    background: #EBD671; /*edit*/
 	position: absolute;
 }
 	#fp-nav li .active span:after, 
@@ -560,7 +562,7 @@ strong,
 /* 3.  Quick links at right*/
 .quick-link{
 	position: fixed;
-	top: 50%;
+	top: 60%;
 	left: 0;
 	-webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2), 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
 	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2), 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
@@ -614,10 +616,10 @@ strong,
 	-webkit-transition: 0.2s;
 	transition: 0.2s;
 }
-.quick-link a:hover{
-/*		opacity: 0.5;*/
-/*		color: #5677fc;*/
-}
+/* .quick-link a:hover{
+		opacity: 0.5;
+		color: #5677fc;
+} */
 .quick-link ul li{
 	position: relative;
 }
@@ -644,7 +646,8 @@ strong,
 	transform: none;
 	border-radius: 0;
 	background: rgba(255,255,255,0.15);
-	background: #5677fc;
+	/* background: #5677fc; */
+	background: #008E89; /*edit*/
 }
 
 .quick-link ul li.active:after{
@@ -707,6 +710,7 @@ strong,
 }
 .page-footer a:hover{
 	opacity: 0.8;
+	background-color: #008E89; /*edit*/
 }
 
 
@@ -769,6 +773,8 @@ strong,
 	margin-left: -12px;
 	font-size: 20px;
 	transition: 0.3s;
+	/* background:rgba(128, 142, 0, 0.075); */
+
 }
 	.p-footer .text{
 		font-size: 12px;
@@ -779,6 +785,7 @@ strong,
 	opacity: 0;
 	-webkit-transform: scale(0);
 	transform: scale(0);
+	/* background:rgba(128, 142, 0, 0.075); */
 }
 .p-footer .arrow-d{
     position: relative;
@@ -799,7 +806,7 @@ strong,
 	font-size: 14px;
 }
 	.p-footer .arrow-d:hover{
-		background: #5677fc;
+		background: #EBD671; /*edit*/
 	}
 	.p-footer .arrow-d.gone{
 		-webkit-transform: scale(0);   
@@ -985,7 +992,7 @@ strong,
     display: inline-block;
 	color: #fff;
     font-family: 'Asap';
-	border-bottom: 8px solid #5677fc;
+	border-bottom: 8px solid #EBD671; /*edit*/
 }
 .page-cent .p-title h2{
     text-transform: uppercase;   
@@ -1120,8 +1127,9 @@ strong,
 	position: relative;
 	display: inline-block;
 	/* adjust below according t your llogo dimension */
-	height: 100px;
+	height: 100px; /*edit*/
 	width: auto;
+
 }
 
 .page-home .content .header{
@@ -1166,7 +1174,7 @@ strong,
 }
 
 .page-home .content .subhead:hover{
-	color: #fff;
+	color: #fff; /*edit*/
 }
 
 .page-home .content .subhead a{
