@@ -658,12 +658,12 @@ strong,
   border-radius: 0;
   background: rgba(255, 255, 255, 0.15);
   /* background: #5677fc; */
-  background: #008e89; /* side nav edit*/
+  /* background: #008e89; */
 }
 
 .quick-link ul li.active:after {
   /* background: rgba(230, 230, 230, 0.12); */
-  background: #008e89; /*edit*/
+  background: #85C88A;
 }
 .quick-link a.marked {
   color: #fff;

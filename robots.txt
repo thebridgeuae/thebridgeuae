@@ -2,4 +2,16 @@
 
 # Allow crawling of all content
 User-agent: *
-Disallow:
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: adsbot-Google
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
