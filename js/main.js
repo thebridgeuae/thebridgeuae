@@ -1,5 +1,6 @@
 "use strict";
 /* 0. Initialization */
+
 // Avoid `console` errors in browsers that lack a console.
 (function() {
     var method;
