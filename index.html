@@ -11,7 +11,7 @@ http://themeforest.net/licenses
     <meta charset="utf-8" />
 
     <!-- Page Title Here -->
-    <title>The Bridge - high-quality rehab center in Ajamn</title>
+    <title>The Bridge - High-Quality Rehab center in Ajamn</title>
     <!-- Google Site Verification -->
     <meta name="google-site-verification" content="kVAvYZ8cf7r3S1cTKzEyHTZ8m19mG00I0eo_QhjMKLw" />
     <!-- Page Description Here -->
@@ -29,6 +29,8 @@ http://themeforest.net/licenses
     <link rel="shortcut icon" href="./img/theb.ico" type="image/x-icon" />
 
     <!-- Web fonts and Web Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="./css/pageloader.css" />
     <link rel="stylesheet" href="./fonts/opensans/stylesheet.css" />
     <link rel="stylesheet" href="./fonts/asap/stylesheet.css" />
@@ -54,6 +56,8 @@ http://themeforest.net/licenses
     <script src="./js/vendor/modernizr-2.7.1.min.js"></script>
   </head>
   <body id="menu" class="alt-bg">
+    <!-- <a href="#eng" data-reload> English</a> -->
+    <!-- <a href="#ar" data-reload> Arabic</a> -->
     <!-- Page Loader -->
     <div class="page-loader" id="page-loader">
       <div>
@@ -163,15 +167,20 @@ http://themeforest.net/licenses
         <section class="content">
           <header class="header">
             <div class="h-left">
-              <h2>The <strong>Bridge</strong></h2>
+              <h2 >The <strong>Bridge</strong></h2>
             </div>
-            <div class="h-right">
+            <div class="h-right hero-header">
               <!-- hero logo on the right-->
               <div class="logo-container-r">
                 <img class="h-logo-r" src="img/bridge-logo.png" alt="Logo" />
               </div>
-              <h3>Grow <br />Together</h3>
-              <h4 class="subhead"><a href="#when">Coming Soon</a></h4>
+              <div id="slogan-box">
+                <p class="slogan-txt"> <span class="highlight">hand in hand</span>
+                    <span class="highlight">we give hope</span>
+                    <span class="highlight">change lives  </span>
+                </p>
+                <!-- <h4 class="subhead"><a href="#when">Coming Soon</a></h4> -->
+              </div>
             </div>
           </header>
         </section>
@@ -233,8 +242,8 @@ http://themeforest.net/licenses
         <footer class="p-footer p-scrolldown">
           <a href="#register">
             <div class="arrow-d">
-              <div class="before">Stay&nbsp;in</div>
-              <div class="after">Touch</div>
+              <div class="before">Who&nbsp;We</div>
+              <div class="after">Are</div>
               <div class="circle"></div>
             </div>
           </a>
@@ -244,15 +253,20 @@ http://themeforest.net/licenses
 
       <!-- Begin of register/Who We are page -->
       <div class="section page-register page page-cent" data-section="register">
-        <section class="content">
+        <section class="content" style="margin-top: 30px;">
           <header class="p-title">
-            <h3>Who We Are </h3>
-            <h2>Just <span class="bold"> beautiful</span> things</h2>
+            <h3> <span>Who We Are</span></h3>
+            <!-- <h2> <span class="bold"> The Bridge</span> for Capacity Development</h2> -->
           </header>
-          <article class="text">
-            <p>
-              Lorem ipsum <strong>magicum </strong>dolor sit amet, consectetur adipiscing elit. Maecenas a sem ultrices neque vehicula fermentum a sit amet
-              nulla.
+          <article class="text txt-box-bg" id="who">
+            <p class="txt-box-span" style="font-size:17px;">
+              <span class="bold" style="font-size: 20px;"> WE</span> are a specialized center for capcity development and committed to
+              improving children's lives every day. Our compassionate, wrap around care envelops
+              each child in a supportive and loving environment that helps them grow. Your child’s
+              health and well-being will always be the center of everything we do. We assemble the
+              best medical specialists, educational methods and invest in the best techniques to
+              deliver the care that’s best for your child’s unique situation and personal needs. With
+              us, your children can get better, live, play, and love unconditionally.
             </p>
           </article>
           <!-- registration section-->
@@ -276,8 +290,8 @@ http://themeforest.net/licenses
         <footer class="p-footer p-scrolldown">
           <a href="#about-us">
             <div class="arrow-d">
-              <div class="before">About</div>
-              <div class="after">Us</div>
+              <div class="before">What&nbsp;We</div>
+              <div class="after">Offer</div>
               <div class="circle"></div>
             </div>
           </a>
@@ -287,20 +301,27 @@ http://themeforest.net/licenses
 
       <!-- Begin of about us page -->
       <div class="section page-about page page-cent" data-section="about-us">
-        <section class="content">
+        <section class="content" style="margin-top: 30px;">
           <header class="p-title">
-            <h3>About Us</i></h3>
-            <h2>We <span class="bold">make</span> only <span class="bold">beautiful</span> things</h2>
+            <h3>What We Offer</i></h3>
+            <!-- <h2>We <span class="bold">make</span> only <span class="bold">beautiful</span> things</h2> -->
           </header>
-          <article class="text">
-            <p>
-              Lorem ipsum <strong>magicum </strong>dolor sit amet, consectetur adipiscing elit. Maecenas a sem ultrices neque vehicula fermentum a sit amet
-              nulla.
+          <article class="text txt-box-bg" id="what">
+            <p class="txt-box-span" style="font-size:17px;">
+              <span class="bold" style="font-size: 20px;">THE</span> bridge’s experienced, innovative, and caring team works together to provide
+              treatment to help each child meet their goals and reach their full potential.
+              Our several special educational programs tailored to achieve our ultimate mission and goal
+              To change and improve children’s lives.
             </p>
-            <p>
-              Aenean ultricies odio at erat facilisis tincidunt. Fusce tempor auctor justo, nec facilisis quam vehicula vel. Aenean non mattis purus, eget
-              lobortis odio.
-            </p>
+          <ul class="bold" id="srv-ul">
+            <li>Applied Behavior Analysis</li>
+            <li>Speech and Language Therapy</li>
+            <li>Vocational Programs</li>
+            <li>Social Group Therapy</li>
+            <li>Family Counselling</li>
+            <li>School Radiance Program</li>
+            <li>Milestone Development Programs</li>
+          </ul>
           </article>
         </section>
         <footer class="p-footer p-scrolldown">
