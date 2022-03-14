@@ -51,7 +51,6 @@ http://themeforest.net/licenses
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/main_responsive.css" />
     <link rel="stylesheet" href="./css/style-font1.css" />
-    <link rel="stylesheet" href="./style.css" />
 
     <script src="./js/vendor/modernizr-2.7.1.min.js"></script>
   </head>
@@ -171,7 +170,7 @@ http://themeforest.net/licenses
             </div>
             <div class="h-right hero-header">
               <!-- hero logo on the right-->
-              <div class="logo-container-r">
+              <div class="logo-container-r" id="herologo">
                 <img class="h-logo-r" src="img/bridge-logo.png" alt="Logo" />
               </div>
               <h3>Grow<br />Together</h3>
@@ -255,18 +254,29 @@ http://themeforest.net/licenses
 
       <!-- Begin of register/Who We are page -->
       <div class="section page-register page page-cent" data-section="register">
-        <section class="content" style="margin-top: 30px;">
+        <section class="content" id="who">
           <header class="p-title">
             <h3> <span>Who We Are</span></h3>
             <!-- <h2> <span class="bold"> The Bridge</span> for Capacity Development</h2> -->
           </header>
-          <article class="text txt-box-bg" id="who">
-            <p class="txt-box-span" style="font-size:17px; justify-content: center;">
-              <span class="bold" style="font-size: 20px;"> THE BRIDGE</span>  is a center specialized and committed to improving children's lives every day. Our compassionate, wrap around care envelops each child in a supportive and loving environment that helps them grow. 
-              <span class="txt-box-span" style="margin-top: 10px;">
-              We assemble the best medical specialists and educational methods to deliver the care that’s best for your child’s unique situation and personal needs. With us, your children can get better, live, play, and love unconditionally.
+          <article class="text txt-box-style" style="z-index: 1;position:relative">
+            <p class="txt-box" style="font-size:14px;">
+              <!-- Full bio-->
+              <span id="fullbio">
+                <span id="topbio" >
+                  <span class="bold" style="font-size: 15px;"> THE BRIDGE</span> Center for Capacity Development specialized and committed to improving children's lives every day. Our compassionate, wrap around care envelops each child in a supportive and loving environment that helps them grow. Your child’s health and well-being will always be the center of everything we do.
+                </span>
+                  <span class="txt-box" style="margin-top: 10px;"></span> We assemble the best medical specialists, educational methods and invest in the best techniques to deliver the care that’s best for your child’s unique situation and personal needs. With us, your children can get better, live, play,and love unconditionally.
+              </span>
+              <!-- Brief bio-->
+              <span id="briefbio">
+                <span class="bold" style="font-size: 15px;"> THE BRIDGE</span> is a center specialized and committed to improving children's lives every day. Our compassionate, wrap around care envelops each child in a supportive and loving environment that helps them grow. We assemble the best medical specialists, educational methods and invest in the best techniques todeliver the care that’s best for your child’s unique situation and personal needs.
+                <span class="bold" style="font-size: 15px;"> With us, your children can get better, live, play, and love unconditionally</span>
               </span>
             </p>
+            <div class="pro-overlay" id="imgbio">
+              <img src="img/pro.JPG"/>
+            </div>
           </article>
           <!-- registration section-->
           <div class="hidden-items">
@@ -298,29 +308,37 @@ http://themeforest.net/licenses
       </div>
       <!-- End of register/Who We are page -->
 
-      <!-- Begin of about us page -->
+      <!-- Begin of about us page/What we offer-->
       <div class="section page-about page page-cent" data-section="about-us">
-        <section class="content" style="margin-top: 25px;">
+        <section class="content" id="what">
           <header class="p-title">  
             <h3>What We Offer</i></h3>
             <!-- <h2>We <span class="bold">make</span> only <span class="bold">beautiful</span> things</h2> -->
           </header>
-          <article class="text txt-box-bg" id="what">
-            <p class="txt-box-span" style="font-size:17px;">
-              <span class="bold" style="font-size: 20px;">THE</span> bridge’s experienced, innovative, and caring team works together to provide
-              treatment to help each child meet their goals and reach their full potential.
-              Our several special educational programs are tailored to achieve our ultimate mission and goal:
-              To change and improve children’s lives.
+          <article class="text txt-box-style" style="z-index: 1;position:relative">
+            <p class="txt-box"style="font-size:14px;">
+              <!-- Full What we offer-->
+              <span id="fullwhat">
+                <span class="bold" style="font-size: 15px;">THE BRDIGE’s</span> Center offers services that deals with a wide variety of situations, from<span>children suffering symptoms of memory loss, trauma, behavioral and learning difficulties, to treating serious medical conditions such as dyslexia, ADHD and autism.</span> 
+                <span> Our experienced, innovative, and caring team works together to provide treatment to help each child meet their goals and reach their full potential. We’re dedicated to providing the best in patient centered care and programs</span><span>as well as other several special educational programs and short-term consultations. All to achieve our ultimate mission and goal: to change and improve children’s lives.</span> 
+              </span>
+              <!-- Brief What we offer-->
+              <span id="briefwhat">
+                <span class="bold" style="font-size: 15px;">THE BRDIGE’s</span> experienced, innovative, and caring team works together to provide several special educational programs<span style="font-style: italic;"> that change and improve children’s lives.</span>
+              </span>
+              <ul class="bold" id="srv-ul">
+                <li>Applied Behavior Analysis</li>
+                <li>Speech and Language Therapy</li>
+                <li>Vocational Programs</li>
+                <li>Social Group Therapy</li>
+                <li>Family Counselling</li>
+                <li>School Radiance Program</li>
+                <li>Milestone Development Programs</li>
+              </ul>
             </p>
-          <ul class="bold" id="srv-ul">
-            <li>Applied Behavior Analysis</li>
-            <li>Speech and Language Therapy</li>
-            <li>Vocational Programs</li>
-            <li>Social Group Therapy</li>
-            <li>Family Counselling</li>
-            <li>School Radiance Program</li>
-            <li>Milestone Development Programs</li>
-          </ul>
+            <div class="srv-overlay" id="imgwhat">
+              <img src="img/Healthcare.png" />
+            </div>
           </article>
         </section>
         <footer class="p-footer p-scrolldown">
@@ -498,6 +516,7 @@ http://themeforest.net/licenses
     <!-- Javascript main files -->
     <script src="./js/main.js"></script>
     <script src="./js/logo.js"></script>
+    <script src="./js/customresponsive.js"></script>
 
     <!-- Google Analytics: Uncomment and change UA-XXXXX-X to be your site"s ID. -->
     <script>

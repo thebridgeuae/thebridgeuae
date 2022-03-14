@@ -89,7 +89,7 @@ textarea {
   padding: 0.2em 0;
 }
 
-body,
+/* body,
 html,
 h1,
 h2,
@@ -100,9 +100,10 @@ h6,
 a,
 ul,
 li {
-}
+} */
 body {
-  font-family: "Encode Sans","Josefin Sans","Merriweather","Montserrat","Open Sans","Palatino", "Palatino LT STD", "Palatino Linotype", "Book Antiqua", "Georgia", "serif","Trebuchet MS";
+  font-family: "Encode Sans", "Josefin Sans", "Merriweather", "Montserrat", "Open Sans", "Palatino", "Palatino LT STD", "Palatino Linotype", "Book Antiqua",
+    "Georgia", "serif", "Trebuchet MS";
   background: #fff;
   margin: 0;
   padding: 0;
@@ -441,7 +442,7 @@ strong,
 }
 
 .header-top > div {
-  display: inline-block;
+  display: block;
   float: left;
 }
 .header-top .logo img {
@@ -972,8 +973,8 @@ strong,
   position: relative;
   text-align: center;
 }
-.page-cent .content p {
-}
+/* .page-cent .content p {
+} */
 .page-cent .content {
   width: 720px;
   /*    width: auto;*/
@@ -1350,16 +1351,14 @@ strong,
 }
 
 /* 6.5 Registration form */
-.page-register .content {
-  /*    margin-top: -4rem;*/
-  /*
+/* .page-register .content {
+     margin-top: -4rem;
     padding-left: 1em;
     padding-right: 1em;
-*/
-  /*    padding-top: 0.2rem;*/
-}
-.page .form {
-}
+     padding-top: 0.2rem;
+} */
+/* .page .form {
+} */
 .page .form input {
   background: transparent;
   /*    background: #f4f;*/
@@ -1380,8 +1379,8 @@ strong,
   right: 0;
   margin-bottom: 0;
 }
-.page .form.send_email_form input {
-}
+/* .page .form.send_email_form input {
+} */
 .page .form.send_email_form .fields {
   margin-top: 72px;
   background: rgba(255, 255, 255, 0.1);
@@ -1498,9 +1497,9 @@ strong,
 }
 
 /* 6.7 Contact, Message */
-.page-contact {
-  /*    margin-top: -1rem;*/
-}
+/* .page-contact {
+     margin-top: -1rem;
+} */
 
 .page-contact .fp-controlArrow {
   display: none;
@@ -1635,14 +1634,14 @@ strong,
 }
 
 /* ///////own classes////////// */
-.hidden-items{
-	visibility: hidden;
+.hidden-items {
+  visibility: hidden;
 }
-.hero-header{
+.hero-header {
   display: flex;
 }
 
-.slogan-txt{
+.slogan-txt {
   font-size: 15px;
   font-weight: bold;
   text-align: left;
@@ -1662,28 +1661,91 @@ strong,
   background-position: 75% 60%;
 }
 
-.txt-box-bg{
-  padding: 15px; 
+.txt-box-style {
+  width: 100%;
+  padding: 15px;
   border-radius: 8px;
   background: #1e1e1fa8;
-  width: fit-content;
   -moz-box-shadow: 0px 1px 5px 0px #676767;
   -webkit-box-shadow: 0px 1px 5px 0px #676767;
   box-shadow: 0px 1px 5px 0px #676767;
+  /* width: fit-content; */
 }
-.txt-box-span{
-  /* padding:5px; */
+.txt-box {
   display: block;
   margin: 0;
   line-height: 1.3;
+  text-align: justify;
+  text-justify: inter-word;
+  /* text-justify: none; */
+  /* text-justify: auto; */
+  /* text-justify: inter-character; */
+  /* text-justify: distribute;   */
+  /* padding:5px; */
 }
 
-#srv-ul li{
+#srv-ul li {
   font-size: 14px;
   list-style-position: inside;
   list-style-type: square;
   text-indent: 3%;
-  margin-left: 0; 
+  margin-left: 0;
   padding-left: 0;
   text-transform: capitalize;
+}
+.content-sizing {
+  margin-top: 5px;
+}
+#fullbio,#fullwhat {
+  display: block;
+}
+#briefbio,#briefwhat{
+  display: none;
+}
+#topbio{
+  position: relative;
+  z-index: 1;
+  width: 435px;
+  display: block;
+  margin: 0;
+  line-height: 1.3;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.pro-overlay{
+  position: absolute;
+  top: -30px;
+  left: 470px;
+  z-index: 2px;
+  width: 200px;
+  /* border-width: 1px; */
+  /* border-style: solid; */
+  /* border-color: red; */
+
+}
+.pro-overlay img{
+  background: #1e1e1fa8;
+  -moz-box-shadow: 0px 1px 5px 0px #676767;
+  -webkit-box-shadow: 0px 1px 5px 0px #676767;
+  box-shadow: 0px 1px 5px 0px #676767;
+  border-radius: 4px 4px 0px 0px;
+  object-fit: fill;
+}
+
+.srv-overlay{
+  object-fit: fill;
+  position: absolute;
+  top: 174px;
+  left: 420px;
+  z-index: 2px;
+  width: 350px;
+  /* border-style: solid; */
+  /* border-width: 1px; */
+  /* border-radius: 3px; */
+  /* background: #1e1e1fa8; */
+  /* -moz-box-shadow: 0px 1px 5px 0px #676767; */
+  /* -webkit-box-shadow: 0px 1px 5px 0px #676767; */
+  /* box-shadow: 0px 1px 5px 0px #676767; */
+  /* border-color: red; */
+
 }

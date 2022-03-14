@@ -215,8 +215,10 @@ var pageElem = $('.page');
 var pageSections = [];
 var pageAnchors = [];
 var pageSectionDivs = $('#mainpage>.section');
+
 /** Init fullpage.js */
 $(document).ready(function() {
+	
 	for (var i = 0; i < pageSectionDivs.length; i++) {
 		pageSections.push(pageSectionDivs[i]);
 	}
