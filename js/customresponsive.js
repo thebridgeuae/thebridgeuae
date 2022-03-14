@@ -3,19 +3,25 @@ $(document).ready(function(){
       var viewportWidth = $(window).width();
       if (viewportWidth < 860) {
             //Means the screen is mobile add a class 
-            $("#who").css("margin-top","35px"); 
-            $("#what").css("margin-top","25px"); 
+            $("#who").css("margin-top","50px"); 
+            $("#what").css("margin-top","40px"); 
+            $("#contactdiv").css("margin-top","150px"); 
             $("#fullbio").hide();
             $("#briefbio").toggle(true);
+            $("#quote").toggle(true);
             $("#fullwhat").hide();
             $("#briefwhat").show();
-            $("#herologo").hide();
-            $("#imgbio").hide();
-            $("#imgwhat").hide();
+            $("#herologo").hide();            
+            $("#hr").show();            
 
             // $("#breifbio").attr("class","show"); 
             // $("#briefbio").style.display = "block"; 
       }
+      if (viewportWidth < 1024) {
+        $("#imgbio").hide();
+        $("#imgwhat").hide();
+      }
+
   }
   $(window).load(mobileViewUpdate);
   $(window).resize(mobileViewUpdate);
