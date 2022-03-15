@@ -3,9 +3,9 @@ $(document).ready(function(){
       var viewportWidth = $(window).width();
       if (viewportWidth < 860) {
             //Means the screen is mobile add a class 
-            $("#who").css("margin-top","50px"); 
+            $("#who").css("margin-top","40px"); 
             $("#what").css("margin-top","40px"); 
-            $("#contactdiv").css("margin-top","150px"); 
+            // $("#contactdiv").css("margin-top","150px"); 
             $("#fullbio").hide();
             $("#briefbio").toggle(true);
             $("#quote").toggle(true);
