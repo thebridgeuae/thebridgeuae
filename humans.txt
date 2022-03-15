@@ -1,0 +1,25 @@
+The Bridge is built by a zoombree development, a creative team of engineers, designers, researchers, robots, and others in many different sites across the globe. Site will be updated updated continuously, and built with more tools and technologies than we can shake a stick at. If you'd like know more visit our website www.zoombree.com
+
+BIENTOT is a responsive “coming soon HTML5” landing page template. 
+<br>
+It was designed to be mobile friendly. 
+<i>
+tags : The bridge , cooking, creative, jquery, minimalist, photography, presto, responsive, studio, under construction, video, en cours de construction</i>
+
+/* TEAM */
+Developer: Zoombree development.
+contact: info@zoombree.com.
+Twitter: twitter @zoombree.
+Location: Abudhabi, UAE
+
+[...]
+/* THANKS */
+Name: www.zoombree.com
+[...]
+
+/* SITE */
+Last update: 2022/03/13
+Standards: HTML5, CSS3,javascript..
+Components: Bootstrap, JQuery, JS , HTML, CSS.
+Software: vscode, AWS
+
