@@ -1,5 +1,7 @@
 $(document).ready(function(){
     function mobileViewUpdate() {
+      var vid = document.getElementById("myVideo");
+      vid.playbackRate = .7;
       var viewportWidth = $(window).width();
       if (viewportWidth < 860) {
             //Means the screen is mobile add a class 

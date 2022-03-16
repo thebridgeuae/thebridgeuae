@@ -452,7 +452,7 @@ strong,
   padding: 8px 16px;
   margin-top: 18px;
   margin-left: 18px;
-  filter: brightness(120%);
+  /* filter: brightness(120%); */
   /* -webkit-filter: drop-shadow(3px 2px 2px rgb(209, 10, 10)); */
   /* filter: drop-shadow(1px 1px 1px rgb(197, 197, 197)); */
   /* filter: contrast(110%); */
@@ -1642,24 +1642,27 @@ strong,
   display: flex;
 }
 
+.txt-box-style-page1 {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  /* background: linear-gradient(#7CC3B4 30%,#28807D); */
+  background: linear-gradient(#D9EAE3  ,#d1e4dc, #789988 90%); 
+  -moz-box-shadow: 0px 1px 5px 0px #676767;
+  -webkit-box-shadow: 0px 1px 5px 0px #676767;
+  box-shadow: 0px 1px 5px 0px #676767;
+
+}
+
 .txt-box-style {
   display: inline-block;
   /* display: block; */
   width: 100%;
   padding: 15px;
   border-radius: 8px;
-  background: linear-gradient(#7cc4b2 20%,#28807D );
-  -moz-box-shadow: 0px 1px 5px 0px #676767;
-  -webkit-box-shadow: 0px 1px 5px 0px #676767;
-  box-shadow: 0px 1px 5px 0px #676767;
-
-}
-.txt-box-style-page1 {
-  display: inline-block;
-  width: 100%;
-  padding: 15px;
-  border-radius: 8px;
-  background: linear-gradient(#7CC3B4 30%,#28807D);
+  /* background: linear-gradient(#7cc4b2 20%,#28807D ); */
+  background: linear-gradient( #D9EAE3,#ADDED8 );
   -moz-box-shadow: 0px 1px 5px 0px #676767;
   -webkit-box-shadow: 0px 1px 5px 0px #676767;
   box-shadow: 0px 1px 5px 0px #676767;
@@ -1687,12 +1690,12 @@ strong,
 .txt-span-newline {
   display: block;
   line-height: 1.3;
-  margin-top: 0px;
+  margin-top: 7px;
   /* background-color: #03a9f4; */
 }
 
 .txt-box {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   color: rgb(0, 0, 0);
   width: 100%;
@@ -1701,6 +1704,18 @@ strong,
   text-align: justify-all;
   text-align: left;
   padding: 0px 10px 0px 10px;
+}
+#fullbio .txt-box{
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  width:250px;
+  display: inline-block;
+  position: relative;
+  text-align: justify-all;
+  text-align: left;
+  padding: 0px 10px 0px 10px;
+  /* background: #259b24; */
 }
 
 blockquote {
@@ -1739,6 +1754,8 @@ blockquote p {
   text-indent: 3%;
   margin: 0;
   padding: 0;
+  color: rgb(73, 73, 73);
+  font-weight: bold;
   text-transform: capitalize;
 }
 
@@ -1756,12 +1773,13 @@ blockquote p {
 
 .pro-overlay {
   position: absolute;
-  bottom: 150px;
-  left: 460px;
+  top: 100px;
+  left: 440px;
   z-index: 2px;
-  width: 250px;
+  width: 320px;
 
 }
+
 .pro-overlay img {
   /* background: #1e1e1fa8; */
   /* -moz-box-shadow: 0px 1px 5px 0px #676767;
@@ -1775,15 +1793,16 @@ blockquote p {
 
 .srv-overlay {
   position: absolute;
-  top: 195px;
-  left: 390px;
+  top: 185px;
+  left: 400px;
   z-index: 2px;
-  width: 300px;
+  width: 290px;
   object-fit: cover;
 }
 
 .srv-overlay img {
-  border-radius: 4px 4px 4px 4px;
+  object-fit: fill;
+  max-width: 100%;
+  max-height: 100%;
 }
-
 
