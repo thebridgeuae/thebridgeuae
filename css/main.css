@@ -1149,6 +1149,7 @@ strong,
 
 .page-home .logo-container-r {
   /*edit*/
+  display: block;
   position: absolute;
   top: -60px;
   width: 100%;
