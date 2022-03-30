@@ -1,0 +1,30 @@
+.g-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .img-holder {
+    flex-grow:1;
+    margin: .1rem;
+    overflow: hidden;
+  } 
+  
+  .img-holder img {
+    display: block;
+    min-width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    transition-duration: 300ms;
+  }
+  
+  .img-holder img:hover {
+    transform: scale(1.1);
+  }
+
+  .shadow-5 {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.08), 
+                0 2px 2px rgba(0,0,0,0.12), 
+                0 4px 4px rgba(0,0,0,0.16), 
+                0 8px 8px rgba(0,0,0,0.20);
+  }

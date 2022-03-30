@@ -1,0 +1,256 @@
+/* ----------------- slider background color change-------------------- */
+/* #slider {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background: linear-gradient(-45deg, #4a6d08, #a1e91a, #a5f1b1, #87ff83);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+} */
+
+@keyframes color {
+  0% {
+    background: #155d27;
+  }
+  20% {
+    background: #4ad66d;
+  }
+  40% {
+    background: #5fad56;
+  }
+  60% {
+    background: #25a244;
+  }
+  80% {
+    background: #208b3a;
+  }
+  100% {
+    background: #155d27;
+  }
+}
+
+#slider {
+  background: #c8d89c; /* Fallback */
+  animation: color 13s infinite linear;
+  /* text-align: center; */
+  /* padding: 2em; */
+}
+
+/* .navbar {
+  background: #c8d89c;
+  animation: color 13s infinite linear;
+} */
+/* -----------------logo/navbar settings-------------------- */
+
+#logo {
+  z-index: 100;
+  width: 7.5rem;
+  height: auto;
+  /* padding: 7px; */
+  margin-top: 7px;
+  filter: drop-shadow(0.5px 0.5px 0.5px rgb(87, 87, 87));
+  -webkit-filter: drop-shadow(1px 1px 0.5px rgb(87, 87, 87));
+  /* filter: grayscale(10%); */
+  /* filter: brightness(150%); */
+  /* filter: contrast(80%); */
+  transition: all 0.5s linear;
+}
+.minilogo {
+  width: 4.5rem !important;
+  height: auto !important;
+  transition: all 0.5s linear;
+  /* transition: all 0.4s ease-in-out 0s; */
+}
+.navbarshrink-onscroll {
+  /* top: 0; */
+  /* z-index: 2; */
+  width: 100%;
+  height: 12vh;
+  padding: 20px 25px;
+  pointer-events: initial;
+  transition: all 0.5s linear;  
+
+  /* transition: all 0.4s ease-in-out 0s; */
+}
+
+
+/* -----------------------//Navbar items style ------------------------------------ */
+.underline {
+  padding-bottom: 2px;
+  --bg-h: 2px;
+}
+
+.underline a {
+  /* color: #F7F7F7; */
+  position: relative;
+  text-decoration: none;
+}
+
+.underline a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.underline a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.nav-link-item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: black !important;
+}
+
+/* -----------------------//Video background ------------------------------------ */
+.video-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  overflow: hidden;
+}
+.video-container video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%;
+  min-height: 100%;
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  /* width: auto;
+  height: auto; */
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* object-fit: cover; */
+  object-fit: fill;
+  /* object-fit: contain; */
+  /* object-fit: scale-down; */
+}
+
+#hero-videoBg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  /* background:linear-gradient(to right,rgba(0, 0, 0, 0.4),rgba(243, 243, 243, 0.3)); */
+  /* background:linear-gradient(to right,rgba(0, 0, 0, 1),rgba(243, 243, 243, 0.158)); */
+}
+
+/* -----------------------//Content section styles  ------------------------------------ */
+
+#slider h2 {
+  /* font-weight: bold; */
+  /* font-family: "Popin"; */
+  font-size: 50px;
+  /* color: #fff !important; */
+}
+#about h2 {
+  font-size: 30px
+}
+.bg-image-fit {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  position: absolute;
+}
+.hero-video {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  /* z-index: 1000; */
+  /* box-shadow: inset 0px 0px 103px 0px rgba(0,0,0,0.75); */
+  filter: drop-shadow(0 0.5rem 0.3rem rgba(0, 0, 0, 0.5));
+  /* border-radius: 10%; */
+}
+
+/* -----INCREASE MARGIN TOP FOR SECTION-1  */
+/* #who .container{
+  margin-top: 70px;
+} */
+
+.section-card {
+  margin: auto !important ;
+  width: 96% !important ;
+  margin-bottom: 25px !important ;
+  border-radius: 25px !important ;
+  padding: 15px !important ;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07) !important ;
+  /* height: 100% !important ;
+  height: 100vh !important ;
+  min-height: 100% !important ; */
+  /* height:10vw; */
+}
+
+/* #about,#video,#footer,#services,#testimonials,#news
+#about .fp-slide,
+#about .fp-tableCell {
+  height: auto !important;
+  padding: 25px;
+} */
+
+/* ----section image resize------ */
+.scaleDown {
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
+  -webkit-transform-origin: 50% 0 0;
+  -moz-transform-origin: 50% 0 0;
+  -ms-transform-origin: 50% 0 0;
+  transform-origin: 50% 0 0;
+  transform-origin: center;
+  vertical-align: middle;
+}
+
+/* -----------------------//fullpage customization ------------------------------------ */
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: #000;
+}
+#fp-nav ul {
+  margin-right: 15px;
+  /* justify-content: center; */
+  /* padding-top: 1rem; */
+}
+
+/* #fp-nav li{
+} */
+
+/* Variabes: */
+/* --------------------------- */
+/* font-family: P22 Mackinac Pro,-apple-system,BlinkMacSystemFont,
+                Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,
+                Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+.section-card
+.fp-auto-height-responsive */
