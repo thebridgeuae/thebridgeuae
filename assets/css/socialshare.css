@@ -1,0 +1,150 @@
+.container-share {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  float: right;
+  margin-left: auto;
+  padding-right: 50px;
+}
+.tip {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 10px);
+  transform: translateY(-50%);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+}
+.tip:after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: rgba(44, 44, 44, 0.3);
+  margin: 0 0 0 8px;
+}
+@media only screen and (max-width: 600px) {
+  .tip {
+    display: none;
+  }
+}
+.trigger {
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.2s, border 0.2s;
+}
+.trigger a {
+  color: currentColor;
+  text-decoration: none;
+  transform: skew(10deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trigger i {
+  font-size: 18px;
+  line-height: 40px;
+}
+.trigger:hover {
+  color: #f33708;
+  border-color: #2c2c2c !important;
+}
+.trigger.share-btn i {
+  margin: 0 5px 0 0;
+}
+.like,
+.share {
+  transform: skew(-10deg);
+  margin: 0 0 0 10px;
+}
+.like .trigger,
+.share .trigger {
+  width: 82px;
+  border: 1px solid rgba(44, 44, 44, 0.3);
+}
+.like i,
+.share i {
+  margin: 0 5px 0 0;
+}
+@media only screen and (min-width: 601px) {
+  .share {
+    display: none;
+  }
+}
+.share-window {
+  transform: skew(-10deg);
+  overflow: hidden;
+}
+@media only screen and (max-width: 600px) {
+  .share-window {
+    display: none;
+  }
+}
+.share-bar {
+  position: relative;
+  width: 82px;
+  height: 40px;
+  transition: width 0.4s ease 0.2s;
+}
+.share-bar:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(44, 44, 44, 0.3) rgba(44, 44, 44, 0.3) rgba(44, 44, 44, 0.3) transparent;
+}
+.share-bar:hover {
+  width: 125px;
+  transition: width 0.4s ease;
+}
+.share-bar:hover .trigger:nth-child(3) {
+  left: 82px;
+  transition: left 0.45s ease 0.06s, color 0.2s, border 0.2s;
+}
+.share-bar:hover .trigger:nth-child(4) {
+  left: 123px;
+  transition: left 0.45s ease 0.12s, color 0.2s, border 0.2s;
+}
+.share-bar:hover .trigger:nth-child(5) {
+  left: 164px;
+  transition: left 0.45s ease 0.18s, color 0.2s, border 0.2s;
+}
+.share-bar:hover .trigger:nth-child(6) {
+  left: 205px;
+  transition: left 0.45s ease 0.24s, color 0.2s, border 0.2s;
+}
+.share-bar .trigger {
+  position: absolute;
+  top: 0;
+  width: 42px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgba(44, 44, 44, 0.3);
+  transition: left 0s ease 0.45s, color 0.2s, border 0.2s;
+}
+.share-bar .trigger:nth-child(1) {
+  left: 0;
+}
+.share-bar .trigger:nth-child(2) {
+  left: 41px;
+}
+.share-bar .trigger:nth-child(3) {
+  left: 102px;
+}
+.share-bar .trigger:nth-child(4) {
+  left: 143px;
+}
+.share-bar .trigger:nth-child(5) {
+  left: 184px;
+}
+.share-bar .trigger:nth-child(6) {
+  left: 225px;
+}

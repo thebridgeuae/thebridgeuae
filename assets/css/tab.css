@@ -1,6 +1,4 @@
-/* @import "bootstrap/functions";
- @import "bootstrap/variables";
- @import "bootstrap/mixins"; */
+
 .tab .content p {
 	 color: #999;
 	 font-weight: 300;
@@ -17,16 +15,30 @@
 }
 #who img{
 	border-radius: 5px;
+	/* top: -10vh; */
+    /* position: relative; */
 }
  .tab-content {
-	 padding: 0rem 0;
+	 padding-top: 3rem;
 }
 #who h2 {
 	 font-size: 20px;
 }
 #who h4{
 	margin:6px;
+	margin: 1.5rem 0;
+    font-size: 1.3rem;
+    font-weight: var(--h2-weight);
+    line-height: 1.2;
+    font-family: var(--h2-font);
+    color: var(--primary-t-color);
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
 }
+/* .owl-carousel{
+	height: 50vh !important;
+	background: rgba(37, 175, 2, 0.5);
+} */
  .owl-1 .owl-nav {
 	 width: 100%;
 	 position: absolute;
@@ -79,10 +91,16 @@
 	 outline: none;
 }
  .media-29101 .img {
-	 flex: 0 0 50%;
+	 flex: 0 0 35%;
 }
  .media-29101 .text {
-	 padding: 50px;
+	 padding: 25px 50px;
+	 /* justify-content: left; */
+	 /* text-justify: inter-word; */
+	 text-justify: inter-character;
+	 -ms-word-wrap: break-word ;
+	 word-wrap: break-word;
+	 /* font-size: 1em !important; */
 }
  .media-29101 .text .category {
 	 color: gray;
@@ -117,11 +135,11 @@
 	 /* transition: background-color .5s; */
 	 
 }
- .carousel-nav a:hover {
+ /* .carousel-nav a:hover {
 	 color: #000;
 	background: rgb(247, 235, 213);
 	 
-}
+} */
  .carousel-nav a.active {
 	 color: #000;
 }
@@ -131,6 +149,6 @@
 	 left: 0;
 	 right: 0;
 	 position: absolute;
-	 border-bottom: 1.5px solid rgb(218, 51, 0);
+	 border-bottom: 2px solid rgb(218, 51, 0);
 }
  
