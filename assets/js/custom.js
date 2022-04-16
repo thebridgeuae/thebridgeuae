@@ -33,7 +33,7 @@ const locoScroll = new LocomotiveScroll({
     getDirection: true,
     // breakpoint: 1024,
   },
-  smoothMobile: true,
+  smoothMobile: false,
   scrollFromAnywhere: false,
   getSpeed: true,
   getDirection: true,
