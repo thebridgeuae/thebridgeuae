@@ -22,13 +22,13 @@ const locoScroll = new LocomotiveScroll({
   scrollbarContainer:false,
   lerp: 0.03,
   smartphone: {
-    smooth: true,
+    smooth: false,
     inertia: 0.8,
     getDirection: true,
     // breakpoint: 767,
   },
   tablet: {
-    smooth: true,
+    smooth: false,
     inertia: 0.8,
     getDirection: true,
     // breakpoint: 1024,
@@ -217,17 +217,21 @@ $(".moreless-button").click(function () {
     $(this).text("Read more");
   }
 });
+/* ==============================================  
+           Expand/Collapse Text end
+=============================================== */
 
-
+/* ==============================================  
+           light Gallary start
+=============================================== */
 $(document).ready(function() {
   var galleryBox = document.getElementById('gallery-container');
   lightGallery(galleryBox, {
     thumbnail: true,
   });
 })
-
 /* ==============================================  
-           Expand/Collapse Text
+            light Gallary end
 =============================================== */
 
 
