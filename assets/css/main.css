@@ -1,12 +1,6 @@
 /*----------------------------------------------
 *
 * [Main Stylesheet]
-*
-* Theme    : Leverage
-* Version  : 2.1
-* Author   : Codings
-* Support  : codings.dev
-* 
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -40,7 +34,15 @@
 16. All Media Queries
 
 ----------------------------------------------*/
+/* #region Root */
 
+/* :root {
+    
+  --primary-color: #fc5130;
+  --secondary-color: #E0040B;
+} */
+
+/* #endregion Root */
 /*----------------------------------------------
 1. Reset
 ----------------------------------------------*/
@@ -713,8 +715,8 @@ section {
   position: relative;
   width: 100%;
   /* edit */
-  padding: 130px 0;
-  /* padding: 90px 0; */
+  /* padding: 130px 0; */
+  padding: 90px 0;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -726,7 +728,7 @@ section.hero {
 }
 section.section-1 {
   background-color: var(--section-1-bg-color);
-  background-image: var(--section-1-bg-image);
+  /* background-image: url("../images/icons/med_bg.jpg") */
 }
 section.section-2 {
   background-color: var(--section-2-bg-color);
@@ -1638,7 +1640,7 @@ header .navbar-sticky {
   /* edit */
   top: 0;
   /* background-color: var(--header-bg-color); */
-  background-color: #fcf9ee;
+  background-color: #FFFAF1;
   filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.555));
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
   box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
@@ -4195,7 +4197,9 @@ footer .copyright a:not(.btn) {
   body h2.super {
     font-size: 4rem;
   }
-
+  body .teaser p{
+    font-size: 2.5rem;
+  }
   body h2 {
     font-size: 2.5rem;
   }
@@ -4265,7 +4269,7 @@ footer .copyright a:not(.btn) {
   body h1,
   body .slide-content .title,
   body h2.super {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 
   body .text-md-left h2.featured,
@@ -4624,16 +4628,11 @@ footer .copyright a:not(.btn) {
   body h1,
   body .slide-content .title,
   body h2.super {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   /* #endregion General */
 }
-@media only screen and (max-width: 1199px) {
-  /* edit */
-  #mousescroll {
-    display: none;
-  }
-}
+
 
 /* #endregion All Media Queries */

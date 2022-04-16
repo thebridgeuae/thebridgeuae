@@ -1,4 +1,48 @@
-/* -----------------GENERAL settings-------------------- */
+/*----------------------------------------------
+*
+* [Custom Stylesheet]
+----------------------------------------------*/
+/*----------------------------------------------
+*
+* [Font Import]
+*
+----------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic");
+/*----------------------------------------------
+
+[ALL CONTENTS]
+
+1. Reset
+2. General 
+3. Section 
+4. Helper Class
+5. Header
+6. Slider
+7. Feature
+8. Widget
+9. Form and Field | 9.1 Multi-Step Form
+10. List
+11. Gallery
+12. Footer
+13. Modal
+14. Miscellaneous
+15. Keyframe
+16. All Media Queries
+
+----------------------------------------------*/
+/* #region Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ==============================================  
+          GENERAL settings Section
+=============================================== */
+/* disable scroll track opt */
+
 /* .scrollbar-track-y {
   display: block !important;
 }
@@ -9,10 +53,19 @@
   overflow-x: hidden;
   } */
 
-/* ----any section scale up/down------ */
+/* collapse/expand text  */
 .moretext {
   display: none;
 }
+
+/* new line  */
+.txt-span-newline {
+  display: block;
+  line-height: 1.3;
+  margin-top: 15px;
+}
+
+/* ---any section scale up/down------ */
 .scaleDown {
   -webkit-transform: scale(0.75);
   -moz-transform: scale(0.75);
@@ -38,54 +91,209 @@
   transform-origin: center;
   vertical-align: middle;
 }
-.txt-span-newline {
-  display: block;
-  line-height: 1.3;
-  margin-top: 15px;
-  /* background-color: #03a9f4; */
-}
-/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic); */
-blockquote{
+
+/* ----Custome blockquote------ */
+blockquote {
   font-size: 1.2em;
-  width:70%;
-  margin:50px auto;
-  font-family:Open Sans;
-  font-style:italic;
+  width: 70%;
+  margin: 50px auto;
+  font-family: Open Sans;
+  font-style: italic;
   color: #555555;
-  padding:1.2em 30px 1.2em 75px;
-  border-left:3px solid #FF725E ;
-  line-height:1.6;
+  padding: 1.2em 30px 1.2em 75px;
+  border-left: 3px solid #ff725e;
+  line-height: 1.6;
   position: relative;
-  background:#fdf6da;
+  background: #fdf6da;
 }
 
-blockquote::before{
-  font-family:Arial;
+blockquote::before {
+  font-family: Arial;
   content: "\201C";
-  color:#303F46;
-  font-size:4em;
+  color: #303f46;
+  font-size: 4em;
   position: absolute;
   left: 10px;
-  top:-10px;
+  top: -10px;
 }
 
-blockquote::after{
-  content: '';
+blockquote::after {
+  content: "";
 }
 
-blockquote span{
-  display:inline-block;
-  color:#333333;
+blockquote span {
+  display: inline-block;
+  color: #333333;
   font-style: normal;
   font-weight: bold;
   /* margin-top:.5em; */
 }
-/* ----any section scale up/down------ */
 
-/* -----------------GENERAL settings-------------------- */
+/* ==============================================  
+          GENERAL settings Section
+=============================================== */
 
-/* ====================== [ Hero section custom start ] ====================== */
-/* -----------------logo/navbar settings-------------------- */
+/* ==============================================  
+  Humberger Menue section
+  =============================================== */
+.menu-wrap {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  padding: 0;
+  /* bottom:5vh; */
+  /* left:1.5vw; */
+}
+.menu-wrap-poschange {
+  position: fixed;
+  display: flex;
+  top: 4.5vh;
+  z-index: 10;
+  align-self: center;
+  padding: 20px 25px;
+  margin-left: 95%;
+  transition: all 0.5s linear;
+}
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #000000;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: #1f1e1dd2;
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vh;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+/* ==============================================  
+  Humberger Menue section END
+  =============================================== */
+
+/* ==============================================  
+            Hero section custom start  
+=============================================== */
+/* ====[ logo/navbar settings ]====*/
 #logo {
   z-index: 100;
   width: 7.5rem;
@@ -121,14 +329,9 @@ blockquote span{
   -moz-transition: all 0.15s ease-out 0s !important;
   transition: all 0.15s ease-out 0s !important;
 }
+/* =============================================================== */
 
-.stacking-slide {
-  height: 100vh !important;
-  /* width: 100% !important; */
-  position: fixed !important;
-  top: 0 !important;
-}
-/* -----------------------//Navbar items style ------------------------------------ */
+/* ====[Navbar items style ]====*/
 .underline {
   padding-bottom: 2px;
   --bg-h: 2px;
@@ -163,19 +366,14 @@ blockquote span{
   padding-left: 1rem;
   padding-right: 1rem;
   font-weight: bold;
-  font-family: 'Poppins','PT Sans', sans-serif;;
+  font-family: "Poppins", "PT Sans", sans-serif;
   font-size: 1em !important;
   color: black !important;
   /* font-family:'Josefin Sans', sans-serif; */
 }
-/* ---------------------------------- */
+/* =============================================================== */
 
-
-
-/* ================================================================================
-================================================================================ */
-/* ----------------- slider background color change-------------------- */
-
+/* ====[slider background color change ]====*/
 @keyframes color {
   0% {
     background: #50af02;
@@ -202,7 +400,9 @@ body {
   background: #dd5b04;
   animation: color 13s infinite linear;
 }
+/* =============================================================== */
 
+/* ====[slider full background image style ]====*/
 .hero-image-fit {
   position: absolute;
   right: 0;
@@ -249,7 +449,9 @@ body {
   transform: translate(-50%, -50%);
   color: white;
 }
+/* =============================================================== */
 
+/* ====[slider full background video style ]====*/
 .hero-video-container {
   position: absolute;
   right: 0;
@@ -291,14 +493,517 @@ body {
   /* z-index: 1; */
   background: linear-gradient(to right, rgba(10, 10, 8, 0.25), rgba(197, 253, 180, 0.1));
 }
+/* =============================================================== */
 
-/* ====================== [ Hero section custom End ] ====================== */
-/* 
-===================================================================================
-=================================================================================== */
+/* ====[Slide settings/style ]====*/
+.slider {
+  position: relative;
+}
+#slider {
+  position: relative;
+  overflow: hidden;
+  width: 100% !important;
+}
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 99999px;
+  overflow: hidden;
+  list-style: none;
+}
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+#slider ul li .slide {
+  background-size: cover;
+  height: 100vh;
+}
+button.control_prev,
+button.control_next {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  display: block;
+  border: none;
+  width: 2em;
+  height: 2em;
+  line-height: 1.9em;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 2rem;
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+button.control_prev:focus,
+button.control_next:focus {
+  outline: none;
+  border: 1px rgba(255, 255, 255, 0.5) solid;
+}
+button.control_prev:hover,
+button.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+button.control_prev {
+  left: 2rem;
+}
+button.control_next {
+  right: 2rem;
+}
+.top-progress-bar {
+  width: 95% !important;
+  height: 80px !important;
+  position: absolute !important;
+  text-align: center !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto !important;
+}
+.progress {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  height: 0.5rem;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px rgba(0, 0, 0, 0.15) solid;
+}
+.progress .bar {
+  height: 100%;
+  width: 0%;
+  /* background: rgb(72, 243, 4); */
+  background: linear-gradient(to right, #e2f022 0%, #9bec04 45%, #03960b 100%);
+  /* background: linear-gradient(to right, #fcbe6c 0%, #df8107 20%, #e4d502 40%, #c0bd25 60%, #07bb34 80%, #50af02 100%); */
+}
+.teaser {
+  position: relative;
+  /* top: 55%; */
+  /* text-align: center; */
+  /* width: 100%; */
+  /* color: #fff; */
+  /* transform: translateY(-50%); */
+}
+.teaser h2 {
+  font-size: 9vw 9vh;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  color: rgb(248, 246, 246);
+  font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
+  justify-content: left;
+  text-align: left;
+  padding-left: 18vw;
+}
+.teaser h3 {
+  font-weight: bold;
+  font-size: 5em;
+  font-family: "Josefin Sans", sans-serif;
+  width: 33%;
+  padding: 1.5rem 0;
+  margin: 0rem auto;
+  min-width: 25rem;
+}
+.teaser a {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 
-/* ====================== [ Content section custom Start ] ====================== */
+.teaser p {
+  /* width: 60%; */
+  max-width: 60vw;
+  margin: 0rem auto;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  font-weight: normal;
+  /* font-family:'Josefin Sans', sans-serif; */
+  /* font-size: 1.2em; */
+  line-height: 1.5em;
+  /* text-align: left; */
+  /* border-radius: 5px; */
+  /* padding:10px; */
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+@media (min-width: 600px) {
+  body .teaser p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  body .teaser p {
+    font-size: 1.2rem;
+    max-width: 200vw;
+  }
+}
+/* @media (max-width: 1199px) {
+  body .teaser p{
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 991px) {
+  body .teaser p{
+    font-size: 2.5rem;
+  }
+}
 
+@media (max-width: 767px) {
+    body .teaser p{
+      font-size: 2.5rem;
+  }
+}
+@media (max-width: 576px) {
+  body .teaser p{
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 374px) {
+  body .teaser p{
+    font-size: 1rem;
+  }
+} */
+/* =============================================================== */
+
+/* ==============================================  
+            Hero section custom End  
+=============================================== */
+
+/* ==============================================  
+            Top Bar custom Start  
+=============================================== */
+.top-banner-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* z-index: 100; */
+  position: absolute;
+  left: 0;
+  right: auto;
+  top: 0;
+  text-align: center;
+  padding-top: 21px;
+  /* height: 100%; */
+  /* background-color: #f5410a; */
+  /* right:50%; */
+  /* top:50%; */
+  /* margin-left: 50%; */
+  /* margin-right: auto; */
+}
+.mouse-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+  position: absolute;
+}
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid rgba(194, 193, 193, 0.8);
+  border-radius: 60px;
+  position: relative;
+}
+.mouse::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(95, 95, 95, 0.7);
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+  -webkit-animation: wheel 2s infinite;
+}
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 40px;
+  }
+}
+@-webkit-keyframes wheel {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
+}
+.scroll {
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgb(223, 222, 222);
+  border-radius: 50%;
+  position: relative;
+  animation: down 1.5s infinite;
+  -webkit-animation: down 1.5s infinite;
+}
+.scroll::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 15px;
+  height: 15px;
+  border-left: 2px solid rgb(223, 222, 222);
+  border-bottom: 2px solid rgb(223, 222, 222);
+  transform: rotate(-45deg);
+}
+@keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
+.arrow {
+  width: 0;
+  height: 40px;
+  border: 1px solid #333;
+  position: relative;
+  animation: scroll 1.5s infinite;
+  -webkit-animation: scroll 1.5s infinite;
+}
+.arrow::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: -5px;
+  width: 1px;
+  height: 10px;
+  border-top: 10px solid #333;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+@keyframes scroll {
+  0% {
+    height: 40px;
+  }
+  30% {
+    height: 70px;
+  }
+  60% {
+    height: 40px;
+  }
+}
+@-webkit-keyframes scroll {
+  0% {
+    height: 40px;
+  }
+  30% {
+    height: 70px;
+  }
+  60% {
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  /* edit */
+  #mousescroll {
+    display: none;
+  }
+}
+
+/* ==============================================  
+            Top Bar custom  End  
+=============================================== */
+
+/* ==============================================  
+            Social Share Bar 
+=============================================== */
+.container-share {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  float: right;
+  margin-left: auto;
+  padding-right: 50px;
+}
+.tip {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 10px);
+  transform: translateY(-50%);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+}
+.tip:after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: rgba(44, 44, 44, 0.3);
+  margin: 0 0 0 8px;
+}
+.trigger {
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.2s, border 0.2s;
+}
+.trigger a {
+  color: currentColor;
+  text-decoration: none;
+  transform: skew(10deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trigger i {
+  font-size: 18px;
+  line-height: 40px;
+}
+.trigger:hover {
+  color: #f33708;
+  border-color: #2c2c2c !important;
+}
+.trigger.share-btn i {
+  margin: 0 5px 0 0;
+}
+.like,
+.share {
+  transform: skew(-10deg);
+  margin: 0 0 0 10px;
+}
+.like .trigger,
+.share .trigger {
+  width: 82px;
+  border: 1px solid rgba(44, 44, 44, 0.3);
+}
+.like i,
+.share i {
+  margin: 0 5px 0 0;
+}
+.share-bar {
+  position: relative;
+  width: 82px;
+  height: 40px;
+  transition: width 0.4s ease 0.2s;
+}
+.share-bar:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(44, 44, 44, 0.3) rgba(44, 44, 44, 0.3) rgba(44, 44, 44, 0.3) transparent;
+}
+.share-bar:hover {
+  width: 125px;
+  transition: width 0.4s ease;
+}
+.share-bar:hover .trigger:nth-child(3) {
+  left: 82px;
+  transition: left 0.45s ease 0.06s, color 0.2s, border 0.2s;
+}
+.share-bar:hover .trigger:nth-child(4) {
+  left: 123px;
+  transition: left 0.45s ease 0.12s, color 0.2s, border 0.2s;
+}
+.share-bar:hover .trigger:nth-child(5) {
+  left: 164px;
+  transition: left 0.45s ease 0.18s, color 0.2s, border 0.2s;
+}
+.share-bar:hover .trigger:nth-child(6) {
+  left: 205px;
+  transition: left 0.45s ease 0.24s, color 0.2s, border 0.2s;
+}
+.share-bar .trigger {
+  position: absolute;
+  top: 0;
+  width: 42px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgba(44, 44, 44, 0.3);
+  transition: left 0s ease 0.45s, color 0.2s, border 0.2s;
+}
+.share-bar .trigger:nth-child(1) {
+  left: 0;
+}
+.share-bar .trigger:nth-child(2) {
+  left: 41px;
+}
+.share-bar .trigger:nth-child(3) {
+  left: 102px;
+}
+.share-bar .trigger:nth-child(4) {
+  left: 143px;
+}
+.share-bar .trigger:nth-child(5) {
+  left: 184px;
+}
+.share-bar .trigger:nth-child(6) {
+  left: 225px;
+}
+/* container-share responsive */
+@media only screen and (max-width: 600px) {
+  .tip {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .like .like-btn {
+    display: none;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .share {
+    display: none;
+  }
+}
+.share-window {
+  transform: skew(-10deg);
+  overflow: hidden;
+}
+@media only screen and (max-width: 600px) {
+  .share-window {
+    display: none;
+  }
+}
+/* ==============================================  
+            Social Share End 
+=============================================== */
+
+/* ==============================================  
+          Content section custom Start
+=============================================== */
 .sec-card {
   margin: auto !important ;
   width: 95%;
@@ -340,10 +1045,13 @@ section.section-01 {
   /* transition-property: opacity, transform; */
   /* background-color: #ffefb9; */
 }
-/* ====================== [ Content section custom End ] ====================== */
+/* ==============================================  
+          Content section custom End
+=============================================== */
 
-/* ====================== [ about section custom start ] ====================== */
-
+/* ==============================================  
+          about section custom Start
+=============================================== */
 .about ul,
 li {
   list-style: none;
@@ -356,10 +1064,13 @@ ul {
 .highlights p {
   white-space: unset !important;
 }
+/* ==============================================  
+          about section custom End
+=============================================== */
 
-/* ====================== [ About section custom End ] ====================== */
-
-/* ====================== [ fullpage customization Start] ====================== */
+/* ==============================================  
+          fullpage customization Start
+=============================================== */
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   background: #000;
@@ -379,17 +1090,31 @@ ul {
 /* #fp-nav li{
 } */
 /* .fp-auto-height-responsive  */
-/* ====================== [ fullpage customization End ] ====================== */
+/* ==============================================  
+          fullpage customization End
+=============================================== */
 
-/* ====================== [ Service section custom Start ] ====================== */
-/* ====================== [ Service section custom End ] ====================== */
+/* ==============================================  
+          Service section custom Start
+=============================================== */
 
-/* ====================== [ Quotes section custom Start ] ====================== */
-/* ====================== [ Quotes section custom End ] ====================== */
+/* ==============================================  
+         Service section custom End
+=============================================== */
 
-/* ====================== [ contact Form/Map section custom Start ] ====================== */
+/* ==============================================  
+          Quotes section custom Satart
+=============================================== */
+
+/* ==============================================  
+          Quotes section custom End
+=============================================== */
+
+/* ==============================================  
+         contact Form/Map section custom Start
+=============================================== */
+
 /* Set the size of the div element that contains the map */
-
 #contact .primary-button,
 .primary-button:visited,
 .primary-button:active {
@@ -411,7 +1136,11 @@ ul {
   height: 100%;
 }
 #contact h2.featured:before {
-  top: 51px !important;
+  top: 80px !important;
+}
+#values h2.featured:before {
+  top: 100px !important;
+  right: 130px;
 }
 .map-area {
   width: 100%;
@@ -445,7 +1174,142 @@ ul {
     margin-right: 0px !important;
   }
 }
-/* ====================== [ contact Form/Map section custom Start ] ====================== */
 
-/* ====================== [ Footer section custom Start ] ====================== */
-/* ====================== [ Footer section custom End ] ====================== */
+/* ==============================================  
+         contact Form/Map section custom End
+=============================================== */
+
+/* ==============================================  
+        Footer/Gallary section custom Start
+=============================================== */
+.small {
+  font-size: 12px;
+  color: #999;
+  display: block;
+  margin-top: 15px;
+}
+.demo-gallary-cont {
+  text-align: center;
+  
+}
+.demo-gallery > ul {
+  margin-bottom: 0;
+}
+.demo-gallery > ul > li {
+  /* margin-bottom: 15px; */
+  width: 18vw;
+  display: inline-block;
+  margin-right: 0px;
+  padding: 0px;
+  list-style: outside none none;
+}
+.demo-gallery > ul > li a {
+  /* border: 2px solid #fff; */
+  border-radius: 4px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+.img-hover-zoom {
+  overflow: hidden;
+}
+.img-hover-zoom img {
+  transition: transform 0.5s ease;
+}
+.img-hover-zoom:hover img {
+  transform: scale(1.2);
+}
+/* ==============================================  
+        Footer section custom End
+=============================================== */
+
+/* ==============================================  
+        The bridge Values
+=============================================== */
+.careFeatures {
+  margin-top: 0px;
+}
+
+.careFeatures .featuresBox {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.careFeatures .featuresBox .featureItem {
+  -ms-flex: 25%;
+  flex: 25%;
+  display: inline-flex;
+}
+
+.careFeatures .featuresBox .featureItem .items {
+  position: relative;
+  margin: 0;
+  padding: 60px 30px 0;
+  transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 8px solid transparent;
+  margin: 0 auto;
+}
+
+.careFeatures .featuresBox .featureItem .items:hover {
+  transform: translateY(-39px);
+  border-color: #c5c146;
+  border-color: var(--primary-color);
+}
+
+.featureItem .items .image {
+  height: 115px;
+  transition: 0.3s;
+  margin: 0 auto;
+}
+
+.featureItem .items .heading {
+  margin-top: 41px;
+  margin-bottom: 27px;
+  transition: 0.3s;
+  
+}
+
+.featureItem .items .btn,
+.featureItem .items .text {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.featureItem .items .heading h5 {
+  color: #282828;
+  font-weight: bold;
+}
+
+.featureItem .items .btn {
+  padding-top: 60px;
+  padding-bottom: 69px;
+  transition: scale 0s, opacity 0.3s;
+  transform: scale(1, 0);
+  opacity: 0;
+  display: block;
+}
+
+.featureItem .items:hover .btn {
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+.care .featureItem .items .heading,
+.featureItem .items .image {
+  text-align: center;
+ 
+}
+/* ==============================================  
+        The bridge Values
+=============================================== */
+
+/* ==============================================  
+        OUR SERVICES Custome Style
+=============================================== */
+
+/* ==============================================  
+        OUR SERVICES Custome Style
+=============================================== */

@@ -1,48 +1,6 @@
-// const reloadtButton = document.querySelector("#reload");
-// function reload() {
-//     reload = location.reload();
-// }
-// reloadtButton.addEventListener("click", reload, false);
-
-// When the window has finished loading create our google map below
-// google.maps.event.addDomListener(window, 'load', init);
-$(".moreless-button").click(function () {
-  $(".moretext").slideToggle();
-  if ($(".moreless-button").text() == "Read more") {
-    $(this).text("Read less");
-  } else {
-    $(this).text("Read more");
-  }
-});
-
-function init() {
-  console.log("map start");
-  var myLatlng = new google.maps.LatLng(35.692056, 51.258393);
-  var mapOptions = {
-    zoom: 11,
-    center: myLatlng,
-    styles: [
-      { featureType: "administrative", elementType: "all", stylers: [{ saturation: "-100" }] },
-      { featureType: "administrative.province", elementType: "all", stylers: [{ visibility: "off" }] },
-      { featureType: "landscape", elementType: "all", stylers: [{ saturation: -100 }, { lightness: 65 }, { visibility: "on" }] },
-      { featureType: "poi", elementType: "all", stylers: [{ saturation: -100 }, { lightness: "50" }, { visibility: "simplified" }] },
-      { featureType: "road", elementType: "all", stylers: [{ saturation: "-100" }] },
-      { featureType: "road.highway", elementType: "all", stylers: [{ visibility: "simplified" }] },
-      { featureType: "road.arterial", elementType: "all", stylers: [{ lightness: "30" }] },
-      { featureType: "road.local", elementType: "all", stylers: [{ lightness: "40" }] },
-      { featureType: "transit", elementType: "all", stylers: [{ saturation: -100 }, { visibility: "simplified" }] },
-      { featureType: "water", elementType: "geometry", stylers: [{ hue: "#ffff00" }, { lightness: -25 }, { saturation: -97 }] },
-      { featureType: "water", elementType: "labels", stylers: [{ lightness: -25 }, { saturation: -100 }] },
-    ],
-  };
-  var mapElement = document.getElementById("map");
-  var map = myLatlng.Map(mapElement, mapOptions);
-  var marker = myLatlng.Marker({
-    position: myLatlng.LatLng(40.67, -73.94),
-    map: map,
-    title: "Snazzy!",
-  });
-}
+/* ==============================================  
+           Locomotive scroll Start
+=============================================== */
 // ------------------Global Selectors;--------------------
 // const pos = 0;
 const head = document.querySelector(".header");
@@ -58,23 +16,28 @@ const toTop = document.getElementById("scroll-to-top");
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
-  multiplier: 1.4,
-  lerp: 0.03,
+  multiplier: 1.1,
+  firefoxMultiplier: 50,
   touchMultiplier: 2,
+  scrollbarContainer:false,
+  lerp: 0.03,
   smartphone: {
-    smooth: !0,
-    breakpoint: 767,
+    smooth: true,
+    inertia: 0.8,
+    getDirection: true,
+    // breakpoint: 767,
   },
   tablet: {
-    smooth: !1,
-    breakpoint: 1024,
+    smooth: true,
+    inertia: 0.8,
+    getDirection: true,
+    // breakpoint: 1024,
   },
   smoothMobile: true,
   scrollFromAnywhere: false,
   getSpeed: true,
   getDirection: true,
   useKeyboard: true,
-  firefoxMultiplier: 50,
   class: "in-view",
   reloadOnContextChange: true,
 });
@@ -152,6 +115,160 @@ anchorLinks.forEach((anchorLink) => {
     locoScroll.scrollTo(target);
   });
 });
+/* ==============================================  
+           Locomotive scroll End
+=============================================== */
+/* ==============================================  
+            Form Validation Start
+=============================================== */
+(function ($) {
+  "use strict";
+
+
+  /*==================================================================
+  [ Validate after type ]*/
+  $('.validate-input .input100').each(function(){
+      $(this).on('blur', function(){
+          if(validate(this) == false){
+              showValidate(this);
+          }
+          else {
+              $(this).parent().addClass('true-validate');
+          }
+      })    
+  })
+
+
+  /*==================================================================
+  [ Validate ]*/
+  var input = $('.validate-input .input100');
+
+  $('.validate-form').on('submit',function(){
+      var check = true;
+
+      for(var i=0; i<input.length; i++) {
+          if(validate(input[i]) == false){
+              showValidate(input[i]);
+              check=false;
+          }
+      }
+
+      return check;
+  });
+
+
+  $('.validate-form .input100').each(function(){
+      $(this).focus(function(){
+         hideValidate(this);
+         $(this).parent().removeClass('true-validate');
+      });
+  });
+
+   function validate (input) {
+      if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
+          if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+              return false;
+          }
+      }
+      else {
+          if($(input).val().trim() == ''){
+              return false;
+          }
+      }
+  }
+
+  function showValidate(input) {
+      var thisAlert = $(input).parent();
+
+      $(thisAlert).addClass('alert-validate');
+
+      $(thisAlert).append('<span class="btn-hide-validate">&#xf136;</span>')
+      $('.btn-hide-validate').each(function(){
+          $(this).on('click',function(){
+             hideValidate(this);
+          });
+      });
+  }
+
+  function hideValidate(input) {
+      var thisAlert = $(input).parent();
+      $(thisAlert).removeClass('alert-validate');
+      $(thisAlert).find('.btn-hide-validate').remove();
+  }
+  
+  
+
+})(jQuery);
+
+/* ==============================================  
+           Form Validation End
+=============================================== */
+
+/* ==============================================  
+           Expand/Collapse Text
+=============================================== */
+$(".moreless-button").click(function () {
+  $(".moretext").slideToggle();
+  if ($(".moreless-button").text() === "Read more") {
+    console.log('yes')
+    $(this).text("Read less");
+    console.log('less')
+  } else {
+    $(this).text("Read more");
+  }
+});
+
+
+$(document).ready(function() {
+  var galleryBox = document.getElementById('gallery-container');
+  lightGallery(galleryBox, {
+    thumbnail: true,
+  });
+})
+
+/* ==============================================  
+           Expand/Collapse Text
+=============================================== */
+
+
+/* ==============================================  
+           Google MAp Start
+=============================================== */
+function init() {
+  console.log("map start");
+  var myLatlng = new google.maps.LatLng(35.692056, 51.258393);
+  var mapOptions = {
+    zoom: 11,
+    center: myLatlng,
+    styles: [
+      { featureType: "administrative", elementType: "all", stylers: [{ saturation: "-100" }] },
+      { featureType: "administrative.province", elementType: "all", stylers: [{ visibility: "off" }] },
+      { featureType: "landscape", elementType: "all", stylers: [{ saturation: -100 }, { lightness: 65 }, { visibility: "on" }] },
+      { featureType: "poi", elementType: "all", stylers: [{ saturation: -100 }, { lightness: "50" }, { visibility: "simplified" }] },
+      { featureType: "road", elementType: "all", stylers: [{ saturation: "-100" }] },
+      { featureType: "road.highway", elementType: "all", stylers: [{ visibility: "simplified" }] },
+      { featureType: "road.arterial", elementType: "all", stylers: [{ lightness: "30" }] },
+      { featureType: "road.local", elementType: "all", stylers: [{ lightness: "40" }] },
+      { featureType: "transit", elementType: "all", stylers: [{ saturation: -100 }, { visibility: "simplified" }] },
+      { featureType: "water", elementType: "geometry", stylers: [{ hue: "#ffff00" }, { lightness: -25 }, { saturation: -97 }] },
+      { featureType: "water", elementType: "labels", stylers: [{ lightness: -25 }, { saturation: -100 }] },
+    ],
+  };
+  var mapElement = document.getElementById("map");
+  var map = myLatlng.Map(mapElement, mapOptions);
+  var marker = myLatlng.Marker({
+    position: myLatlng.LatLng(40.67, -73.94),
+    map: map,
+    title: "Snazzy!",
+  });
+}
+/* ==============================================  
+           Google MAp End
+=============================================== */
+
+// -----------------images load-----------------------------
+// $('body').imagesLoaded().always( function( instance ) {
+//   locoScroll.update();
 
 // ------------------LOCOMOTIVE--------------------
 // Plugin @RokoCB :: Return the visible amount of px
@@ -242,6 +359,7 @@ anchorLinks.forEach((anchorLink) => {
 // const Scroll = SmoothScrollbar.init(this.scrollbarComponentRef.current);
 // if (disableXAxis) {
 // }
+
 // -----------------Docslider init-----------------------------
 // jQuery(function($){
 //     docSlider.init({
@@ -252,86 +370,11 @@ anchorLinks.forEach((anchorLink) => {
 //       });
 // });
 
-////////////////////////////////////////////////////////////////////
-// FORM
-////////////////////////////////////////////////////////////////////
-
-(function ($) {
-  "use strict";
-
-  /*==================================================================
-  [ Validate after type ]*/
-  $(".validate-input .input100").each(function () {
-    $(this).on("blur", function () {
-      if (validate(this) == false) {
-        showValidate(this);
-      } else {
-        $(this).parent().addClass("true-validate");
-      }
-    });
-  });
-
-  /*==================================================================
-  [ Validate ]*/
-  var input = $(".validate-input .input100");
-
-  $(".validate-form").on("submit", function () {
-    var check = true;
-
-    for (var i = 0; i < input.length; i++) {
-      if (validate(input[i]) == false) {
-        showValidate(input[i]);
-        check = false;
-      }
-    }
-
-    return check;
-  });
-
-  $(".validate-form .input100").each(function () {
-    $(this).focus(function () {
-      hideValidate(this);
-      $(this).parent().removeClass("true-validate");
-    });
-  });
-
-  function validate(input) {
-    if ($(input).attr("type") == "email" || $(input).attr("name") == "email") {
-      if (
-        $(input)
-          .val()
-          .trim()
-          .match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null
-      ) {
-        return false;
-      }
-    } else {
-      if ($(input).val().trim() == "") {
-        return false;
-      }
-    }
-  }
-
-  function showValidate(input) {
-    var thisAlert = $(input).parent();
-
-    $(thisAlert).addClass("alert-validate");
-
-    $(thisAlert).append('<span class="btn-hide-validate">&#xf136;</span>');
-    $(".btn-hide-validate").each(function () {
-      $(this).on("click", function () {
-        hideValidate(this);
-      });
-    });
-  }
-
-  function hideValidate(input) {
-    var thisAlert = $(input).parent();
-    $(thisAlert).removeClass("alert-validate");
-    $(thisAlert).find(".btn-hide-validate").remove();
-  }
-})(jQuery);
-
-////////////////////////////////////////////////////////////////////
-// FORM
-////////////////////////////////////////////////////////////////////
+// -----------------Document/location Reload-----------------------------
+// const reloadtButton = document.querySelector("#reload");
+// function reload() {
+//     reload = location.reload();
+// }
+// reloadtButton.addEventListener("click", reload, false);
+// When the window has finished loading create our google map below
+// google.maps.event.addDomListener(window, 'load', init);
