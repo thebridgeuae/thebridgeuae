@@ -22,13 +22,13 @@ const locoScroll = new LocomotiveScroll({
   scrollbarContainer:false,
   lerp: 0.03,
   smartphone: {
-    smooth: true,
+    smooth: false,
     inertia: 0.8,
     getDirection: true,
     // breakpoint: 767,
   },
   tablet: {
-    smooth: true,
+    smooth: false,
     inertia: 0.8,
     getDirection: true,
     // breakpoint: 1024,
