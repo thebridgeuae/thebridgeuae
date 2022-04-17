@@ -2,8 +2,8 @@
   var t = {
       611: function () {
         !(function (t) {
-          const e = t("#tabs-section .tab-link"),
-            r = t("#tabs-section .tab-body");
+          const e = t("#vtabs .tab-link"),
+            r = t("#vtabs .tab-body");
           let n;
           const o = () => {
             e.off("click").on("click", function (o) {

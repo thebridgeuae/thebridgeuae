@@ -336,7 +336,10 @@ h1,
   font-weight: var(--h1-weight);
   line-height: 1.2;
   font-family: var(--h1-font);
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
+  color: #fff;
+  /* text-shadow: 2px 2px 1px #b9b9b9; */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .7);
   -ms-word-wrap: break-word;
   word-wrap: break-word;
   /* text-align: center; */
@@ -3875,6 +3878,7 @@ footer .odd.alt.copyright {
 footer .copyright p {
   font-size: 14px;
   line-height: 1.8;
+  color:#797979
 }
 
 footer .copyright a:not(.btn) {

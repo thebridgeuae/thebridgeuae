@@ -224,17 +224,20 @@
   body {
     font-size: 1.125rem;
   }
+}
 
 @media (min-width: 992px) {
   .tabs {
     width: 100%;
   }
 }
-@media (max-width: 580px) {
-  #tabs-section {
-    display: none !important;
+@media only screen and (max-width: 576px) {
+  #vtabs {
+    display: none;
+    visibility: hidden !important;
   }
 }
+
 #tab-1 ul li {
   list-style-type: square;
   display: list-item;
@@ -270,6 +273,9 @@
   display: list-item;
   margin-left: 50px;
 }
+/* ==============================================  
+        vertical Tabs Style End
+=============================================== */
 
 /* ==============================================  
         Tabs hover Style
@@ -292,7 +298,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  background-color: #3a7546;
+  background-color:  #3a7546;
   transform-origin: 0 bottom 0;
   transform: scaleY(0);
   transition: 0.4s ease-out;
@@ -306,7 +312,7 @@
   transform: scaleY(1);
 }
 /* ==============================================  
-        vertical Tabs Style End
+        Tabs hover Style
 =============================================== */
 
 /* ==============================================  
@@ -315,14 +321,6 @@
 .tabs-container {
   padding: 0rem;
 }
-
-  /* .tabs-container {
-    padding: 4rem 4rem;
-  } */
-}
-/* .tabs-container {
-   padding: 0rem 0rem;
- } */
 
 .mtabs {
   display: flex;
@@ -336,7 +334,7 @@
   align-items: center;
   justify-content: center;
   padding: 1rem 2rem;
-  border-bottom: .3px solid rgba(204, 204, 204, 0.781);
+  border-bottom: 0.3px solid rgba(51, 102, 39, 0.322);
   /* margin-right: 0.0625rem; */
   cursor: pointer;
   background-color: #19381f;
@@ -380,12 +378,12 @@
 .mtabs [type="radio"]:checked + label + .tab {
   display: block;
 }
+
 @media (min-width: 768px) {
   body {
     font-size: 1rem;
   }
 
- 
   .mtabs label {
     order: 1;
     width: auto;
@@ -399,14 +397,17 @@
     border-bottom: none;
   }
 }
+
 @media (min-width: 992px) {
   .mtabs {
     width: 100%;
   }
 }
-@media (min-width: 580px) {
+
+@media only screen and (min-width: 580px) {
   #mobtabs {
     display: none !important;
+    visibility: hidden !important;
   }
 }
 
@@ -414,8 +415,8 @@
   list-style-type: square;
   display: list-item;
   margin-left: 50px;
-  font-weight: bold;
-  font-size: 1em;
+  font-weight:600;
+  font-size: 1.1em;
 }
 /* ==============================================  
         Mobile Tabs Style End

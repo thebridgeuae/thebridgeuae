@@ -207,14 +207,23 @@ anchorLinks.forEach((anchorLink) => {
 /* ==============================================  
            Expand/Collapse Text
 =============================================== */
-$(".moreless-button").click(function () {
-  $(".moretext").slideToggle();
-  if ($(".moreless-button").text() === "Read more") {
-    console.log('yes')
-    $(this).text("Read less");
-    console.log('less')
+// $(".moreless-button").click(function () {
+//   $(".moretext").slideToggle();
+//   if ($(".moreless-button").text() === "Read more") {
+//     console.log('yes')
+//     $(this).text("Read less");
+//     console.log('less')
+//   } else {
+//     $(this).text("Read more");
+//   }
+// });
+
+$('.read-more').click(function() {
+  $(this).prev().slideToggle();
+  if (($(this).text()) == "Read More") {
+      $(this).text("Read Less");
   } else {
-    $(this).text("Read more");
+      $(this).text("Read More");
   }
 });
 /* ==============================================  
@@ -227,7 +236,9 @@ $(".moreless-button").click(function () {
 $(document).ready(function() {
   var galleryBox = document.getElementById('gallery-container');
   lightGallery(galleryBox, {
-    thumbnail: true,
+      plugins: [lgThumbnail],
+      speed: 500,
+      mode: 'fade'
   });
 })
 /* ==============================================  

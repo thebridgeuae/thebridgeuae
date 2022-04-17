@@ -84,10 +84,12 @@
     <link rel="stylesheet" href="assets/css/vendor/animation.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/vendor/animate.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/vendor/animate.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="assets/css/vendor/gallery.min.css" type="text/css" media="all" />
+    <!-- <link rel="stylesheet" href="assets/css/vendor/gallery.min.css" type="text/css" media="all" /> -->
     <link rel="stylesheet" href="assets/css/vendor/cookie-notice.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/vendor/lightgallary/lightgallery.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="assets/css/vendor/lightgallary/lg-thumbnail.css" type="text/css" media="all" />
+
     <!-- ==============================================
       Custom Stylesheet
       =============================================== -->
@@ -260,7 +262,8 @@
                 <div class="slide-content row container-md">
                   <div class="col-12 d-flex inner">
                     <div class="left align-self-center text-center text-md-left">
-                      <h2 class="title effect-static-text">
+                      <!-- class: effect-static-text -->
+                      <h2 class="title">
                         CARING HANDS <br />
                         COMPASSIONATE HEARTS
                       </h2>
@@ -291,7 +294,8 @@
                 <div class="slide-content row container-md">
                   <div class="col-12 d-flex inner">
                     <div class="left align-self-center text-center text-md-left">
-                      <h2 class="title effect-static-text">INNOVATION AND TRUST</h2>
+                      <!-- class: effect-static-text -->
+                      <h2 class="title">INNOVATION AND TRUST</h2>
                       <div class="teaser">
                         <p class="description">
                           We assemble the best innovative medical specialists, educational methods and invest in the best techniques to deliver the care
@@ -316,7 +320,8 @@
                 <div class="slide-content row container-md">
                   <div class="col-12 d-flex inner">
                     <div class="left align-self-center text-center text-md-left">
-                      <h1 class="title effect-static-text">A TRANSFORMING<br />HEALING PRESENCE</h1>
+                      <!-- class: effect-static-text -->
+                      <h1 class="title">A TRANSFORMING<br />HEALING PRESENCE</h1>
                       <div class="teaser">
                         <p class="description">Dedication beyond measure to putting children and their healing journeys first</p>
                       </div>
@@ -873,8 +878,8 @@
                           <h5>Quality First</h5>
                         </div>
                         <!-- <div class="text">
-                                <p>If there is a specific cause close to your heart.</p>
-                            </div> -->
+                          <p>If there is a specific cause close to your heart.</p>
+                        </div> -->
                       </div>
                     </div>
                     <div class="featureItem">
@@ -896,7 +901,7 @@
                           <img src="assets/images/icons/item4.png" alt="" />
                         </div>
                         <div class="heading">
-                          <h5>Partner With Us</h5>
+                          <h5>Proven Results</h5>
                         </div>
                         <!-- <div class="text">
                                 <p>If you are an organisation who is looking to make a real positive impact for a better tomorrow as part of your Corporate Social Responsibility.</p>
@@ -953,13 +958,12 @@
         <!--services container-->
         <!---------->
         <div class="container">
+          <!-- Header/Title -->
           <div class="row intro">
-            <!-- <img src="assets/images/bg.svg" class="bg-image-fit" alt="Hero Image" /> -->
             <div class="col-12 col-md-9 align-self-center text-center text-md-left">
               <h2 class="featured"></h2>
-              <!-- <h3 class="main-title">Our Services</h3> -->
-              <h3 class="main-title">We Focused on the well-being of our patients</h3>
-              <!-- <p>We Focused on results, we seek to raise the level of our customers.</p> -->
+              <h3 class="main-title">Our Services</h3>
+              <p style="font-size: 1.5em; margin: 25px">We Focused on the well-being of our patients</p>
             </div>
             <!-- <div class="col-12 col-md-3 align-self-end">
               <a href="page-services-1.html" class="btn mx-auto mr-md-0 ml-md-auto primary-button"><i class="icon-grid"></i>VIEW ALL</a>
@@ -967,23 +971,17 @@
           </div>
 
           <!-- services vTabs on large screen -->
-          <div class="row">
-            <!-- <section class="tabs-wrapper"> -->
-            <!-- <div class="tabs-container"> -->
-            <!-- <div class="tabs-block"> -->
-            <div id="tabs-section" class="tabs">
+          <div id="vtabs" class="row">
+            <div class="tabs">
               <ul class="tab-head">
                 <li>
-                  <a href="#tab-1" class="post tab-link active"><span class="tab-label post-title">Applied Behavioral Analysis</span></a
-                  >
+                  <a href="#tab-1" class="post tab-link active"><span class="tab-label post-title">Applied Behavioral Analysis</span></a>
                 </li>
                 <li>
-                  <a href="#tab-2" class="post tab-link"></span> <span class="tab-label post-title">Speech and Language Therapy</span></a
-                  >
+                  <a href="#tab-2" class="post tab-link"><span class="tab-label post-title">Speech and Language Therapy</span></a>
                 </li>
                 <li>
-                  <a href="#tab-3" class=" post tab-link"><span class="tab-label post-title">Early Intervention </span></a
-                  >
+                  <a href="#tab-3" class="post tab-link"><span class="tab-label post-title">Early Intervention </span></a>
                 </li>
                 <li>
                   <a href="#tab-4" class="post tab-link"><span class="tab-label post-title">Special Educational Programs</span></a>
@@ -1007,25 +1005,26 @@
                   that a client's behaviour is influenced by previous and current environmental experiences, or contingencies, as well as other genetic
                   and/or environmental factors.
                 </p>
-                <p class="moretext">
-                  ABA focuses on treating the disorder's problems by facilitating the learning of suitable and functional behaviours rather than the
-                  dysfunctional or inappropriate actions. ABA is an evidence-based technique that has been shown to be useful not only for those with
-                  Autism but also for other diseases such as ADHD, Depression, ASD and other developmental disabilities. ABA programmes includes goals to
-                  address concerns such as:
-                </p>
-                <ul class="moretext">
-                  <li>Maladaptive Behaviour</li>
-                  <li>Conversation and pre-conversational skills</li>
-                  <li>Adaptive, daily living skills</li>
-                  <li>Attending skills</li>
-                  <li>Fine & gross motor skills</li>
-                  <li>Play skills</li>
-                  <li>Social skills</li>
-                  <li>Communication skills</li>
-                  <li>Imitative skills</li>
-                  <li>Functional Academic skills</li>
-                </ul>
-                <a class="moreless-button" href="#">Read more</a>
+                <div>
+                  <p>
+                    ABA focuses on treating the disorder's problems by facilitating the learning of suitable and functional behaviours rather than the
+                    dysfunctional or inappropriate actions. ABA is an evidence-based technique that has been shown to be useful not only for those with
+                    Autism but also for other diseases such as ADHD, Depression, ASD and other developmental disabilities. ABA programmes includes goals to
+                    address concerns such as:
+                  </p>
+                  <ul>
+                    <li>Maladaptive Behaviour</li>
+                    <li>Conversation and pre-conversational skills</li>
+                    <li>Adaptive, daily living skills</li>
+                    <li>Attending skills</li>
+                    <li>Fine & gross motor skills</li>
+                    <li>Play skills</li>
+                    <li>Social skills</li>
+                    <li>Communication skills</li>
+                    <li>Imitative skills</li>
+                    <li>Functional Academic skills</li>
+                  </ul>
+                </div>
               </section>
 
               <section id="tab-2" class="tab-body entry-content">
@@ -1052,41 +1051,52 @@
               </section>
 
               <section id="tab-3" class="tab-body entry-content">
-                <h2>Early Intervention </h2>
+                <h2>Early Intervention</h2>
                 <p>
-                  When a child does not appear to be developing according to the regular timetable of new-born milestones, parents and family members are understandably concerned. 
-                  At The Bridge, early intervention is a complete service that provides focused stimulation for both children and preschoolers with developmental delays, high-risk conditions, or disabilities.
+                  When a child does not appear to be developing according to the regular timetable of new-born milestones, parents and family members are
+                  understandably concerned. At The Bridge, early intervention is a complete service that provides focused stimulation for both children and
+                  preschoolers with developmental delays, high-risk conditions, or disabilities.
                 </p>
-                <p>The ultimate goal of the Early Intervention program is to assist children in learning skills related to the developmental areas that normally develop during the first three years of life such as: 
+                <p>
+                  The ultimate goal of the Early Intervention program is to assist children in learning skills related to the developmental areas that
+                  normally develop during the first three years of life such as:
                 </p>
-                <UL>
+                <ul>
                   <li>Physical (reaching, rolling, crawling, and walking)</li>
                   <li>Cognitive (thinking, learning, solving problems)</li>
                   <li>Social (playing, feeling secure and happy)</li>
                   <li>Self Help (eating, dressing).</li>
-                </UL>
-                <p>If the child has a developmental delay in one or more of these areas, the child receives individualized treatment to fulfil his or her specific requirements.</p>
+                </ul>
+                <p>
+                  If the child has a developmental delay in one or more of these areas, the child receives individualized treatment to fulfil his or her
+                  specific requirements.
+                </p>
               </section>
 
               <section id="tab-4" class="tab-body entry-content">
                 <h2>Special Educational Programs</h2>
-                <p>Special education is programme targeting child who are eligible for special education because their learning and upbringing is impacted by a physical, cognitive, behavioural, or an emotional condition. This program ensures that all disabled children are able to receive normal adequate education alongside their friends and siblings.</p>
+                <p>
+                  Special education is programme targeting child who are eligible for special education because their learning and upbringing is impacted
+                  by a physical, cognitive, behavioural, or an emotional condition. This program ensures that all disabled children are able to receive
+                  normal adequate education alongside their friends and siblings.
+                </p>
                 <p>This program provides services such as:</p>
                 <ul>
-                 <li>Individualized education program (IEP).</li>
-                 <li>Occupational therapy to help with daily activities.</li>
-                 <li>Supplemental aids and classroom aide.</li>
-                 <li>Speech therapy to help with communicating and feeding problems.</li>
+                  <li>Individualized education program (IEP).</li>
+                  <li>Occupational therapy to help with daily activities.</li>
+                  <li>Supplemental aids and classroom aide.</li>
+                  <li>Speech therapy to help with communicating and feeding problems.</li>
                 </ul>
               </section>
 
               <section id="tab-5" class="tab-body entry-content">
                 <h2>Vocational Program</h2>
                 <p>
-                  Children in our vocational programme learn critical life skills that will benefit them at home and in the community. These abilities boost self-assurance and participation in everyday activities. 
+                  Children in our vocational programme learn critical life skills that will benefit them at home and in the community. These abilities
+                  boost self-assurance and participation in everyday activities.
                 </p>
                 <p>
-                  The bridge’s vocational program focuses on teaching a wide range of core skills needed for employment and enhancement, such skills are: 
+                  The bridge’s vocational program focuses on teaching a wide range of core skills needed for employment and enhancement, such skills are:
                 </p>
                 <ul>
                   <li>Time management</li>
@@ -1096,39 +1106,45 @@
                   <li>Positive attitude</li>
                   <li>Problem solving</li>
                 </ul>
-
               </section>
 
               <section id="tab-6" class="tab-body entry-content">
                 <h2>Family Therapy and Counseling</h2>
                 <p>
-                  Family therapy is a type of counseling treatment that looks at psychological issues and how to deal with them via the interactions of family members. Families are viewed as a cohesive, interrelated system in which each family member's psychological functioning is influenced by each family member individually and collectively as an entire system.
+                  Family therapy is a type of counseling treatment that looks at psychological issues and how to deal with them via the interactions of
+                  family members. Families are viewed as a cohesive, interrelated system in which each family member's psychological functioning is
+                  influenced by each family member individually and collectively as an entire system.
                 </p>
                 <p>
-                  In family therapy the focus is usually on family members' interpersonal patterns and communication. When a child has a behavior problem, for example, a family therapist is more likely to see the child's problems in the context of the family structure rather on his or her difficulties. 
+                  In family therapy the focus is usually on family members' interpersonal patterns and communication. When a child has a behavior problem,
+                  for example, a family therapist is more likely to see the child's problems in the context of the family structure rather on his or her
+                  difficulties.
                 </p>
-                <p>During family therapy, our expert team helps the family interact in a new, different way that may improve the child’s functioning system. 
+                <p>
+                  During family therapy, our expert team helps the family interact in a new, different way that may improve the child’s functioning system.
                   Family therapy can help people with a variety of issues, including:
-                  </p>
-                  <ul>
-                  <li>Anorexia nervosa </li>
+                </p>
+                <ul>
+                  <li>Anorexia nervosa</li>
                   <li>Abuse of drugs and alcohol</li>
                   <li>Obesity and overweight</li>
-                  </ul>
+                </ul>
               </section>
 
               <section id="tab-7" class="tab-body entry-content">
                 <h2>Group Therapy</h2>
                 <p>
-                  Group therapy is a psychotherapy treatment in which several skilled therapists work with a group of people at the same time. It’s a form of treatment that is focuses on bringing people of share similar experiences and struggles together. 
+                  Group therapy is a psychotherapy treatment in which several skilled therapists work with a group of people at the same time. It’s a form
+                  of treatment that is focuses on bringing people of share similar experiences and struggles together.
                 </p>
                 <p>
-                  Group therapy deals with a variety of conditions and mental health concerns such as social anxiety and depression. Some other examples of conditions a group may focus on include:
+                  Group therapy deals with a variety of conditions and mental health concerns such as social anxiety and depression. Some other examples of
+                  conditions a group may focus on include:
                 </p>
                 <ul>
                   <li>Grief</li>
                   <li>Chronic pain</li>
-                  <li>Anger management </li>
+                  <li>Anger management</li>
                   <li>Post-traumatic stress disorder</li>
                   <li>Generalized anxiety disorder</li>
                   <li>Bipolar disorder</li>
@@ -1139,176 +1155,191 @@
                 </ul>
               </section>
             </div>
-            <!-- </div> -->
-            <!-- </div> -->
-            <!-- </section> -->
           </div>
 
-          <!-- services colTabs on mobile screen -->
-          <div class="row">
-            <!-- <div class="site-wrapper"> -->
-              <!-- <section class="tabs-wrapper"> -->
-                <div class="tabs-container">
-                  <div class="tabs-block">
-                    <div id="mobtabs" class="mtabs">
-                      <input type="radio" name="tabs" id="tab1" checked="checked"/>
-                      <label for="tab1">Applied Behavioral Analysis</label>
-                      <div class="tab">
-                        <!-- <h2>Applied Behavioral Analysis (ABA)</h2> -->
-                        <p>What is ABA Therapy? Is ABA Right for My Child?</p>
-                        <p>
-                          Behavioural analysis is a branch of psychology that aims to comprehend, predict, and modify human behaviour. ABA is based on the fact
-                          that a client's behaviour is influenced by previous and current environmental experiences, or contingencies, as well as other genetic
-                          and/or environmental factors.
-                        </p>
-                        <p class="moretext">
-                          ABA focuses on treating the disorder's problems by facilitating the learning of suitable and functional behaviours rather than the
-                          dysfunctional or inappropriate actions. ABA is an evidence-based technique that has been shown to be useful not only for those with
-                          Autism but also for other diseases such as ADHD, Depression, ASD and other developmental disabilities. ABA programmes includes goals to
-                          address concerns such as:
-                        </p>
-                        <ul class="moretext">
-                          <li>Maladaptive Behaviour</li>
-                          <li>Conversation and pre-conversational skills</li>
-                          <li>Adaptive, daily living skills</li>
-                          <li>Attending skills</li>
-                          <li>Fine & gross motor skills</li>
-                          <li>Play skills</li>
-                          <li>Social skills</li>
-                          <li>Communication skills</li>
-                          <li>Imitative skills</li>
-                          <li>Functional Academic skills</li>
-                        </ul>
-                        <a class="moreless-button" href="#">Read more</a>
-                      </div>
-        
-                      <input type="radio" name="tabs" id="tab2" />
-                      <label for="tab2">Speech and Language Therapy</label>
-                      <div class="tab">
-                        <!-- <h2>Speech and Language Therapy</h2> -->
-                        <p>
-                          Speech and Language Therapy is a programme that supports children and young people (0– 19) with speech, language, and communication
-                          problems. This includes problems such as:
-                        </p>
-                        <br />
-                        <ul>
-                          <li>Understanding a language</li>
-                          <li>Using a language</li>
-                          <li>Communication and interaction</li>
-                          <li>Dysfluency (stammering)</li>
-                          <li>Speech sounds</li>
-                          <li>Social skills</li>
-                        </ul>
-                        <p class="moretext">
-                          We also help children and young people who have eating and drinking difficulties. Some of the children we help may have exceptional
-                          needs, such as a cleft palate, hearing loss, special educational needs, or disabilities. To assist in helping the child, we collaborate
-                          closely with parents, caregivers, and other experts. Workshops, training, assessments, and group and/or individual therapy sessions are
-                          all included in this.
-                        </p>
-                        <a class="moreless-button" href="#">Read more</a>
-                      </div>
-        
-                      <input type="radio" name="tabs" id="tab3" />
-                      <label for="tab3">Early Intervention</label>
-                      <div class="tab">
-                        <!-- <h2>Early Intervention </h2> -->
-                        <p>
-                          When a child does not appear to be developing according to the regular timetable of new-born milestones, parents and family members are understandably concerned. 
-                          At The Bridge, early intervention is a complete service that provides focused stimulation for both children and preschoolers with developmental delays, high-risk conditions, or disabilities.
-                        </p>
-                        <p>The ultimate goal of the Early Intervention program is to assist children in learning skills related to the developmental areas that normally develop during the first three years of life such as: 
-                        </p>
-                        <UL>
-                          <li>Physical (reaching, rolling, crawling, and walking)</li>
-                          <li>Cognitive (thinking, learning, solving problems)</li>
-                          <li>Social (playing, feeling secure and happy)</li>
-                          <li>Self Help (eating, dressing).</li>
-                        </UL>
-                        <p>If the child has a developmental delay in one or more of these areas, the child receives individualized treatment to fulfil his or her specific requirements.</p>
-                      </div>
-        
-                      <input type="radio" name="tabs" id="tab4" />
-                      <label for="tab4">Special Educational Programs</label>
-                      <div class="tab">
-                        <!-- <h2>Special Educational Programs</h2> -->
-                        <p>Special education is programme targeting child who are eligible for special education because their learning and upbringing is impacted by a physical, cognitive, behavioural, or an emotional condition. This program ensures that all disabled children are able to receive normal adequate education alongside their friends and siblings.</p>
-                        <p>This program provides services such as:</p>
-                        <ul>
-                        <li>Individualized education program (IEP).</li>
-                        <li>Occupational therapy to help with daily activities.</li>
-                        <li>Supplemental aids and classroom aide.</li>
-                        <li>Speech therapy to help with communicating and feeding problems.</li>
-                        </ul>
-                      </div>
-                      
-                      <input type="radio" name="tabs" id="tab5" />
-                      <label for="tab5">Vocational Program</label>
-                      <div class="tab">
-                        <!-- <h2>Vocational Program</h2> -->
-                        <p>
-                          Children in our vocational programme learn critical life skills that will benefit them at home and in the community. These abilities boost self-assurance and participation in everyday activities. 
-                        </p>
-                        <p>
-                          The bridge’s vocational program focuses on teaching a wide range of core skills needed for employment and enhancement, such skills are: 
-                        </p>
-                        <ul>
-                          <li>Time management</li>
-                          <li>Organisation and planning</li>
-                          <li>Effective communication</li>
-                          <li>Teamwork</li>
-                          <li>Positive attitude</li>
-                          <li>Problem solving</li>
-                        </ul>
-                      </div>
-                      
-                      <input type="radio" name="tabs" id="tab6" />
-                      <label for="tab6">Family Therapy and Counseling</label>
-                      <div class="tab">
-                        <!-- <h2>Family Therapy and Counseling</h2> -->
-                        <p>
-                          Family therapy is a type of counseling treatment that looks at psychological issues and how to deal with them via the interactions of family members. Families are viewed as a cohesive, interrelated system in which each family member's psychological functioning is influenced by each family member individually and collectively as an entire system.
-                        </p>
-                        <p>
-                          In family therapy the focus is usually on family members' interpersonal patterns and communication. When a child has a behavior problem, for example, a family therapist is more likely to see the child's problems in the context of the family structure rather on his or her difficulties. 
-                        </p>
-                        <p>During family therapy, our expert team helps the family interact in a new, different way that may improve the child’s functioning system. 
-                          Family therapy can help people with a variety of issues, including:
-                          </p>
-                          <ul>
-                          <li>Anorexia nervosa </li>
-                          <li>Abuse of drugs and alcohol</li>
-                          <li>Obesity and overweight</li>
-                          </ul>
-                      </div>
-
-                      <input type="radio" name="tabs" id="tab7" />
-                      <label for="tab7">Group Therapy</label>
-                      <div class="tab">
-                        <!-- <h2>Group Therapy</h2> -->
-                        <p>
-                          Group therapy is a psychotherapy treatment in which several skilled therapists work with a group of people at the same time. It’s a form of treatment that is focuses on bringing people of share similar experiences and struggles together. 
-                        </p>
-                        <p>
-                          Group therapy deals with a variety of conditions and mental health concerns such as social anxiety and depression. Some other examples of conditions a group may focus on include:
-                        </p>
-                        <ul>
-                          <li>Grief</li>
-                          <li>Chronic pain</li>
-                          <li>Anger management </li>
-                          <li>Post-traumatic stress disorder</li>
-                          <li>Generalized anxiety disorder</li>
-                          <li>Bipolar disorder</li>
-                          <li>Panic disorder</li>
-                          <li>Phobias</li>
-                          <li>Attention deficit hyperactivity disorder</li>
-                          <li>Substance use disorder</li>
-                        </ul>
-                      </div>
+          <!-- services mobTabs on mobile screen -->
+          <div id="mobtabs" class="row">
+            <div class="tabs-container">
+              <div class="tabs-block">
+                <div class="mtabs">
+                  <input type="radio" name="tabs" id="tab1" checked="checked" />
+                  <label for="tab1">Applied Behavioral Analysis</label>
+                  <div class="tab">
+                    <p>What is ABA Therapy? Is ABA Right for My Child?</p>
+                    <p>
+                      Behavioural analysis is a branch of psychology that aims to comprehend, predict, and modify human behaviour. ABA is based on the fact
+                      that a client's behaviour is influenced by previous and current environmental experiences, or contingencies, as well as other genetic
+                      and/or environmental factors.
+                    </p>
+                    <div class="moretext">
+                    <p >
+                      ABA focuses on treating the disorder's problems by facilitating the learning of suitable and functional behaviours rather than the
+                      dysfunctional or inappropriate actions. ABA is an evidence-based technique that has been shown to be useful not only for those with
+                      Autism but also for other diseases such as ADHD, Depression, ASD and other developmental disabilities. ABA programmes includes goals
+                      to address concerns such as:
+                    </p>
+                    <ul>
+                      <li>Maladaptive Behaviour</li>
+                      <li>Conversation and pre-conversational skills</li>
+                      <li>Adaptive, daily living skills</li>
+                      <li>Attending skills</li>
+                      <li>Fine & gross motor skills</li>
+                      <li>Play skills</li>
+                      <li>Social skills</li>
+                      <li>Communication skills</li>
+                      <li>Imitative skills</li>
+                      <li>Functional Academic skills</li>
+                    </ul>
                     </div>
+                    <a href="javascript:void(0);" class="read-more r-link link text-underlined" title="Read More">Read More</a>
+                  </div>
+
+                  <input type="radio" name="tabs" id="tab2" />
+                  <label for="tab2">Speech and Language Therapy</label>
+                  <div class="tab">
+                    <p>
+                      Speech and Language Therapy is a programme that supports children and young people (0– 19) with speech, language, and communication
+                      problems. This includes problems such as:
+                    </p>
+                    <ul>
+                      <li>Understanding a language</li>
+                      <li>Using a language</li>
+                      <li>Communication and interaction</li>
+                      <li>Dysfluency (stammering)</li>
+                      <li>Speech sounds</li>
+                      <li>Social skills</li>
+                    </ul>
+                    <p class="moretext">
+                      We also help children and young people who have eating and drinking difficulties. Some of the children we help may have exceptional
+                      needs, such as a cleft palate, hearing loss, special educational needs, or disabilities. To assist in helping the child, we
+                      collaborate closely with parents, caregivers, and other experts. Workshops, training, assessments, and group and/or individual
+                      therapy sessions are all included in this.
+                    </p>
+                    <a href="javascript:void(0);" class="read-more r-link link text-underlined" title="Read More">Read More</a>
+                  </div>
+
+                  <input type="radio" name="tabs" id="tab3" />
+                  <label for="tab3">Early Intervention</label>
+                  <div class="tab">
+                    <p>
+                      When a child does not appear to be developing according to the regular timetable of new-born milestones, parents and family members
+                      are understandably concerned. At The Bridge, early intervention is a complete service that provides focused stimulation for both
+                      children and preschoolers with developmental delays, high-risk conditions, or disabilities.
+                    </p>
+                    <div class="moretext">
+                    <p>
+                      The ultimate goal of the Early Intervention program is to assist children in learning skills related to the developmental areas that
+                      normally develop during the first three years of life such as:
+                    </p>
+                    <ul>
+                      <li>Physical (reaching, rolling, crawling, and walking)</li>
+                      <li>Cognitive (thinking, learning, solving problems)</li>
+                      <li>Social (playing, feeling secure and happy)</li>
+                      <li>Self Help (eating, dressing).</li>
+                    </ul>
+                    <p>
+                      If the child has a developmental delay in one or more of these areas, the child receives individualized treatment to fulfil his or
+                      her specific requirements.
+                    </p>
+                    </div>
+                    <a href="javascript:void(0);" class="read-more r-link link text-underlined" title="Read More">Read More</a>
+                  </div>
+
+                  <input type="radio" name="tabs" id="tab4" />
+                  <label for="tab4">Special Educational Programs</label>
+                  <div class="tab">
+                    <p>
+                      Special education is programme targeting child who are eligible for special education because their learning and upbringing is
+                      impacted by a physical, cognitive, behavioural, or an emotional condition. This program ensures that all disabled children are able
+                      to receive normal adequate education alongside their friends and siblings.
+                    </p>
+                    <p>This program provides services such as:</p>
+                    <ul class="moretext">
+                      <li>Individualized education program (IEP).</li>
+                      <li>Occupational therapy to help with daily activities.</li>
+                      <li>Supplemental aids and classroom aide.</li>
+                      <li>Speech therapy to help with communicating and feeding problems.</li>
+                    </ul>
+                    <a href="javascript:void(0);" class="read-more r-link link text-underlined" title="Read More">Read More</a>
+                  </div>
+
+                  <input type="radio" name="tabs" id="tab5" />
+                  <label for="tab5">Vocational Program</label>
+                  <div class="tab">
+                    <p>
+                      Children in our vocational programme learn critical life skills that will benefit them at home and in the community. These abilities
+                      boost self-assurance and participation in everyday activities.
+                    </p>
+                    <p>
+                      The bridge’s vocational program focuses on teaching a wide range of core skills needed for employment and enhancement, such skills
+                      are:
+                    </p>
+                    <ul class="moretext">
+                      <li>Time management</li>
+                      <li>Organisation and planning</li>
+                      <li>Effective communication</li>
+                      <li>Teamwork</li>
+                      <li>Positive attitude</li>
+                      <li>Problem solving</li>
+                    </ul>
+                    <a href="javascript:void(0);" class="read-more r-link link text-underlined" title="Read More">Read More</a>
+                  </div>
+
+                  <input type="radio" name="tabs" id="tab6" />
+                  <label for="tab6">Family Therapy and Counseling</label>
+                  <div class="tab">
+                    <p>
+                      Family therapy is a type of counseling treatment that looks at psychological issues and how to deal with them via the interactions of
+                      family members. Families are viewed as a cohesive, interrelated system in which each family member's psychological functioning is
+                      influenced by each family member individually and collectively as an entire system.
+                    </p>
+                    <div class="moretext">
+                    <p>
+                      In family therapy the focus is usually on family members' interpersonal patterns and communication. When a child has a behavior
+                      problem, for example, a family therapist is more likely to see the child's problems in the context of the family structure rather on
+                      his or her difficulties.
+                    </p>
+                    <p>
+                      During family therapy, our expert team helps the family interact in a new, different way that may improve the child’s functioning
+                      system. Family therapy can help people with a variety of issues, including:
+                    </p>
+                    <ul>
+                      <li>Anorexia nervosa</li>
+                      <li>Abuse of drugs and alcohol</li>
+                      <li>Obesity and overweight</li>
+                    </ul>
+                    </div>
+                    <a href="javascript:void(0);" class="read-more r-link link text-underlined" title="Read More">Read More</a>
+                  </div>
+
+                  <input type="radio" name="tabs" id="tab7" />
+                  <label for="tab7">Group Therapy</label>
+                  <div class="tab">
+                    <p>
+                      Group therapy is a psychotherapy treatment in which several skilled therapists work with a group of people at the same time. It’s a
+                      form of treatment that is focuses on bringing people of share similar experiences and struggles together.
+                    </p>
+                    <p>
+                      Group therapy deals with a variety of conditions and mental health concerns such as social anxiety and depression. Some other
+                      examples of conditions a group may focus on include:
+                    </p>
+                    <ul class="moretext">
+                      <li>Grief</li>
+                      <li>Chronic pain</li>
+                      <li>Anger management</li>
+                      <li>Post-traumatic stress disorder</li>
+                      <li>Generalized anxiety disorder</li>
+                      <li>Bipolar disorder</li>
+                      <li>Panic disorder</li>
+                      <li>Phobias</li>
+                      <li>Attention deficit hyperactivity disorder</li>
+                      <li>Substance use disorder</li>
+                    </ul>
+                    <a href="javascript:void(0);" class="read-more r-link link text-underlined" title="Read More">Read More</a>
                   </div>
                 </div>
-              <!-- </section> -->
-            <!-- </div> -->
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1318,57 +1349,58 @@
       <!-----bottom section----->
       <!-------------------------->
       <section id="contactus" class="section-3 form sec-card" data-scroll data-scroll-repeat data-scroll-call="toggleBackToTop" data-anchor="contactus">
+        <!---------Gallary Container---------->
         <div class="container" style="margin-bottom: 50px">
           <!---------Section Head---------->
           <div class="row intro">
             <div class="col-12 col-md-9 align-self-center text-center text-md-left">
               <h2 class="featured"></h2>
-              <h3 class="main-title">A Closer look into our Center:</h3>
+              <h3 class="main-title">A Closer look into our Center</h3>
             </div>
           </div>
 
-          <!---------Gallary---------->
+          <!---------IMG Gallary---------->
           <div class="demo-gallary-cont">
             <div class="demo-gallery">
               <ul id="gallery-container">
                 <li data-src="assets/images/gallary/1.jpeg">
-                <a href="" class="img-hover-zoom">
-                    <img src="assets/images/gallary/1-thumb.jpeg">
+                  <a href="" class="img-hover-zoom">
+                    <img src="assets/images/gallary/1-thumb.jpeg" />
                   </a>
                 </li>
                 <li data-src="assets/images/gallary/2.jpeg">
-                <a href="" class="img-hover-zoom">
-                    <img src="assets/images/gallary/2.jpeg">
+                  <a href="" class="img-hover-zoom">
+                    <img src="assets/images/gallary/2.jpeg" />
                   </a>
                 </li>
                 <li data-src="assets/images/gallary/3.jpeg">
-                <a href="" class="img-hover-zoom">
-                    <img  src="assets/images/gallary/3.jpeg">
+                  <a href="" class="img-hover-zoom">
+                    <img src="assets/images/gallary/3.jpeg" />
                   </a>
                 </li>
                 <li data-src="assets/images/gallary/4.jpeg">
-                <a href="" class="img-hover-zoom">
-                    <img  src="assets/images/gallary/4.jpeg">
+                  <a href="" class="img-hover-zoom">
+                    <img src="assets/images/gallary/4.jpeg" />
                   </a>
                 </li>
                 <li data-src="assets/images/gallary/7.jpeg">
-                <a href="" class="img-hover-zoom">
-                    <img  src="assets/images/gallary/7.jpeg">
+                  <a href="" class="img-hover-zoom">
+                    <img src="assets/images/gallary/7.jpeg" />
                   </a>
                 </li>
                 <li data-src="assets/images/gallary/8.jpeg">
-                <a href="" class="img-hover-zoom">
-                    <img  src="assets/images/gallary/8.jpeg">
+                  <a href="" class="img-hover-zoom">
+                    <img src="assets/images/gallary/8.jpeg" />
                   </a>
                 </li>
                 <li data-src="assets/images/gallary/9.jpeg">
-                <a href="" class="img-hover-zoom">
-                    <img  src="assets/images/gallary/9.jpeg">
+                  <a href="" class="img-hover-zoom">
+                    <img src="assets/images/gallary/9.jpeg" />
                   </a>
                 </li>
                 <li data-src="assets/images/gallary/12.jpeg">
-                <a href="" class="img-hover-zoom">
-                    <img  src="assets/images/gallary/12.jpeg">
+                  <a href="" class="img-hover-zoom">
+                    <img src="assets/images/gallary/12.jpeg" />
                   </a>
                 </li>
               </ul>
@@ -1484,7 +1516,10 @@
                         <img src="assets/images/Thebridge.svg" alt="Thebridge" />
                       </a>
                     </div>
-                    <p>Authentic and innovative.<br />Built to the smallest detail<br />with a focus on usability<br />and performance.</p>
+                    <p>
+                      Children rehabilitation and capacity development center<br />
+                      that provides life changing outcomes for exceptional kids.
+                    </p>
                     <ul class="navbar-nav social share-list mt-0 ml-auto">
                       <li class="nav-item">
                         <a href="#" class="nav-link"><i class="icon-social-instagram ml-0"></i></a>
@@ -1492,9 +1527,9 @@
                       <li class="nav-item">
                         <a href="#" class="nav-link"><i class="icon-social-facebook"></i></a>
                       </li>
-                      <li class="nav-item">
+                      <!-- <li class="nav-item">
                         <a href="#" class="nav-link"><i class="icon-social-linkedin"></i></a>
-                      </li>
+                      </li> -->
                       <li class="nav-item">
                         <a href="#" class="nav-link"><i class="icon-social-twitter"></i></a>
                       </li>
@@ -1510,19 +1545,19 @@
                       <li class="nav-item">
                         <a href="#" class="nav-link">
                           <i class="icon-phone mr-2"></i>
-                          +1 123 98765 4321
+                          +971 56 5683172
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="#" class="nav-link">
                           <i class="icon-envelope mr-2"></i>
-                          hello@business.com
+                          info@thebridgeuae.com
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="#" class="nav-link">
                           <i class="icon-location-pin mr-2"></i>
-                          Office Street, 123
+                          AUH, Plaza Tower, Office 805
                         </a>
                       </li>
                       <li class="nav-item">
@@ -1532,14 +1567,14 @@
                   </div>
                   <div class="col-12 col-lg-4 p-3 text-center text-lg-left item">
                     <h4 class="title">Popular Tags</h4>
-                    <a href="#" class="badge tag">Mobile</a>
-                    <a href="#" class="badge tag">Development</a>
-                    <a href="#" class="badge tag">Technology</a>
-                    <a href="#" class="badge tag">App</a>
-                    <a href="#" class="badge tag">Education</a>
-                    <a href="#" class="badge tag">Business</a>
-                    <a href="#" class="badge tag">Health</a>
-                    <a href="#" class="badge tag">Industry</a>
+                    <a href="#" class="badge tag">Family Centered Services</a>
+                    <a href="#" class="badge tag">ABA therapy</a>
+                    <a href="#" class="badge tag">Early Intervention Program</a>
+                    <!-- <a href="#" class="badge tag">Group Therapy</a> -->
+                    <a href="#" class="badge tag">Special Education</a>
+                    <a href="#" class="badge tag">Family Counseling</a>
+                    <a href="#" class="badge tag">Speech and Language Therapy </a>
+                    <a href="#" class="badge tag">Vocational Program</a>
                   </div>
                 </div>
               </div>
@@ -1551,10 +1586,13 @@
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-6 p-3 text-center text-lg-left">
-                <p>Enjoy the low price. We are tracking any intention of piracy.</p>
+                <!-- <p>Enjoy the low price. We are tracking any intention of piracy.</p> -->
               </div>
-              <div class="col-12 col-md-6 p-3 text-center text-lg-right">
-                <p>© 2021 Leverage is Proudly Powered by <a href="https://codings.dev" target="_blank">Codings</a>.</p>
+              <div class="col-12 p-3 text-center text-lg-center">
+                <p>
+                  © 2022 Thebridge is Proudly Powered by <a href="https://zoombree.com" target="_blank"><small>zoombree Development</small></a
+                  >.
+                </p>
               </div>
             </div>
           </div>
@@ -1596,16 +1634,17 @@
     <script src="assets/js/vendor/animation.min.js"></script>
     <script src="assets/js/vendor/progress-radial.min.js"></script>
     <script src="assets/js/vendor/bricklayer.min.js"></script>
-    <script src="assets/js/vendor/gallery.min.js"></script>
+    <!-- <script src="assets/js/vendor/gallery.min.js"></script> -->
     <script src="assets/js/vendor/shuffle.min.js"></script>
     <script src="assets/js/vendor/cookie-notice.min.js"></script>
     <script src="assets/js/vendor/particles.min.js"></script>
     <script src="assets/js/vendor/owl.carousel.min.js"></script>
     <script src="assets/js/vendor/locomotive-scroll.min.js"></script>
     <script src="assets/js/vendor/lightgallary/lightgallery.min.js"></script>
+    <script src="assets/js/vendor/lightgallary/lightgallery.umd.js"></script>
     <!-- lightgallery plugins -->
-    <!-- <script src="assets/js/vendor/lightgallary/thumbnail/lg-thumbnail.min.js"></script>
-    <script src="assets/js/vendor/lightgallary/fullscreen/lg-fullscreen.min.js"></script> -->
+    <script src="assets/js/vendor/lightgallary/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="assets/js/vendor/lightgallary/fullscreen/lg-fullscreen.min.js"></script>
 
     <!-- ==============================================
     custome Scripts
@@ -1615,7 +1654,7 @@
     <script src="assets/js/bridge-hslider.js"></script>
     <script src="assets/js/info-tabs.js"></script>
     <script src="assets/js/service-tabs.js"></script>
-    
+
     <!-- <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
     <script>
       window.formbutton =
