@@ -12,7 +12,9 @@ jQuery(document).ready(function ($) {
     isPause = false; //false for auto slideshow
 
     $bar = obj.find(".progress .bar");
-
+    // pause
+    
+    // pause
     function startProgressbar() {
       resetProgressbar();
       percentTime = 0;

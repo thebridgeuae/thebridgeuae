@@ -1657,10 +1657,10 @@
 	/* background: rgb(247, 235, 213); */
 	/* background: rgba(233, 114, 3, 0.8); */
 }
-#who img{
-	border-radius: 5px;
-	/* top: -10vh; */
-    /* position: relative; */
+#info img{
+	/* border-radius: 5px; */
+	top: -3vh;
+    position: relative;
 }
  .tab-content {
 	 padding-top: 3rem;

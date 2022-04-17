@@ -390,7 +390,7 @@ h2.featured {
 h2.featured:before {
   content: "";
   position: absolute;
-  top: -5px;
+  /* top: -5px; */
   left: 0;
   width: 75px;
   height: 5px;
@@ -1643,7 +1643,7 @@ header .navbar-sticky {
   /* edit */
   top: 0;
   /* background-color: var(--header-bg-color); */
-  background-color: #FFFAF1;
+  background-color: #F9F7E6;
   filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.555));
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
   box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);

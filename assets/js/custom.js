@@ -22,18 +22,18 @@ const locoScroll = new LocomotiveScroll({
   scrollbarContainer:false,
   lerp: 0.03,
   smartphone: {
-    smooth: false,
+    smooth: true,
     inertia: 0.8,
     getDirection: true,
     // breakpoint: 767,
   },
   tablet: {
-    smooth: false,
+    smooth: true,
     inertia: 0.8,
     getDirection: true,
     // breakpoint: 1024,
   },
-  smoothMobile: false,
+  smoothMobile: true,
   scrollFromAnywhere: false,
   getSpeed: true,
   getDirection: true,
@@ -279,6 +279,18 @@ function init() {
 }
 /* ==============================================  
            Google MAp End
+=============================================== */
+
+
+/* ==============================================  
+           Humberger Menue Start
+=============================================== */
+function closeNav() {
+  document.getElementById("checkbox").checked = false;
+
+}
+/* ==============================================  
+           Humberger MEnue End
 =============================================== */
 
 // -----------------images load-----------------------------
