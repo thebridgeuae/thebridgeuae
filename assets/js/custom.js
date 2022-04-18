@@ -9,8 +9,6 @@ const log = document.getElementById("logo");
 const navbar = document.querySelector(".navbar");
 const toTop = document.getElementById("scroll-to-top");
 
-// ------------------Global Selectors;--------------------
-
 // ------------------LOCOMOTIVE--------------------
 //initialize locomotive
 const locoScroll = new LocomotiveScroll({
@@ -118,6 +116,151 @@ anchorLinks.forEach((anchorLink) => {
 /* ==============================================  
            Locomotive scroll End
 =============================================== */
+
+/* ==============================================  
+           Hero Slider Start
+=============================================== */
+// $(document).ready(function() {
+//   console.log($('#sliderbtns').attr('id'));
+// });
+
+
+
+jQuery(document).ready(function ($) {
+  const outerbtn = ('#'+$("#sliderbtns").attr('id'));
+  // console.log(outerbtn)
+  startSlider($("#slider"), 39); // Slide container ID, SlideShow interval
+
+  function startSlider(obj, timer) {
+    var obj, timer;
+    var id = "#" + obj.attr("id");
+    // console.log(id)
+    var slideCount = obj.find("ul li").length;
+    slideWidth = obj.attr("data-width");
+    var sliderUlWidth = (slideCount + 1) * slideWidth;
+    var time = 2;
+    var $bar, isPause, tick, percentTime;
+    isPause = false; //false for auto slideshow
+
+    $bar = obj.find(".progress .bar");
+    // pause
+    
+    // pause
+    function startProgressbar() {
+      resetProgressbar();
+      percentTime = 0;
+      tick = setInterval(interval, timer);
+    }
+
+    function interval() {
+      if (isPause === false) {
+        percentTime += 1 / (time + 0.1);
+        $bar.css({
+          width: percentTime + "%",
+        });
+        if (percentTime >= 100) {
+          moveRight();
+          startProgressbar();
+        }
+      }
+    }
+
+    function resetProgressbar() {
+      $bar.css({
+        width: 0 + "%",
+      });
+      clearTimeout(tick);
+    }
+
+    function startslide() {
+      $(id + " ul li:last-child").prependTo(id + " ul");
+      obj.find("ul").css({ width: sliderUlWidth + "vw", marginLeft: -slideWidth + "vw" });
+
+      obj.find("ul li:last-child").appendTo(obj.attr("id") + " ul");
+    }
+
+    if (slideCount > 1) {
+      startslide();
+      startProgressbar();
+    } else {
+      // hade navigation buttons for 1 slide only
+      $(id + " button.control_prev").hide();
+      $(id + " button.control_next").hide();
+    }
+
+    function moveLeft() {
+      $(id + " ul").css({ transition: "1s", transform: "translateX(" + slideWidth + "vw)" });
+
+      setTimeout(function () {
+        $(id + " ul li:last-child").prependTo(id + " ul");
+        $(id + " ul").css({ transition: "none", transform: "translateX(" + 0 + "vw)" });
+
+        $("li.actslide").prev().addClass("actslide").next().removeClass("actslide");
+      }, 1000);
+    }
+
+    function moveRight2() {
+      // fix for only 2 slades
+      $(id + " ul li:first-child").appendTo(id + " ul");
+
+      $(id + " ul")
+        .css({ transition: "none", transform: "translateX(100vw)" })
+        .delay();
+
+      setTimeout(
+        function () {
+          $(id + " ul").css({ transition: "1s", transform: "translateX(0vw)" });
+        },
+        100,
+        setTimeout(function () {
+          $(id + " ul").css({ transition: "none", transform: "translateX(0vw)" });
+          $("li.actslide").next().addClass("actslide").prev().removeClass("actslide");
+        }, 1000)
+      );
+    }
+
+    function moveRight() {
+      if (slideCount > 2) {
+        $(id + " ul").css({ transition: "1s", transform: "translateX(" + -1 * slideWidth + "vw)" });
+
+        setTimeout(function () {
+          $(id + " ul li:first-child").appendTo(id + " ul");
+          $(id + " ul").css({ transition: "none", transform: "translateX(" + 0 + "vw)" });
+
+          $("li.actslide").next().addClass("actslide").prev().removeClass("actslide");
+        }, 1000);
+      } else {
+        moveRight2();
+      }
+    }
+
+    // console.log(outerbtn)
+    $(outerbtn + " button.control_prev").click(function () {
+      // console.log(outerbtn)
+      moveLeft();
+      startProgressbar();
+    });
+
+    $(outerbtn + " button.control_next").click(function () {
+      moveRight();
+
+      startProgressbar();
+    });
+
+    $(id + " .progress").click(function () {
+      if (isPause === false) {
+        isPause = true;
+      } else {
+        isPause = false;
+      }
+    });
+  }
+});
+/* ==============================================  
+           Hero Slider End
+=============================================== */
+
+
 /* ==============================================  
             Form Validation Start
 =============================================== */
@@ -199,25 +342,13 @@ anchorLinks.forEach((anchorLink) => {
   
 
 })(jQuery);
-
-/* ==============================================  
+/* =============================================  
            Form Validation End
 =============================================== */
 
 /* ==============================================  
            Expand/Collapse Text
 =============================================== */
-// $(".moreless-button").click(function () {
-//   $(".moretext").slideToggle();
-//   if ($(".moreless-button").text() === "Read more") {
-//     console.log('yes')
-//     $(this).text("Read less");
-//     console.log('less')
-//   } else {
-//     $(this).text("Read more");
-//   }
-// });
-
 $('.read-more').click(function() {
   $(this).prev().slideToggle();
   if (($(this).text()) == "Read More") {
@@ -243,6 +374,137 @@ $(document).ready(function() {
 })
 /* ==============================================  
             light Gallary end
+=============================================== */
+
+/* ==============================================  
+        info Tabs carousal slider Start
+=============================================== */
+$(function() {
+
+	var owl = $('.owl-1');
+    owl.owlCarousel({
+        loop:false,
+        margin:0,
+        nav:false,
+        dots: false,
+        items: 1,
+        smartSpeed: 1000,
+        autoplay: false,
+        navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">']
+    });
+
+    var carousel_nav_a = $('.carousel-nav a');
+
+    carousel_nav_a.each(function(slide_index){
+        var $this = $(this);
+        $this.attr('data-num', slide_index);
+        $this.click(function(e) {
+            owl.trigger('to.owl.carousel',[slide_index,1500]);
+            e.preventDefault();
+        })
+    })
+
+    owl.on('changed.owl.carousel', function(event) {
+        carousel_nav_a.removeClass('active');
+        $(".carousel-nav a[data-num="+event.item.index+"]").addClass('active');
+    })
+
+	
+})
+/* ==============================================  
+        info Tabs carousal slider End
+=============================================== */
+
+
+/* ==============================================  
+        vertical Tabs navigation start
+=============================================== */
+!(function () {
+  var t = {
+      611: function () {
+        !(function (t) {
+          const e = t("#vtabs .tab-link"),
+            r = t("#vtabs .tab-body");
+          let n;
+          const o = () => {
+            e.off("click").on("click", function (o) {
+              o.preventDefault(),
+                o.stopPropagation(),
+                window.clearTimeout(n),
+                e.removeClass("active "),
+                r.removeClass("active "),
+                r.removeClass("active-content"),
+                t(this).addClass("active"),
+                t(t(this).attr("href")).addClass("active"),
+                (n = setTimeout(() => {
+                  t(t(this).attr("href")).addClass("active-content");
+                }, 50));
+            });
+          };
+          t(function () {
+            o();
+          });
+        })(jQuery);
+      },
+      221: function (t, e, r) {
+        "use strict";
+        t.exports = r.p + "css/style.css";
+      },
+    },
+    e = {};
+  function r(n) {
+    var o = e[n];
+    if (void 0 !== o) return o.exports;
+    var i = (e[n] = { exports: {} });
+    return t[n](i, i.exports, r), i.exports;
+  }
+  (r.n = function (t) {
+    var e =
+      t && t.__esModule
+        ? function () {
+            return t.default;
+          }
+        : function () {
+            return t;
+          };
+    return r.d(e, { a: e }), e;
+  }),
+    (r.d = function (t, e) {
+      for (var n in e) r.o(e, n) && !r.o(t, n) && Object.defineProperty(t, n, { enumerable: !0, get: e[n] });
+    }),
+    (r.g = (function () {
+      if ("object" == typeof globalThis) return globalThis;
+      try {
+        return this || new Function("return this")();
+      } catch (t) {
+        if ("object" == typeof window) return window;
+      }
+    })()),
+    (r.o = function (t, e) {
+      return Object.prototype.hasOwnProperty.call(t, e);
+    }),
+    (function () {
+      var t;
+      r.g.importScripts && (t = r.g.location + "");
+      var e = r.g.document;
+      if (!t && e && (e.currentScript && (t = e.currentScript.src), !t)) {
+        var n = e.getElementsByTagName("script");
+        n.length && (t = n[n.length - 1].src);
+      }
+      if (!t) throw new Error("Automatic publicPath is not supported in this browser");
+      (t = t
+        .replace(/#.*$/, "")
+        .replace(/\?.*$/, "")
+        .replace(/\/[^\/]+$/, "/")),
+        (r.p = t + "../");
+    })(),
+    (function () {
+      "use strict";
+      r(221), r(611);
+    })();
+})();
+/* ==============================================  
+        vertical Tabs navigation start
 =============================================== */
 
 
@@ -287,121 +549,14 @@ function init() {
 =============================================== */
 function closeNav() {
   document.getElementById("checkbox").checked = false;
-
 }
 /* ==============================================  
            Humberger MEnue End
 =============================================== */
 
+
+
+
 // -----------------images load-----------------------------
 // $('body').imagesLoaded().always( function( instance ) {
 //   locoScroll.update();
-
-// ------------------LOCOMOTIVE--------------------
-// Plugin @RokoCB :: Return the visible amount of px
-// of any element currently in viewport.
-// stackoverflow.com/questions/24768795/
-// (function ($, win) {
-//   $.fn.inViewport = function (cb) {
-//     return this.each(function (i, el) {
-//       function visPx() {
-//         var H = $(this).height(),
-//           r = el.getBoundingClientRect(),
-//           t = r.top,
-//           b = r.bottom;
-//         return cb.call(el, Math.max(0, t > 0 ? H - t : b < H ? b : H));
-//       }
-//       visPx();
-//       $(win).on("resize scroll", visPx);
-//     });
-//   };
-// })(jQuery, window);
-
-// $(".sec-card").inViewport(function (px) {
-//   if (px) $(this).addClass("triggeredCSS3");
-// });
-
-//--------------navbar/logo resize on scroll event ----------
-// $(function () {
-//   $(document).scroll(function () {
-//     var $nav = $("nav");
-//     var $log = $("#logo");
-//     var $burger = $("#burgermenu");
-//     var viewportWidth = $(window).width();
-//     if (viewportWidth >= 1199) {
-//     $nav.toggleClass("navbarshrink-onscroll", $(this).scrollTop() > $nav.height());
-//     $log.toggleClass("minilogo", $(this).scrollTop() > $nav.height());
-//     $burger.toggleClass('menu-wrap-poschange', $(window).scrollTop() == 0);
-//     }
-//   });
-// });
-
-// $(function () {
-//   $(document).scroll(function () {
-//     var $nav = $(".navbar-sticky");
-//     $nav.toggleClass('scrolled', $(this).scrollTop() > 150);
-//   });
-// });
-
-///----------------------------hide Humberger Menu---------------------------------------------
-// function hidHumbergerMenu() {
-// var section1 = document.querySelector('.banner');
-// var position1 = section1.getBoundingClientRect();
-// var section = document.querySelector(".footer");
-// var position = section.getBoundingClientRect();
-
-//Checking whether the specified sections are visible
-//If any of them is visible, then show the float content. Else, hide it.
-// if (position1.top < window.innerHeight && position1.bottom >= 0) {
-//Show the floating element
-//   document.querySelector('.float-popup').style.display = "block";
-//   return;
-// } else {
-//   document.querySelector('.float-popup').style.display = "none";
-// }
-
-// if (position.top < window.innerHeight && position.bottom >= 0) {
-//Show the floating element
-// document.querySelector("#burgermenu").style.display = "none";
-// } else {
-// document.querySelector("#burgermenu").style.display = "block";
-// }
-// }
-
-// Run the function on scroll
-// window.addEventListener("scroll", hidHumbergerMenu);
-// Run the function on load, if any elements are already visible without scrolling
-// window.addEventListener("load", hidHumbergerMenu);
-
-// -----------------Smooth scroll Bar-----------------------------
-// jQuery(function($){
-//     var Scrollbar = window.Scrollbar;
-//     var options = {
-//         'damping': 0.07,
-//         'alwaysShowTracks':true,
-//         'renderByPixels':true,
-//     }
-//         Scrollbar.init(document.getElementById('smoothscroll'),options);
-// });
-// const Scroll = SmoothScrollbar.init(this.scrollbarComponentRef.current);
-// if (disableXAxis) {
-// }
-
-// -----------------Docslider init-----------------------------
-// jQuery(function($){
-//     docSlider.init({
-//         speed : 800,
-//         startSpeed : null,
-//         easing : 'ease',
-//         scrollReset : false
-//       });
-// });
-
-// -----------------Document/location Reload-----------------------------
-// const reloadtButton = document.querySelector("#reload");
-// function reload() {
-//     reload = location.reload();
-// }
-// reloadtButton.addEventListener("click", reload, false);
-// When the window has finished loading create our google map below
-// google.maps.event.addDomListener(window, 'load', init);

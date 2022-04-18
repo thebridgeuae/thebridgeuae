@@ -17,16 +17,18 @@
     <meta name="description" content="The Bridge Center for Skills Development: specialized in supporting and rehabilitating children and young people" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Thebridge Rehab Center" />
+    <meta property="og:title" content="Thebridge - Skills Development and Rehabilitating Center" />
     <meta
       property="og:description"
       content="The Bridge Center for Skills Development: specialized in supporting and rehabilitating children and young people"
     />
     <meta property="og:url" content="index.html" />
     <meta property="og:site_name" content="Thebridge" />
-    <meta property="og:image" content="images/social-og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image" content="assets/images/Thebridge-intro.svg" />
+    <meta property="og:image:width" content="120" />
+    <!-- 1200 -->
+    <meta property="og:image:height" content="80" />
+    <!-- 630 -->
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -106,15 +108,15 @@
       :root {
         --primary-color: #fc5130;
         --secondary-color: #e0040b;
-        --header-bg-color: #fbf8ea;
-        --header-bg-color: #fbf8ea;
-        --hero-bg-color: #fbf8ea;
+        --header-bg-color: #f9f7e6;
+        --header-bg-color: #f9f7e6;
+        --hero-bg-color: #f9f7e6;
         --nav-item-color: #2f323a;
         --top-nav-item-color: #2f323a;
 
-        --section-1-bg-color: #F9F7E6;
-        --section-2-bg-color: #F9F7E6;
-        --section-3-bg-color: #F9F7E6;
+        --section-1-bg-color: #f9f7e6;
+        --section-2-bg-color: #f9f7e6;
+        --section-3-bg-color: #f9f7e6;
         --section-4-bg-color: #8f9d75;
         --section-5-bg-color: #ebf3e8;
         --section-6-bg-color: #d9f6ef;
@@ -185,17 +187,17 @@
                 <div>
                   <div>
                     <ul>
-                      <li class="">
-                        <a href="#hero" class="smooth-anchor " onclick="closeNav()"><h1>Home</h1></a>
+                      <li>
+                        <a href="#hero" class="smooth-anchor" onclick="closeNav()"><h1>Home</h1></a>
                       </li>
-                      <li class="">
-                        <a href="#who" class="smooth-anchor " onclick="closeNav()"><h1>About</h1></a>
-                      </li class="">
                       <li>
-                        <a href="#services" class="smooth-anchor " onclick="closeNav()"><h1>Services</h1></a>
-                      </li class="">
+                        <a href="#who" class="smooth-anchor" onclick="closeNav()"><h1>About</h1></a>
+                      </li>
                       <li>
-                        <a href="#contact" class="smooth-anchor " onclick="closeNav()"><h1>Contact</h1></a>
+                        <a href="#services" class="smooth-anchor" onclick="closeNav()"><h1>Services</h1></a>
+                      </li>
+                      <li>
+                        <a href="#contact" class="smooth-anchor" onclick="closeNav()"><h1>Contact</h1></a>
                       </li>
                     </ul>
                   </div>
@@ -217,8 +219,10 @@
         <!-- slider -->
         <!---------->
         <div class="slider" id="slider" data-width="100">
-          <button class="control_next">&rarr;</button>
-          <button class="control_prev">&larr;</button>
+          <!-- <div>
+            <button class="control_next"><i class="bi bi-arrow-right-circle"></i></button>
+            <button class="control_prev"><i class="bi bi-arrow-left-circle"></i></button>
+          </div> -->
 
           <!-- Hero slides content -->
           <!---------->
@@ -261,7 +265,7 @@
               <!-- hero video -->
               <!---------->
               <div class="hero-video-container">
-                <video autoplay loop muted playsinline id="vid-sld2" >
+                <video autoplay loop muted playsinline id="vid-sld2">
                   <source src="assets/vids/g1.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -321,8 +325,11 @@
         <!-- top banner-->
         <!---------->
         <div class="top-banner-container">
-          <!-- left side items -->
-          <!-- ######################## -->
+          <!-- left side slider nav icons-->
+          <div id="sliderbtns" class="outerbtn-container">
+            <button class="control_next"><i class="bi bi-arrow-right-circle"></i></button>
+            <button class="control_prev"><i class="bi bi-arrow-left-circle"></i></button>
+          </div>
           <!---------->
 
           <!-- middle scroll icon-->
@@ -331,19 +338,18 @@
           </div>
           <!---------->
 
-          <!-- right side items -->
-          <div class="container-share  ">
-            <div class="addthis_toolbox addthis_default_style ">
-              <a class="addthis_button_whatsapp"><i class="bi bi-whatsapp custome-soc"></i></a>
-              <a class="addthis_button_instagram"><i class="bi bi-instagram custome-soc"></i></a>
-              <a class="addthis_button_twitter"><i class="bi bi-twitter custome-soc"></i></a>
-              <a class="addthis_button_facebook"><i class="bi bi-facebook custome-soc"></i></a>
+          <!-- social share icons -->
+          <div class="container-share">
+            <div class="addthis_toolbox addthis_default_style">
+              <a class="addthis_button_whatsapp"><i class="bi bi-whatsapp custom-socialicon"></i></a>
+              <!-- <a class="addthis_button_instagram"><i class="bi bi-instagram custom-socialicon"></i></a> -->
+              <a class="addthis_button_twitter"><i class="bi bi-twitter custom-socialicon"></i></a>
+              <a class="addthis_button_facebook"><i class="bi bi-facebook custom-socialicon"></i></a>
             </div>
-            <div class="tip">Share</div>    
-            </div>
-
+            <div class="tip">Share</div>
+          </div>
         </div>
-          <!---------->
+        <!---------->
         <!-- </div> -->
 
         <!--  info tabs contianer -->
@@ -356,8 +362,8 @@
             </div>
             <div class="owl-carousel owl-1">
               <div class="media-29101 d-md-flex w-100">
-                <div class="img">
-                  <img src="assets/images/who.svg" alt="Image" class="img-fluid" />
+                <div class="img scaleDown">
+                  <img src="assets/images/who-o.svg" alt="Image" class="img-fluid" />
                 </div>
                 <div class="text">
                   <!-- <a class="category d-block mb-4" href="#">The Bridge</a> -->
@@ -377,7 +383,7 @@
 
               <div class="media-29101 d-md-flex w-100">
                 <div class="img scaleDown">
-                  <img src="assets/images/mission-mini.svg" alt="Image" class="img-fluid" />
+                  <img src="assets/images/mission-o.svg" alt="Image" class="img-fluid" />
                 </div>
                 <div class="text">
                   <!-- <a class="category d-block mb-4" href="#">Travel &mdash; Second Tab</a> -->
@@ -397,8 +403,8 @@
               <!-- .item -->
 
               <div class="media-29101 d-md-flex w-100">
-                <div class="img">
-                  <img src="assets/images/why.svg" alt="Image" class="img-fluid" />
+                <div class="img scaleDown">
+                  <img src="assets/images/why-o.svg" alt="Image" class="img-fluid" />
                 </div>
                 <div class="text">
                   <!-- <a class="category d-block mb-4" href="#">Travel &mdash; Third Tab</a> -->
@@ -432,11 +438,9 @@
                 <div class="content">
                   <!-- Head text  -->
                   <h3 class="main-title">We are more than just a rehb center !</h3>
-                  <p>
-                    We are AVO. We create award-winning websites, remarkable brands and cutting-edge apps.Nullam imperdiet, sem at fringilla lobortis, sem
-                    nibh fringilla nibh, id gravida mi purus sit amet erat. Ut dictum nisi masvitp We are AVO. We create award-winning websites, remarkable
-                    brands and cutting-edge apps.Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, id gravida mi purus sit amet erat.
-                    Ut dictum nisi masvitp
+                  <p> The bridge offers services that deals with a wide variety of situations, from children suffering symptoms of Memory Loss,
+                      Anxiety,Depression, Trauma, Behavioural and Learning Difficulties, to treating serious medical conditions such as Dyslexia, ADHD, and
+                      Autism.
                   </p>
                   <!------------------>
                 </div>
@@ -493,7 +497,7 @@
                     <div class="featureItem">
                       <div class="items">
                         <div class="image">
-                          <img src="assets/images/icons/item1.png" alt="" />
+                          <img src="assets/images/icons/item1-o.png" alt="" />
                         </div>
                         <div class="heading">
                           <h5>Family Care</h5>
@@ -506,7 +510,7 @@
                     <div class="featureItem">
                       <div class="items">
                         <div class="image">
-                          <img src="assets/images/icons/item2.png" alt="" />
+                          <img src="assets/images/icons/item2-o.png" alt="" />
                         </div>
                         <div class="heading">
                           <h5>Quality First</h5>
@@ -519,7 +523,7 @@
                     <div class="featureItem">
                       <div class="items">
                         <div class="image">
-                          <img src="assets/images/icons/item3.png" alt="" />
+                          <img src="assets/images/icons/item3-o.png" alt="" />
                         </div>
                         <div class="heading">
                           <h5>Hand in Hand</h5>
@@ -532,7 +536,7 @@
                     <div class="featureItem">
                       <div class="items">
                         <div class="image">
-                          <img src="assets/images/icons/item4.png" alt="" />
+                          <img src="assets/images/icons/item4-o.png" alt="" />
                         </div>
                         <div class="heading">
                           <h5>Proven Results</h5>
@@ -560,16 +564,15 @@
         <!-- top banner-->
         <!---------->
         <div class="top-banner-container">
-          <!-- social share -->
-        <!-- right side items -->
-          <div class="container-share  ">
-            <div class="addthis_toolbox addthis_default_style ">
-              <a class="addthis_button_whatsapp"><i class="bi bi-whatsapp custome-soc"></i></a>
-              <a class="addthis_button_instagram"><i class="bi bi-instagram custome-soc"></i></a>
-              <a class="addthis_button_twitter"><i class="bi bi-twitter custome-soc"></i></a>
-              <a class="addthis_button_facebook"><i class="bi bi-facebook custome-soc"></i></a>
+          <!-- social share icons -->
+          <div class="container-share">
+            <div class="addthis_toolbox addthis_default_style">
+              <a class="addthis_button_whatsapp"><i class="bi bi-whatsapp custom-socialicon"></i></a>
+              <!-- <a class="addthis_button_instagram"><i class="bi bi-instagram custom-socialicon"></i></a> -->
+              <a class="addthis_button_twitter"><i class="bi bi-twitter custom-socialicon"></i></a>
+              <a class="addthis_button_facebook"><i class="bi bi-facebook custom-socialicon"></i></a>
             </div>
-            <div class="tip">Share</div>    
+            <div class="tip">Share</div>
           </div>
         </div>
 
@@ -1179,7 +1182,9 @@
                         </a>
                       </li>
                       <li class="nav-item">
-                        <a href="#contact" class="mt-4 mr-auto ml-auto ml-lg-0 btn dark-button smooth-anchor"><i class="bi bi-chat-text"></i>SEND A MESSAGE</a>
+                        <a href="#contact" class="mt-4 mr-auto ml-auto ml-lg-0 btn dark-button smooth-anchor"
+                          ><i class="bi bi-chat-text"></i>SEND A MESSAGE</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -1229,7 +1234,7 @@
     <!-----Main locomotive scroll container End----->
 
     <!-- #region Global ============================ -->
-    
+
     <!-- ==============================================
         Google MAP // Put your site key here
         =============================================== -->
@@ -1265,19 +1270,14 @@
      =============================================== -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
-    <script src="assets/js/bridge-heroslider.js"></script>
-    <script src="assets/js/info-tabs.js"></script>
-    <script src="assets/js/service-tabs.js"></script>
-
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-625b7bbf5082e247">
-  var addthis_share = {
-   url: "https://www.thebridgeuae.com",
-   title: "Thebridge Skills Development Center",
-   description: "The Bridge Center for Skills Development: specialized in supporting and rehabilitating children and young people",
-   media: "./assets/images/Thebridgebw.svg"
-}
-</script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-625b7bbf5082e247">
+      var addthis_share = {
+      url: "https://www.thebridgeuae.com",
+      title: "Thebridge Skills Development Center",
+      description: "The Bridge Center for Skills Development: specialized in supporting and rehabilitating children and young people",
+      media: "./assets/images/Thebridgebw.svg"
+      }
+    </script>
 
     <!-- <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
     <script>

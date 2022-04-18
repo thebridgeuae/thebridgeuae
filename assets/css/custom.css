@@ -166,10 +166,10 @@
 
 /* ---any section scale up/down------ */
 .scaleDown {
-  -webkit-transform: scale(0.75);
-  -moz-transform: scale(0.75);
-  -ms-transform: scale(0.75);
-  transform: scale(0.75);
+  -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  transform: scale(0.85);
   -webkit-transform-origin: 50% 0 0;
   -moz-transform-origin: 50% 0 0;
   -ms-transform-origin: 50% 0 0;
@@ -632,10 +632,10 @@ body {
   background-size: cover;
   height: 100vh;
 }
-button.control_prev,
+/* button.control_prev,
 button.control_next {
   position: absolute;
-  top: 50%;
+  top: 93%;
   z-index: 10;
   display: block;
   border: none;
@@ -643,7 +643,7 @@ button.control_next {
   height: 2em;
   line-height: 1.9em;
   background: rgba(255, 255, 255, 0.3);
-  color: #fff;
+  color: gray;
   text-align: center;
   text-decoration: none;
   font-weight: 600;
@@ -652,11 +652,11 @@ button.control_next {
   cursor: pointer;
   border-radius: 50%;
   transform: translateY(-50%);
-}
+} */
 button.control_prev:focus,
 button.control_next:focus {
   outline: none;
-  border: 1px rgba(255, 255, 255, 0.5) solid;
+  /* border: 1px rgba(255, 255, 255, 0.5) solid; */
 }
 button.control_prev:hover,
 button.control_next:hover {
@@ -664,12 +664,30 @@ button.control_next:hover {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
+
+.outerbtn-container {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  float: left;
+  padding-left: 50px;
+}
 button.control_prev {
-  left: 2rem;
+  color: gray;
+  font-size: 35px;
 }
+
 button.control_next {
-  right: 2rem;
+  position: absolute;
+  color: gray;
+  font-size: 35px;
+  left: 110px;
 }
+
+/* .outerbtn-style {
+  
+} */
+
 .top-progress-bar {
   width: 95% !important;
   height: 80px !important;
@@ -754,6 +772,18 @@ button.control_next {
     max-width: 200vw;
   }
 }
+@media only screen and (max-width: 600px) {
+  .outerbtn-container {
+    padding-left: 20px;
+  }
+  button.control_next {
+    left: 70px;
+  }
+  button.control_next,
+  button.control_prev {
+    font-size: 25px;
+  }
+}
 /* @media (max-width: 1199px) {
   body .teaser p{
     font-size: 3.5rem;
@@ -794,19 +824,12 @@ button.control_next {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* z-index: 100; */
   position: absolute;
   left: 0;
   right: auto;
   top: 0;
   text-align: center;
-  padding-top: 21px;
-  /* height: 100%; */
-  /* background-color: #f5410a; */
-  /* right:50%; */
-  /* top:50%; */
-  /* margin-left: 50%; */
-  /* margin-right: auto; */
+  padding-top: 10px;
 }
 .mouse-field {
   display: flex;
@@ -972,37 +995,60 @@ button.control_next {
   background: rgba(44, 44, 44, 0.3);
   margin: 0 0 0 8px;
 }
-.custome-soc {
+.custom-socialicon {
+  z-index: 11;
   color: gray;
-  font-size: 25px !important;
+  font-size: 35px !important;
   padding-left: 7px;
 }
-.custome-soc.bi-whatsapp:hover {
+.custom-socialicon.bi-whatsapp:hover {
   color: green;
   background: -webkit-linear-gradient(45deg, #128c7e 0%, #25d366 25%, #17a74c 50%, #25d366 75%, #34b7f1 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.custome-soc.bi-facebook:hover {
+.custom-socialicon.bi-facebook:hover {
   background: -webkit-linear-gradient(45deg, #3b5998 0%, #100196 25%, #4827dc 50%, #3b5998 75%, #3b5998 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.custome-soc.bi-instagram:hover {
-  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.custome-soc.bi-twitter:hover {
+.custom-socialicon.bi-twitter:hover {
   background: -webkit-linear-gradient(45deg, #33b4f0 0%, #3c9ae6 25%, #279adc 50%, #33b4f0 75%, #189bbc 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+/* .custom-socialicon.bi-instagram:hover {
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
 
+@media only screen and (max-width: 600px) {
+  .container-share {
+    padding-right: 20px;
+  }
+  .custom-socialicon {
+    font-size: 25px !important;
+    padding-left: 7px;
+  }
+  .custom-socialicon.bi-whatsapp {
+    color: gray;
+  }
+  .custom-socialicon.bi-facebook {
+    color: gray;
+  }
+
+  .custom-socialicon.bi-twitter {
+    color: gray;
+  }
+  /* .custom-socialicon.bi-instagram {
+    color: gray;
+  } */
+}
 /* ==============================================  
             Social Share End 
 =============================================== */
@@ -1260,7 +1306,7 @@ ul {
 }
 
 .featureItem .items .image {
-  height: 115px;
+  /* height: 115px; */
   transition: 0.3s;
   margin: 0 auto;
 }
@@ -1443,10 +1489,12 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .bg0 {
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #ebf3e8;
 }
 .bg1 {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+  background-color: #ebf3e8;
 }
 
 /*//////////////////////////////////////////////////////////////////
