@@ -75,7 +75,6 @@
     <link rel="stylesheet" href="assets/css/vendor/bootstrap-icons.css" />
     <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/icons.min.css" />
-    <!-- <link rel="stylesheet" href="assets/css/vendor/fontawesome.min.css"/> -->
 
     <!-- ==============================================
         Vendor Stylesheet
@@ -90,7 +89,6 @@
     <link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/vendor/lightgallary/lightgallery.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/vendor/lightgallary/lg-thumbnail.css" type="text/css" media="all" />
-    <!-- <link rel="stylesheet" href="assets/css/vendor/gallery.min.css" type="text/css" media="all" /> -->
 
     <!-- ==============================================
       Custom Stylesheet
@@ -100,7 +98,6 @@
     <link rel="stylesheet" href="assets/css/custom.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/info-tabs.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/service-tabs.css" type="text/css" media="all" />
-    <!-- <link rel="stylesheet" href="assets/css/form.css" type="text/css" media="all" /> -->
 
     <!-- ==============================================
         Theme Settings
@@ -165,7 +162,7 @@
               <li class="nav-item underline active" data-scroll>
                 <a href="#who" class="smooth-anchor nav-link-item" data-scroll-to>Who We are</a>
               </li>
-              <li class="nav-item underline" data-scroll>
+              <li class="nav-item underline active" data-scroll>
                 <a href="#services" class="smooth-anchor nav-link-item" data-scroll-to>Services</a>
               </li>
               <!-- <li class="nav-item underline" data-scroll>
@@ -188,17 +185,17 @@
                 <div>
                   <div>
                     <ul>
-                      <li>
-                        <a href="#hero" onclick="closeNav()"><h1>Home</h1></a>
+                      <li class="">
+                        <a href="#hero" class="smooth-anchor " onclick="closeNav()"><h1>Home</h1></a>
                       </li>
+                      <li class="">
+                        <a href="#who" class="smooth-anchor " onclick="closeNav()"><h1>About</h1></a>
+                      </li class="">
                       <li>
-                        <a href="#who" onclick="closeNav()"><h1>About</h1></a>
-                      </li>
+                        <a href="#services" class="smooth-anchor " onclick="closeNav()"><h1>Services</h1></a>
+                      </li class="">
                       <li>
-                        <a href="#services" onclick="closeNav()"><h1>Services</h1></a>
-                      </li>
-                      <li>
-                        <a href="#contact" onclick="closeNav()"><h1>Contact</h1></a>
+                        <a href="#contact" class="smooth-anchor " onclick="closeNav()"><h1>Contact</h1></a>
                       </li>
                     </ul>
                   </div>
@@ -232,7 +229,7 @@
               <!--  hero video -->
               <!---------->
               <div class="hero-video-container">
-                <video autoplay loop muted playsinline id="vid-sld1" poster="assets/images/why.svg">
+                <video autoplay loop muted playsinline id="vid-sld1">
                   <source src="assets/vids/g2.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -264,7 +261,7 @@
               <!-- hero video -->
               <!---------->
               <div class="hero-video-container">
-                <video autoplay loop muted playsinline id="vid-sld2" poster="assets/images/why.svg">
+                <video autoplay loop muted playsinline id="vid-sld2" >
                   <source src="assets/vids/g1.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -328,42 +325,26 @@
           <!-- ######################## -->
           <!---------->
 
-          <!-- scroll icon-->
+          <!-- middle scroll icon-->
           <div class="mouse-field" id="mousescroll">
             <a href="#who" class="mouse smooth-anchor"></a>
           </div>
           <!---------->
 
           <!-- right side items -->
-          <div class="container-share">
-            <div class="tip">Share</div>
-            <div class="share-window">
-              <div class="share-bar">
-                <div class="trigger">
-                  <a href="#"><i class="icon-social-instagram"></i></a>
-                </div>
-                <div class="trigger">
-                  <a href="#"><i class="icon-social-twitter"></i></a>
-                </div>
-                <div class="trigger">
-                  <a href="#"><i class="icon-social-facebook"></i></a>
-                </div>
-                <!-- <div class="trigger"><a href="#"><i class="fab fa-linkedin-in"></i></a></div> -->
-                <!-- <div class="trigger"><a href="#"><i class="icon-social-whatsapp"></i></a></div> -->
-                <!-- <div class="trigger"><a href="#"><i class="fas fa-paper-plane"></i></a></div> -->
-              </div>
+          <div class="container-share  ">
+            <div class="addthis_toolbox addthis_default_style ">
+              <a class="addthis_button_whatsapp"><i class="bi bi-whatsapp custome-soc"></i></a>
+              <a class="addthis_button_instagram"><i class="bi bi-instagram custome-soc"></i></a>
+              <a class="addthis_button_twitter"><i class="bi bi-twitter custome-soc"></i></a>
+              <a class="addthis_button_facebook"><i class="bi bi-facebook custome-soc"></i></a>
             </div>
-            <!-- <div class="share">
-                <div class="trigger share-btn"><a href="#"><i class="icon-share"></i> Share</a></div>
-              </div> -->
-            <div class="like">
-              <div class="trigger like-btn">
-                <a href="#"><i class="icon-share"></i> Share</a>
-              </div>
+            <div class="tip">Share</div>    
             </div>
-          </div>
-          <!---------->
+
         </div>
+          <!---------->
+        <!-- </div> -->
 
         <!--  info tabs contianer -->
         <div id="info" class="container">
@@ -578,33 +559,17 @@
       <section id="services" class="section-2 offers sec-card" data-scroll data-scroll-repeat data-scroll-call="toggleBackToTop" data-anchor="services">
         <!-- top banner-->
         <!---------->
-        <div class="top-banner-container" id="mousescroll">
-          <div class="container-share">
-            <div class="tip">Share</div>
-            <div class="share-window">
-              <div class="share-bar">
-                <div class="trigger">
-                  <a href="#"><i class="icon-social-instagram"></i></a>
-                </div>
-                <div class="trigger">
-                  <a href="#"><i class="icon-social-twitter"></i></a>
-                </div>
-                <div class="trigger">
-                  <a href="#"><i class="icon-social-facebook"></i></a>
-                </div>
-                <!-- <div class="trigger"><a href="#"><i class="fab fa-linkedin-in"></i></a></div> -->
-                <!-- <div class="trigger"><a href="#"><i class="icon-social-whatsapp"></i></a></div> -->
-                <!-- <div class="trigger"><a href="#"><i class="fas fa-paper-plane"></i></a></div> -->
-              </div>
+        <div class="top-banner-container">
+          <!-- social share -->
+        <!-- right side items -->
+          <div class="container-share  ">
+            <div class="addthis_toolbox addthis_default_style ">
+              <a class="addthis_button_whatsapp"><i class="bi bi-whatsapp custome-soc"></i></a>
+              <a class="addthis_button_instagram"><i class="bi bi-instagram custome-soc"></i></a>
+              <a class="addthis_button_twitter"><i class="bi bi-twitter custome-soc"></i></a>
+              <a class="addthis_button_facebook"><i class="bi bi-facebook custome-soc"></i></a>
             </div>
-            <!-- <div class="share">
-              <div class="trigger share-btn"><a href="#"><i class="icon-share"></i> Share</a></div>
-            </div> -->
-            <div class="like">
-              <div class="trigger like-btn">
-                <a href="#"><i class="icon-share"></i> Share</a>
-              </div>
-            </div>
+            <div class="tip">Share</div>    
           </div>
         </div>
 
@@ -1264,10 +1229,7 @@
     <!-----Main locomotive scroll container End----->
 
     <!-- #region Global ============================ -->
-    <!-- ==============================================
-        Google reCAPTCHA // Put your site key here
-        =============================================== -->
-    <!-- <script src="https://www.google.com/recaptcha/api.js?render=6Lf-NwEVAAAAAPo_wwOYxFW18D9_EKvwxJxeyUx7"></script> -->
+    
     <!-- ==============================================
         Google MAP // Put your site key here
         =============================================== -->
@@ -1294,7 +1256,6 @@
     <script src="assets/js/vendor/locomotive-scroll.min.js"></script>
     <script src="assets/js/vendor/lightgallary/lightgallery.min.js"></script>
     <script src="assets/js/vendor/lightgallary/lightgallery.umd.js"></script>
-    <!-- <script src="assets/js/vendor/gallery.min.js"></script> -->
     <!-- lightgallery plugins -->
     <script src="assets/js/vendor/lightgallary/thumbnail/lg-thumbnail.min.js"></script>
     <script src="assets/js/vendor/lightgallary/fullscreen/lg-fullscreen.min.js"></script>
@@ -1307,6 +1268,16 @@
     <script src="assets/js/bridge-heroslider.js"></script>
     <script src="assets/js/info-tabs.js"></script>
     <script src="assets/js/service-tabs.js"></script>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-625b7bbf5082e247">
+  var addthis_share = {
+   url: "https://www.thebridgeuae.com",
+   title: "Thebridge Skills Development Center",
+   description: "The Bridge Center for Skills Development: specialized in supporting and rehabilitating children and young people",
+   media: "./assets/images/Thebridgebw.svg"
+}
+</script>
 
     <!-- <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
     <script>
