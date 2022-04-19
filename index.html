@@ -14,30 +14,18 @@
 
     <!-- Page Title Here -->
     <title>The Bridge - Skills Development & Rehabilitating Center in Abu Dhabi</title>
-    <meta name="description" content="The Bridge Center for Skills Development: specialized in supporting and rehabilitating children and young people" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Thebridge - Skills Development and Rehabilitating Center" />
-    <meta
-      property="og:description"
-      content="The Bridge Center for Skills Development: specialized in supporting and rehabilitating children and young people"
-    />
+    <meta property="og:description" content="The Bridge Center for Skills Development: specialized in supporting and rehabilitating children and young people"/>
     <meta property="og:url" content="index.html" />
     <meta property="og:site_name" content="Thebridge" />
     <meta property="og:image" content="assets/images/Thebridge-intro.svg" />
-    <meta property="og:image:width" content="120" />
-    <!-- 1200 -->
-    <meta property="og:image:height" content="80" />
-    <!-- 630 -->
+    <meta property="og:image:width" content="120" /><!-- 1200 -->
+    <meta property="og:image:height" content="80" /><!-- 630 -->
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
-    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#191919" />
-    <link rel="shortcut icon" href="assets/images/favicons/favicon.ico" />
     <meta name="msapplication-TileColor" content="#191919" />
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml" />
     <meta name="theme-color" content="#ED4439" />
@@ -59,10 +47,16 @@
     <!-- ==============================================
         Favicons
         =============================================== -->
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#191919" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/bridgetest.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/bridgetest.png" />
     <link rel="shortcut icon" href="assets/images/favicon.ico" />
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png" />
     <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/bridgetest.png" />
+
     <!-- ==============================================
         Fonts & icons
         =============================================== -->
@@ -97,8 +91,6 @@
       =============================================== -->
     <link rel="stylesheet" href="assets/css/main.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/custom.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="assets/css/info-tabs.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="assets/css/service-tabs.css" type="text/css" media="all" />
 
     <!-- ==============================================
         Theme Settings
@@ -122,7 +114,7 @@
         --secondary-color: #e0040b;
         --header-bg-color: #f9f7e6;
         --hero-bg-color: #f9f7e6;
-        --nav-item-color: #2f323a;
+        --nav-item-color: #151516;
         --top-nav-item-color: #2f323a;
         --nav-brand-height: 35px;
 
@@ -133,6 +125,8 @@
         --section-5-bg-color: #ebf3e8;
         --section-6-bg-color: #d9f6ef;
         --section-7-bg-color: #115740;
+        /* --icons-color : #c7c49a; */
+        --icons-color : #968481;
 
         --footer-bg-color: #19381f;
         --footer-brand-height: 80px;
@@ -185,7 +179,15 @@
     <!--------------->
     <header id="header">
       <!-- Navbar -->
-      <div style="position: relative">
+      <div style="
+        position: absolute;
+        display: flex;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: auto;
+        align-items: center;
+        justify-content: center;">
         <nav data-aos="zoom-out" data-aos-delay="800" class="navbar navbar-expand">
           <div class="container header">
             <!-- Navbar Brand-->
@@ -213,9 +215,9 @@
             </ul>
 
             <!-- Navbar Action -->
-            <ul id="action-btn" class="navbar-nav action action-btn">
+            <ul id="action-btn" class="navbar-nav action action-btn ">
               <li class="nav-item ml-3">
-                <a href="#contact" class="smooth-anchor btn ml-lg-auto "><i class="bi bi-chat-text"></i>CONTACT US</a>
+                <a href="#contact" class="smooth-anchor btn ml-lg-auto"><i class="bi bi-chat-text"></i>Contact Us</a>
               </li>
             </ul>
 
@@ -226,7 +228,7 @@
               <div class="menu">
                 <div>
                   <div>
-                    <ul>
+                    <ul >
                       <li>
                         <a href="#hero" class="smooth-anchor" onclick="closeNav()"><h1>Home</h1></a>
                       </li>
@@ -367,8 +369,8 @@
         <div class="top-banner-container">
           <!-- left side slider nav icons-->
           <div id="sliderbtns" class="outerbtn-container">
-            <button class="control_next"><i class="bi bi-arrow-right-circle"></i></button>
-            <button class="control_prev"><i class="bi bi-arrow-left-circle"></i></button>
+            <button class="control_next circle_btn"><i class="bi bi-skip-forward-btn"></i></button>
+            <button class="control_prev circle_btn"><i class="bi bi-skip-backward-btn"></i></button>
           </div>
           <!---------->
 
@@ -1094,7 +1096,7 @@
                     <span class="label-input100">FULL NAME *</span>
                     <input class="input100" type="text" name="name" />
                   </div>
-
+                  <!-- <div style="display:flex;flex-direction:row;margin:0 auto"> -->
                   <div id="email" class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Enter Your Email (e@a.x)">
                     <span class="label-input100">Email *</span>
                     <input class="input100" type="text" name="email" />
@@ -1104,7 +1106,7 @@
                     <span class="label-input100">Phone</span>
                     <input class="input100" type="text" name="phone" />
                   </div>
-
+                <!-- </div> -->
                   <div class="wrap-input100 input100-select bg1">
                     <span class="label-input100">Needed Services *</span>
                     <div>

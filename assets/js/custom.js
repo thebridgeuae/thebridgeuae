@@ -99,6 +99,10 @@ locoScroll.on("scroll", (args) => {
     pos = scroll;
   }
 });
+//update
+$(window).on("load", function () {
+  locoScroll.update();
+});
 
 /* Locomotive Anchor Scroll */
 const anchorLinks = document.querySelectorAll("a[href^=\\#]:not([href$=\\#])");
