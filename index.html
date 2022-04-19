@@ -96,7 +96,6 @@
       Custom Stylesheet
       =============================================== -->
     <link rel="stylesheet" href="assets/css/main.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="assets/css/default.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/custom.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/info-tabs.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/service-tabs.css" type="text/css" media="all" />
@@ -104,15 +103,28 @@
     <!-- ==============================================
         Theme Settings
         =============================================== -->
+    <!-- #startregion Root -->
     <style>
       :root {
+        --h1-font: "Default";
+        --h1-size: 3rem;
+        --h1-weight: 900;
+
+        --h2-font: "Poppins", "Josefin Sans", sans-serif;
+        --h2-size: 2rem;
+        --h2-weight: 300;
+
+        --p-font: "Poppins", sans-serif;
+        --p-size: 1.2rem;
+        --p-weight: 400;
+
         --primary-color: #fc5130;
         --secondary-color: #e0040b;
-        --header-bg-color: #f9f7e6;
         --header-bg-color: #f9f7e6;
         --hero-bg-color: #f9f7e6;
         --nav-item-color: #2f323a;
         --top-nav-item-color: #2f323a;
+        --nav-brand-height: 35px;
 
         --section-1-bg-color: #f9f7e6;
         --section-2-bg-color: #f9f7e6;
@@ -123,8 +135,36 @@
         --section-7-bg-color: #115740;
 
         --footer-bg-color: #19381f;
+        --footer-brand-height: 80px;
+
+        --white-color: #f9f9f9;
+        --black-color: #040402;
+        --dark-grey-color: #191919;
+
+        --primary-t-color: #2f323a;
+        --secondary-t-color: #f5f5f5;
+        --primary-p-color: #6f6f6f;
+        --secondary-p-color: #fff;
+
+        --primary-b-color: #6f6f6f;
+        --primary-l-color: rgba(0, 0, 0, 0.25);
+        --secondary-l-color: rgba(255, 255, 255, 0.25);
+
+        --valid-color: #007a4d;
+        --invalid-color: #e34f4f;
+
+        --primary-bg-color: #f5f5f5;
+        --primary-bg-color-2: #eeeeee;
+        --primary-bg-color-3: #e5e5e5;
+
+        --secondary-bg-color: #040402;
+        --secondary-bg-color-2: #111111;
+        --secondary-bg-color-3: #191919;
+
+        --card-bg-color: #f5f5f5;
       }
     </style>
+    <!-- #endregion Root -->
   </head>
 
   <body>
@@ -173,9 +213,9 @@
             </ul>
 
             <!-- Navbar Action -->
-            <ul class="navbar-nav action">
+            <ul id="action-btn" class="navbar-nav action action-btn">
               <li class="nav-item ml-3">
-                <a href="#contact" class="smooth-anchor btn ml-lg-auto primary-button"><i class="bi bi-chat-text"></i>CONTACT US</a>
+                <a href="#contact" class="smooth-anchor btn ml-lg-auto "><i class="bi bi-chat-text"></i>CONTACT US</a>
               </li>
             </ul>
 
@@ -438,9 +478,10 @@
                 <div class="content">
                   <!-- Head text  -->
                   <h3 class="main-title">We are more than just a rehb center !</h3>
-                  <p> The bridge offers services that deals with a wide variety of situations, from children suffering symptoms of Memory Loss,
-                      Anxiety,Depression, Trauma, Behavioural and Learning Difficulties, to treating serious medical conditions such as Dyslexia, ADHD, and
-                      Autism.
+                  <p>
+                    The bridge offers services that deals with a wide variety of situations, from children suffering symptoms of Memory Loss,
+                    Anxiety,Depression, Trauma, Behavioural and Learning Difficulties, to treating serious medical conditions such as Dyslexia, ADHD, and
+                    Autism.
                   </p>
                   <!------------------>
                 </div>

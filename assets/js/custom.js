@@ -124,8 +124,6 @@ anchorLinks.forEach((anchorLink) => {
 //   console.log($('#sliderbtns').attr('id'));
 // });
 
-
-
 jQuery(document).ready(function ($) {
   const outerbtn = ('#'+$("#sliderbtns").attr('id'));
   // console.log(outerbtn)
@@ -556,7 +554,11 @@ function closeNav() {
 
 
 
-
 // -----------------images load-----------------------------
 // $('body').imagesLoaded().always( function( instance ) {
 //   locoScroll.update();
+// $(document).ready(function() {
+//   console.log($('#sliderbtns').attr('id'));
+// });
+
+// primary-button
