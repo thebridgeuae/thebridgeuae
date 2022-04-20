@@ -78,7 +78,8 @@ html.touch *:hover {
 }
 .subhead{
   color: var(--subhead-p-color) !important;
-  font-weight: 400;
+  font-weight: 600;
+
 }
 /* handwritten style underline readmore text */
 .r-link {
