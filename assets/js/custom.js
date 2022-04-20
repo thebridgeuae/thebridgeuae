@@ -558,40 +558,40 @@ function closeNav() {
 /* ==============================================  
     hover effects disabled on-touch.
 =============================================== */
-var mobileNoHoverState = function() {
+// var mobileNoHoverState = function() {
 
-  var hoverClass = 'hover',
-      $target = $(".foo"), 
-      preventMouseover = false;
+//   var hoverClass = 'hover',
+//       $target = $(".foo"), 
+//       preventMouseover = false;
 
-  function forTouchstart() {
-      preventMouseover = true;
-  }
+//   function forTouchstart() {
+//       preventMouseover = true;
+//   }
 
-  function forMouseover() {
-      if (preventMouseover === false) {
-          $(this).addClass(hoverClass);
-      } else {
-          preventMouseover = false;
-      }
-  }
+//   function forMouseover() {
+//       if (preventMouseover === false) {
+//           $(this).addClass(hoverClass);
+//       } else {
+//           preventMouseover = false;
+//       }
+//   }
 
-  function forMouseout() {
-      $(this).removeClass(hoverClass);
-  }
+//   function forMouseout() {
+//       $(this).removeClass(hoverClass);
+//   }
 
-  function init() {
-      $target.on({
-          touchstart  : forTouchstart,
-          mouseover   : forMouseover,
-          mouseout    : forMouseout
-      });                
-  }
+//   function init() {
+//       $target.on({
+//           touchstart  : forTouchstart,
+//           mouseover   : forMouseover,
+//           mouseout    : forMouseout
+//       });                
+//   }
 
-  return {
-      init: init
-  };
-}();
+//   return {
+//       init: init
+//   };
+// }();
 /* ==============================================  
     hover effects disabled on-touch.
 =============================================== */
