@@ -1683,6 +1683,7 @@ header .navbar-expand {
   padding: 20px 25px;
   pointer-events: initial;
   /* transition: all 0.7s linear; */
+  will-change:transform;
   border-radius: 0px 0px 10px 10px;  
 }
 

@@ -20,15 +20,15 @@ const locoScroll = new LocomotiveScroll({
   scrollbarContainer:false,
   lerp: 0.03,
   smartphone: {
-    smooth: false,
-    inertia: 0.8,
-    getDirection: true,
+    smooth: true,
+    // inertia: 0.8,
+    // getDirection: true,
     // breakpoint: 767,
   },
   tablet: {
-    smooth: false,
-    inertia: 0.8,
-    getDirection: true,
+    smooth: true,
+    // inertia: 0.8,
+    // getDirection: true,
     // breakpoint: 1024,
   },
   smoothMobile: true,
@@ -100,11 +100,11 @@ locoScroll.on("scroll", (args) => {
   }
 });
 //update
-$(window).on("load", function () {
-  locoScroll.update();
-});
+// $(window).on("load", function () {
+//   locoScroll.update();
+// });
 
-/* Locomotive Anchor Scroll */
+/* Locomotive smooth Anchor Scroll */
 const anchorLinks = document.querySelectorAll("a[href^=\\#]:not([href$=\\#])");
 anchorLinks.forEach((anchorLink) => {
   let hashval = anchorLink.getAttribute("href");
