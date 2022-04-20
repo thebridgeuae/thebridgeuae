@@ -398,7 +398,7 @@ blockquote span {
 .navbarshrink-onscroll {
   top: 0;
   height: 11vh;
-  background-color: #fcf9ee;
+  /* background-color: #f9f7e6; */
   filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.555));
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
   box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
