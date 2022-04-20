@@ -555,8 +555,46 @@ function closeNav() {
 /* ==============================================  
            Humberger MEnue End
 =============================================== */
+/* ==============================================  
+    hover effects disabled on-touch.
+=============================================== */
+var mobileNoHoverState = function() {
 
+  var hoverClass = 'hover',
+      $target = $(".foo"), 
+      preventMouseover = false;
 
+  function forTouchstart() {
+      preventMouseover = true;
+  }
+
+  function forMouseover() {
+      if (preventMouseover === false) {
+          $(this).addClass(hoverClass);
+      } else {
+          preventMouseover = false;
+      }
+  }
+
+  function forMouseout() {
+      $(this).removeClass(hoverClass);
+  }
+
+  function init() {
+      $target.on({
+          touchstart  : forTouchstart,
+          mouseover   : forMouseover,
+          mouseout    : forMouseout
+      });                
+  }
+
+  return {
+      init: init
+  };
+}();
+/* ==============================================  
+    hover effects disabled on-touch.
+=============================================== */
 
 // -----------------images load-----------------------------
 // $('body').imagesLoaded().always( function( instance ) {
