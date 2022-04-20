@@ -174,7 +174,8 @@ body {
 
   background-color: var(--primary-bg-color);
   font-family: var(--p-font);
-  color: var(--primary-p-color);
+  color: #6f6f6f
+  /* color: var(--primary-p-color); */
 }
 
 body .body-mode-dark,
