@@ -18,7 +18,7 @@ const locoScroll = new LocomotiveScroll({
   firefoxMultiplier: 50,
   touchMultiplier: 2,
   scrollbarContainer:false,
-  lerp: 0.03,
+  lerp: 0.05,
   smartphone: {
     smooth: false,
     // inertia: 0.8,
