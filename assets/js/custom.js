@@ -1,3 +1,50 @@
+// Initialize and add the map
+function initMap() {
+  // The location of myLatLng
+  const myLatLng = { lat: 24.49339098050116, lng: 54.36684905506596 };
+  
+  // The map, centered at myLatLng
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 18,
+    center: myLatLng,
+  });
+
+  // infowindow tooltip
+  const contentString =
+    // '<div id="content">' +
+    // '<div id="siteNotice">' +
+    // "</div>" +
+    // '<img src="./assets/images/icons/thebw_64_icon.ico">'+
+    '<h4 id="firstHeading" class="firstHeading" style="font-weight:600">The Bridge</h4>' +
+    '<div id="bodyContent">' +
+    "<p>The Bridge Center for Skills Development specialized in supporting and rehabilitating children and young people ";
+    // "</div>" +
+    // "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+  });
+
+  // The marker, positioned at myLatLng
+  const marker = new google.maps.Marker({
+    position: myLatLng,
+    map,
+    title: "The Bridge Center",
+  });
+
+  marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  infowindow.open(map,marker);
+}
+
+window.initMap = initMap;
+
+
+
 /* ==============================================  
            Locomotive scroll Start
 =============================================== */
@@ -57,12 +104,13 @@ locoScroll.on("scroll", (args) => {
   navbar.removeAttribute("ddata-aos-delay");
 
   var scroll = args.scroll.y;
+  // console.log(scroll)
 
   if (!navbar.classList.contains("relative")) {
     // Down
     if (scroll > pos) {
       navbar.classList.add("navbar-sticky");
-      if (navbar.contains("navbar-fixed") || window.innerWidth <= 767) {
+      if (navbar.contains("navbar-fixed") || window.innerWidth <= 528) {
         navbar.classList.toggle("hidden");
       } else {
         if (args.scroll.y >= window.innerHeight) {
@@ -595,7 +643,23 @@ function closeNav() {
 /* ==============================================  
     hover effects disabled on-touch.
 =============================================== */
+// $('.card').click(function(){  
+ 
+//   if (!$(this).hasClass("flipped")) {
+//   $( ".face" ).addClass( 'off' );
+//   $( this ).children( ".face" ).removeClass( 'off' );
+//   $( this ).parent( ".cards" ).addClass( 'big' );
+//   $( this ).addClass('flipped');
 
+//   } else {
+ 
+//   $( ".face" ).removeClass( 'off' );
+//   $( ".cards" ).removeClass( 'big' );
+//   $( this ).removeClass('flipped'); 
+// }
+  
+
+// });
 // -----------------images load-----------------------------
 // $('body').imagesLoaded().always( function( instance ) {
 //   locoScroll.update();

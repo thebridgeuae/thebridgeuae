@@ -720,7 +720,7 @@ section {
   width: 100%;
   /* edit */
   /* padding: 130px 0; */
-  padding: 90px 0;
+  padding: 110px 0;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -1644,7 +1644,9 @@ header .navbar-sticky {
   /* edit */
   top: 0;
   /* background-color: var(--header-bg-color); */
-  background-color: #f9f7e6;
+  /* background-color: #f9f7e6; */
+  background-color: #D0AC47;
+  /* background-color: #2b9c76; */
   filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.555));
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
   box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
@@ -3739,8 +3741,8 @@ form[data-steps="4"] .progressbar li {
 
 footer {
   position: relative;
-  /* background-color: var(--footer-bg-color); */
-  background-color: #021603;
+  background-color: var(--footer-bg-color);
+  /* background-color: #021603; */
 }
 
 footer .brand .logo {
@@ -3857,7 +3859,7 @@ footer .nav-item .nav-link:hover {
 }
 
 .footer-widget .badge.tag:hover {
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
   border: 1px solid var(--primary-color);
 }
 
