@@ -1644,9 +1644,10 @@ header .navbar-sticky {
   /* edit */
   top: 0;
   /* background-color: var(--header-bg-color); */
-  /* background-color: #f9f7e6; */
-  background-color: #D0AC47;
-  /* background-color: #2b9c76; */
+  /* background-color: #dacdb6; */
+  /* background-color: #D0AC47; */
+  /* background-color: #C8BAA1;  */
+  background-color: #f9f7e6; 
   filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.555));
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
   box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);

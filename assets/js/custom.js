@@ -1,62 +1,13 @@
-// Initialize and add the map
-function initMap() {
-  // The location of myLatLng
-  const myLatLng = { lat: 24.49339098050116, lng: 54.36684905506596 };
-  
-  // The map, centered at myLatLng
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 18,
-    center: myLatLng,
-  });
-
-  // infowindow tooltip
-  const contentString =
-    // '<div id="content">' +
-    // '<div id="siteNotice">' +
-    // "</div>" +
-    // '<img src="./assets/images/icons/thebw_64_icon.ico">'+
-    '<h4 id="firstHeading" class="firstHeading" style="font-weight:600">The Bridge</h4>' +
-    '<div id="bodyContent">' +
-    "<p>The Bridge Center for Skills Development specialized in supporting and rehabilitating children and young people ";
-    // "</div>" +
-    // "</div>";
-  const infowindow = new google.maps.InfoWindow({
-    content: contentString,
-  });
-
-  // The marker, positioned at myLatLng
-  const marker = new google.maps.Marker({
-    position: myLatLng,
-    map,
-    title: "The Bridge Center",
-  });
-
-  marker.addListener("click", () => {
-    infowindow.open({
-      anchor: marker,
-      map,
-      shouldFocus: false,
-    });
-  });
-  infowindow.open(map,marker);
-}
-
-window.initMap = initMap;
-
-
-
 /* ==============================================  
            Locomotive scroll Start
 =============================================== */
 // ------------------Global Selectors;--------------------
-// const pos = 0;
 const head = document.querySelector(".header");
 const nav = document.querySelector("nav");
 const log = document.getElementById("logo");
 const navbar = document.querySelector(".navbar");
 const toTop = document.getElementById("scroll-to-top");
 
-// ------------------LOCOMOTIVE--------------------
 //initialize locomotive
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
@@ -64,8 +15,8 @@ const locoScroll = new LocomotiveScroll({
   multiplier: 1.1,
   firefoxMultiplier: 50,
   touchMultiplier: 2,
-  scrollbarContainer:false,
-  lerp: 0.05,
+  scrollbarContainer: false,
+  lerp: 0.04,
   smartphone: {
     smooth: false,
     // inertia: 0.8,
@@ -87,16 +38,12 @@ const locoScroll = new LocomotiveScroll({
   reloadOnContextChange: true,
 });
 
-//update
-$(window).on("load", function () {
-  locoScroll.update();
-});
-
-/* Locomotive navbar hide/show/shrink */
+//Locomotive navbar hide/show/shrink
 locoScroll.on("scroll", (args) => {
   var pos = args.scroll.y;
   if (pos > 0) {
     navbar.classList.add("navbar-sticky");
+    // $(".navbar .navbar-brand img").attr("src", "/thebridge-app/assets/images/logo/Thebridgebw-svg-sm.svg");
   }
   toTop.style.display = "none";
 
@@ -126,6 +73,7 @@ locoScroll.on("scroll", (args) => {
         // navbar.classList.toggle("hidden");
         log.classList.remove("minilogo");
         nav.classList.remove("navbarshrink-onscroll");
+        $(".navbar .navbar-brand img").attr("src", "/thebridge-app/assets/images/logo/Thebridgebw-svg-big.svg");
       }
 
       // Top
@@ -135,6 +83,7 @@ locoScroll.on("scroll", (args) => {
         if (!navbar.classList.contains("navbar-no-fixed")) {
           nav.classList.add("navbarshrink-onscroll");
           log.classList.add("minilogo");
+          $(".navbar .navbar-brand img").attr("src", "/thebridge-app/assets/images/logo/Thebridgebw-svg-sm.svg");
         }
       }
 
@@ -147,12 +96,13 @@ locoScroll.on("scroll", (args) => {
     pos = scroll;
   }
 });
-//update
-// $(window).on("load", function () {
-//   locoScroll.update();
-// });
 
-/* Locomotive smooth Anchor Scroll */
+//Update
+$(window).on("load", function () {
+  locoScroll.update();
+});
+
+//Locomotive smooth Anchor Scroll
 const anchorLinks = document.querySelectorAll("a[href^=\\#]:not([href$=\\#])");
 anchorLinks.forEach((anchorLink) => {
   let hashval = anchorLink.getAttribute("href");
@@ -172,12 +122,8 @@ anchorLinks.forEach((anchorLink) => {
 /* ==============================================  
            Hero Slider Start
 =============================================== */
-// $(document).ready(function() {
-//   console.log($('#sliderbtns').attr('id'));
-// });
-
 jQuery(document).ready(function ($) {
-  const outerbtn = ('#'+$("#sliderbtns").attr('id'));
+  const outerbtn = "#" + $("#sliderbtns").attr("id");
   // console.log(outerbtn)
   startSlider($("#slider"), 39); // Slide container ID, SlideShow interval
 
@@ -194,7 +140,7 @@ jQuery(document).ready(function ($) {
 
     $bar = obj.find(".progress .bar");
     // pause
-    
+
     // pause
     function startProgressbar() {
       resetProgressbar();
@@ -310,87 +256,83 @@ jQuery(document).ready(function ($) {
            Hero Slider End
 =============================================== */
 
-
 /* ==============================================  
             Form Validation Start
 =============================================== */
 (function ($) {
   "use strict";
 
-
   /*==================================================================
   [ Validate after type ]*/
-  $('.validate-input .input100').each(function(){
-      $(this).on('blur', function(){
-          if(validate(this) == false){
-              showValidate(this);
-          }
-          else {
-              $(this).parent().addClass('true-validate');
-          }
-      })    
-  })
-
+  $(".validate-input .input100").each(function () {
+    $(this).on("blur", function () {
+      if (validate(this) == false) {
+        showValidate(this);
+      } else {
+        $(this).parent().addClass("true-validate");
+      }
+    });
+  });
 
   /*==================================================================
   [ Validate ]*/
-  var input = $('.validate-input .input100');
+  var input = $(".validate-input .input100");
 
-  $('.validate-form').on('submit',function(){
-      var check = true;
+  $(".validate-form").on("submit", function () {
+    var check = true;
 
-      for(var i=0; i<input.length; i++) {
-          if(validate(input[i]) == false){
-              showValidate(input[i]);
-              check=false;
-          }
+    for (var i = 0; i < input.length; i++) {
+      if (validate(input[i]) == false) {
+        showValidate(input[i]);
+        check = false;
       }
+    }
 
-      return check;
+    return check;
   });
 
-
-  $('.validate-form .input100').each(function(){
-      $(this).focus(function(){
-         hideValidate(this);
-         $(this).parent().removeClass('true-validate');
-      });
+  $(".validate-form .input100").each(function () {
+    $(this).focus(function () {
+      hideValidate(this);
+      $(this).parent().removeClass("true-validate");
+    });
   });
 
-   function validate (input) {
-      if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
-          if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
-              return false;
-          }
+  function validate(input) {
+    if ($(input).attr("type") == "email" || $(input).attr("name") == "email") {
+      if (
+        $(input)
+          .val()
+          .trim()
+          .match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null
+      ) {
+        return false;
       }
-      else {
-          if($(input).val().trim() == ''){
-              return false;
-          }
+    } else {
+      if ($(input).val().trim() == "") {
+        return false;
       }
+    }
   }
 
   function showValidate(input) {
-      var thisAlert = $(input).parent();
+    var thisAlert = $(input).parent();
 
-      $(thisAlert).addClass('alert-validate');
+    $(thisAlert).addClass("alert-validate");
 
-      $(thisAlert).append('<span class="btn-hide-validate">&#xf136;</span>')
-      $('.btn-hide-validate').each(function(){
-          $(this).on('click',function(){
-             hideValidate(this);
-          });
+    $(thisAlert).append('<span class="btn-hide-validate">&#xf136;</span>');
+    $(".btn-hide-validate").each(function () {
+      $(this).on("click", function () {
+        hideValidate(this);
       });
+    });
   }
 
   function hideValidate(input) {
-      var thisAlert = $(input).parent();
-      $(thisAlert).removeClass('alert-validate');
-      $(thisAlert).find('.btn-hide-validate').remove();
+    var thisAlert = $(input).parent();
+    $(thisAlert).removeClass("alert-validate");
+    $(thisAlert).find(".btn-hide-validate").remove();
   }
-  
-  
-
 })(jQuery);
 /* =============================================  
            Form Validation End
@@ -399,12 +341,12 @@ jQuery(document).ready(function ($) {
 /* ==============================================  
            Expand/Collapse Text
 =============================================== */
-$('.read-more').click(function() {
+$(".read-more").click(function () {
   $(this).prev().slideToggle();
-  if (($(this).text()) == "Read More") {
-      $(this).text("Read Less");
+  if ($(this).text() == "Read More") {
+    $(this).text("Read Less");
   } else {
-      $(this).text("Read More");
+    $(this).text("Read More");
   }
 });
 /* ==============================================  
@@ -414,14 +356,14 @@ $('.read-more').click(function() {
 /* ==============================================  
            light Gallary start
 =============================================== */
-$(document).ready(function() {
-  var galleryBox = document.getElementById('gallery-container');
+$(document).ready(function () {
+  var galleryBox = document.getElementById("gallery-container");
   lightGallery(galleryBox, {
-      plugins: [lgThumbnail],
-      speed: 500,
-      mode: 'fade'
+    plugins: [lgThumbnail],
+    speed: 500,
+    mode: "fade",
   });
-})
+});
 /* ==============================================  
             light Gallary end
 =============================================== */
@@ -429,42 +371,38 @@ $(document).ready(function() {
 /* ==============================================  
         info Tabs carousal slider Start
 =============================================== */
-$(function() {
+$(function () {
+  var owl = $(".owl-1");
+  owl.owlCarousel({
+    loop: false,
+    margin: 0,
+    nav: false,
+    dots: false,
+    items: 1,
+    smartSpeed: 1000,
+    autoplay: false,
+    navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">'],
+  });
 
-	var owl = $('.owl-1');
-    owl.owlCarousel({
-        loop:false,
-        margin:0,
-        nav:false,
-        dots: false,
-        items: 1,
-        smartSpeed: 1000,
-        autoplay: false,
-        navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">']
+  var carousel_nav_a = $(".carousel-nav a");
+
+  carousel_nav_a.each(function (slide_index) {
+    var $this = $(this);
+    $this.attr("data-num", slide_index);
+    $this.click(function (e) {
+      owl.trigger("to.owl.carousel", [slide_index, 1500]);
+      e.preventDefault();
     });
+  });
 
-    var carousel_nav_a = $('.carousel-nav a');
-
-    carousel_nav_a.each(function(slide_index){
-        var $this = $(this);
-        $this.attr('data-num', slide_index);
-        $this.click(function(e) {
-            owl.trigger('to.owl.carousel',[slide_index,1500]);
-            e.preventDefault();
-        })
-    })
-
-    owl.on('changed.owl.carousel', function(event) {
-        carousel_nav_a.removeClass('active');
-        $(".carousel-nav a[data-num="+event.item.index+"]").addClass('active');
-    })
-
-	
-})
+  owl.on("changed.owl.carousel", function (event) {
+    carousel_nav_a.removeClass("active");
+    $(".carousel-nav a[data-num=" + event.item.index + "]").addClass("active");
+  });
+});
 /* ==============================================  
         info Tabs carousal slider End
 =============================================== */
-
 
 /* ==============================================  
         vertical Tabs navigation start
@@ -557,43 +495,6 @@ $(function() {
         vertical Tabs navigation start
 =============================================== */
 
-
-/* ==============================================  
-           Google MAp Start
-=============================================== */
-function init() {
-  console.log("map start");
-  var myLatlng = new google.maps.LatLng(35.692056, 51.258393);
-  var mapOptions = {
-    zoom: 11,
-    center: myLatlng,
-    styles: [
-      { featureType: "administrative", elementType: "all", stylers: [{ saturation: "-100" }] },
-      { featureType: "administrative.province", elementType: "all", stylers: [{ visibility: "off" }] },
-      { featureType: "landscape", elementType: "all", stylers: [{ saturation: -100 }, { lightness: 65 }, { visibility: "on" }] },
-      { featureType: "poi", elementType: "all", stylers: [{ saturation: -100 }, { lightness: "50" }, { visibility: "simplified" }] },
-      { featureType: "road", elementType: "all", stylers: [{ saturation: "-100" }] },
-      { featureType: "road.highway", elementType: "all", stylers: [{ visibility: "simplified" }] },
-      { featureType: "road.arterial", elementType: "all", stylers: [{ lightness: "30" }] },
-      { featureType: "road.local", elementType: "all", stylers: [{ lightness: "40" }] },
-      { featureType: "transit", elementType: "all", stylers: [{ saturation: -100 }, { visibility: "simplified" }] },
-      { featureType: "water", elementType: "geometry", stylers: [{ hue: "#ffff00" }, { lightness: -25 }, { saturation: -97 }] },
-      { featureType: "water", elementType: "labels", stylers: [{ lightness: -25 }, { saturation: -100 }] },
-    ],
-  };
-  var mapElement = document.getElementById("map");
-  var map = myLatlng.Map(mapElement, mapOptions);
-  var marker = myLatlng.Marker({
-    position: myLatlng.LatLng(40.67, -73.94),
-    map: map,
-    title: "Snazzy!",
-  });
-}
-/* ==============================================  
-           Google MAp End
-=============================================== */
-
-
 /* ==============================================  
            Humberger Menue Start
 =============================================== */
@@ -603,68 +504,92 @@ function closeNav() {
 /* ==============================================  
            Humberger MEnue End
 =============================================== */
+
+/* ==============================================  
+            Initialize and add the map
+=============================================== */
+function initMap() {
+  // The location of myLatLng
+  const myLatLng = { lat: 24.49339098050116, lng: 54.36684905506596 };
+  // The map, centered at myLatLng
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 18,
+    center: myLatLng,
+  });
+
+  // infowindow tooltip
+  const contentString =
+    // '<div id="content">' +
+    // '<div id="siteNotice">' +
+    // "</div>" +
+    // '<img src="./assets/images/icons/thebw_64_icon.ico">'+
+    '<h4 id="firstHeading" class="firstHeading" style="font-weight:600">The Bridge</h4>' +
+    '<div id="bodyContent">' +
+    "<p> The Bridge Center for Skills Development. Specialized in supporting and rehabilitating children and young people. ";
+  // "</div>" +
+  // "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+  });
+
+  // The marker, positioned at myLatLng
+  const marker = new google.maps.Marker({
+    position: myLatLng,
+    map,
+    title: "The Bridge Center",
+  });
+
+  marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  infowindow.open(map, marker);
+}
+window.initMap = initMap;
+/* ==============================================  
+            Google Map End
+=============================================== */
+
 /* ==============================================  
     hover effects disabled on-touch.
 =============================================== */
-// var mobileNoHoverState = function() {
+var mobileNoHoverState = function() {
 
-//   var hoverClass = 'hover',
-//       $target = $(".foo"), 
-//       preventMouseover = false;
+  var hoverClass = 'hover',
+      $target = $(".foo"),
+      preventMouseover = false;
 
-//   function forTouchstart() {
-//       preventMouseover = true;
-//   }
+  function forTouchstart() {
+      preventMouseover = true;
+  }
 
-//   function forMouseover() {
-//       if (preventMouseover === false) {
-//           $(this).addClass(hoverClass);
-//       } else {
-//           preventMouseover = false;
-//       }
-//   }
+  function forMouseover() {
+      if (preventMouseover === false) {
+          $(this).addClass(hoverClass);
+      } else {
+          preventMouseover = false;
+      }
+  }
 
-//   function forMouseout() {
-//       $(this).removeClass(hoverClass);
-//   }
+  function forMouseout() {
+      $(this).removeClass(hoverClass);
+  }
 
-//   function init() {
-//       $target.on({
-//           touchstart  : forTouchstart,
-//           mouseover   : forMouseover,
-//           mouseout    : forMouseout
-//       });                
-//   }
+  function init() {
+      $target.on({
+          touchstart  : forTouchstart,
+          mouseover   : forMouseover,
+          mouseout    : forMouseout
+      });
+  }
 
-//   return {
-//       init: init
-//   };
-// }();
+  return {
+      init: init
+  };
+}();
 /* ==============================================  
-    hover effects disabled on-touch.
+    hover effects disabled on-touch END
 =============================================== */
-// $('.card').click(function(){  
- 
-//   if (!$(this).hasClass("flipped")) {
-//   $( ".face" ).addClass( 'off' );
-//   $( this ).children( ".face" ).removeClass( 'off' );
-//   $( this ).parent( ".cards" ).addClass( 'big' );
-//   $( this ).addClass('flipped');
-
-//   } else {
- 
-//   $( ".face" ).removeClass( 'off' );
-//   $( ".cards" ).removeClass( 'big' );
-//   $( this ).removeClass('flipped'); 
-// }
-  
-
-// });
-// -----------------images load-----------------------------
-// $('body').imagesLoaded().always( function( instance ) {
-//   locoScroll.update();
-// $(document).ready(function() {
-//   console.log($('#sliderbtns').attr('id'));
-// });
-
-// primary-button
