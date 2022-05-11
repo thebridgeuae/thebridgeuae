@@ -43,7 +43,7 @@ locoScroll.on("scroll", (args) => {
   var pos = args.scroll.y;
   if (pos > 0) {
     navbar.classList.add("navbar-sticky");
-    $(".navbar .navbar-brand img").attr("src", "/thebridge-app/assets/images/logo/Thebridgebw-sm.svg");
+    // $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm.svg");
   }
   toTop.style.display = "none";
 
@@ -51,7 +51,6 @@ locoScroll.on("scroll", (args) => {
   navbar.removeAttribute("ddata-aos-delay");
 
   var scroll = args.scroll.y;
-  // console.log(scroll)
 
   if (!navbar.classList.contains("relative")) {
     // Down
@@ -69,11 +68,9 @@ locoScroll.on("scroll", (args) => {
       // Up
     } else {
       if (!navbar.classList.contains("navbar-no-fixed")) {
-        // console.log("yes");
-        // navbar.classList.toggle("hidden");
         log.classList.remove("minilogo");
         nav.classList.remove("navbarshrink-onscroll");
-        $(".navbar .navbar-brand img").attr("src", "/thebridge-app/assets/images/logo/Thebridgebw-big.svg");
+        $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-big.svg");
       }
 
       // Top
@@ -83,7 +80,7 @@ locoScroll.on("scroll", (args) => {
         if (!navbar.classList.contains("navbar-no-fixed")) {
           nav.classList.add("navbarshrink-onscroll");
           log.classList.add("minilogo");
-          $(".navbar .navbar-brand img").attr("src", "/thebridge-app/assets/images/logo/Thebridgebw-sm.svg");
+          $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm.svg");
         }
       }
 
