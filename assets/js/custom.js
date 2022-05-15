@@ -1,6 +1,22 @@
-$(function(){
-  $('.selectpicker').selectpicker();
-});
+// $(function(){
+//   $('.selectpicker').selectpicker();
+// });
+
+
+// $(document).ready(function () {
+//   var viewportWidth = $(window).width();
+//   if (viewportWidth < 886) {
+//     console.log("mobile");
+//     $(".navbar-brand img").hide();
+//     $(".navbar-brand img").css('opacity: 0')
+//     navbar.classList.add("navbar-fixed");
+//     navbar.classList.add("navbar-sticky");
+//     nav.classList.add("navbarshrink-mob");
+//     log.classList.add("minilogo-mob");
+//     $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm-lg.svg");
+//   }
+// });
+
 /* ==============================================  
            Locomotive scroll Start
 =============================================== */
@@ -11,20 +27,6 @@ const log = document.getElementById("logo");
 const navbar = document.querySelector(".navbar");
 const navbrand = document.querySelector(".navbar-brand");
 const toTop = document.getElementById("scroll-to-top");
-
-$(document).ready(function () {
-  var viewportWidth = $(window).width();
-  if (viewportWidth < 886) {
-    console.log("mobile");
-    // $(".navbar-brand img").hide();
-    // $(".navbar-brand img").css('opacity: 0')
-    // navbar.classList.add("navbar-fixed");
-    // navbar.classList.add("navbar-sticky");
-    // nav.classList.add("navbarshrink-mob");
-    // log.classList.add("minilogo-mob");
-    // $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm-lg.svg");
-  }
-});
 
 //initialize locomotive
 const locoScroll = new LocomotiveScroll({
@@ -42,10 +44,10 @@ const locoScroll = new LocomotiveScroll({
     // breakpoint: 767,
   },
   tablet: {
-    smooth: false,
-    // inertia: 0.8,
-    // getDirection: true,
-    // breakpoint: 1024,
+    smooth: true,
+    inertia: 0.8,
+    getDirection: true,
+    breakpoint: 1024,
   },
   smoothMobile: true,
   scrollFromAnywhere: false,
