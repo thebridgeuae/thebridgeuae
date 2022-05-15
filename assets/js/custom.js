@@ -45,7 +45,7 @@ const locoScroll = new LocomotiveScroll({
   },
   tablet: {
     smooth: true,
-    inertia: 0.8,
+    inertia: 0.4,
     getDirection: true,
     breakpoint: 1024,
   },
