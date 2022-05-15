@@ -1,3 +1,6 @@
+$(function(){
+  $('.selectpicker').selectpicker();
+});
 /* ==============================================  
            Locomotive scroll Start
 =============================================== */
@@ -6,7 +9,22 @@ const head = document.querySelector(".header");
 const nav = document.querySelector("nav");
 const log = document.getElementById("logo");
 const navbar = document.querySelector(".navbar");
+const navbrand = document.querySelector(".navbar-brand");
 const toTop = document.getElementById("scroll-to-top");
+
+$(document).ready(function () {
+  var viewportWidth = $(window).width();
+  if (viewportWidth < 886) {
+    console.log("mobile");
+    // $(".navbar-brand img").hide();
+    // $(".navbar-brand img").css('opacity: 0')
+    // navbar.classList.add("navbar-fixed");
+    // navbar.classList.add("navbar-sticky");
+    // nav.classList.add("navbarshrink-mob");
+    // log.classList.add("minilogo-mob");
+    // $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm-lg.svg");
+  }
+});
 
 //initialize locomotive
 const locoScroll = new LocomotiveScroll({
@@ -41,56 +59,66 @@ const locoScroll = new LocomotiveScroll({
 //Locomotive navbar hide/show/shrink
 locoScroll.on("scroll", (args) => {
   var pos = args.scroll.y;
-  if (pos > 0) {
-    navbar.classList.add("navbar-sticky");
-    // $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm.svg");
-  }
-  toTop.style.display = "none";
+  var viewportWidth = $(window).width();
 
-  navbar.removeAttribute("data-aos");
-  navbar.removeAttribute("ddata-aos-delay");
-
-  var scroll = args.scroll.y;
-
-  if (!navbar.classList.contains("relative")) {
-    // Down
-    if (scroll > pos) {
+  if (viewportWidth > 700) {
+    console.log("large screen");
+    if (pos > 0) {
       navbar.classList.add("navbar-sticky");
-      if (navbar.contains("navbar-fixed") || window.innerWidth <= 528) {
-        navbar.classList.toggle("hidden");
-      } else {
-        if (args.scroll.y >= window.innerHeight) {
-          navbar.classList.toggle("visible");
+    }
+    // toTop.style.display = "none";
+
+    navbar.removeAttribute("data-aos");
+    navbar.removeAttribute("ddata-aos-delay");
+    var scroll = args.scroll.y;
+
+    if (!navbar.classList.contains("relative")) {
+      // Down
+      if (scroll > pos) {
+        navbar.classList.add("navbar-sticky");
+        if (navbar.contains("navbar-fixed") || window.innerWidth <= 528) {
+          navbar.classList.toggle("hidden");
+        } else {
+          if (args.scroll.y >= window.innerHeight) {
+            navbar.classList.toggle("visible");
+          }
         }
-      }
-      toTop.style.opacity = 0;
+        // toTop.style.opacity = 0;
 
-      // Up
-    } else {
-      if (!navbar.classList.contains("navbar-no-fixed")) {
-        log.classList.remove("minilogo");
-        nav.classList.remove("navbarshrink-onscroll");
-        $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-big.svg");
-      }
-
-      // Top
-      if (args.scroll.y <= 50 && $(".navbar-holder").length == 0) {
-        navbar.classList.remove("navbar-sticky");
+        // Up
       } else {
         if (!navbar.classList.contains("navbar-no-fixed")) {
-          nav.classList.add("navbarshrink-onscroll");
-          log.classList.add("minilogo");
-          $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm.svg");
+          log.classList.remove("minilogo-mob");
+          nav.classList.remove("navbarshrink-onscroll");
+          $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-big-lg.svg");
         }
-      }
 
-      if (pos >= window.innerHeight && window.innerWidth >= 767) {
-        toTop.style.opacity = 0;
-      } else {
-        toTop.style.opacity = 0;
+        // Top
+        if (args.scroll.y <= 50 && $(".navbar-holder").length == 0) {
+          navbar.classList.remove("navbar-sticky");
+        } else {
+          if (!navbar.classList.contains("navbar-no-fixed")) {
+            nav.classList.add("navbarshrink-onscroll");
+            log.classList.add("minilogo-mob");
+            $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm-lg.svg");
+          }
+        }
+
+        // if (pos >= window.innerHeight && window.innerWidth >= 767) {
+        //   toTop.style.opacity = 0;
+        //  }
+        // else {
+        //   toTop.style.opacity = 0;
+        // }
       }
+      pos = scroll;
     }
-    pos = scroll;
+  } else{
+    console.log("mobile screen");
+    navbar.classList.add("navbar-sticky");
+    nav.classList.add("navbarshrink-mob");
+    log.classList.add("minilogo-mob");
+    $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm-lg.svg");
   }
 });
 
@@ -553,40 +581,39 @@ window.initMap = initMap;
 /* ==============================================  
     hover effects disabled on-touch.
 =============================================== */
-var mobileNoHoverState = function() {
-
-  var hoverClass = 'hover',
-      $target = $(".foo"),
-      preventMouseover = false;
+var mobileNoHoverState = (function () {
+  var hoverClass = "hover",
+    $target = $(".foo"),
+    preventMouseover = false;
 
   function forTouchstart() {
-      preventMouseover = true;
+    preventMouseover = true;
   }
 
   function forMouseover() {
-      if (preventMouseover === false) {
-          $(this).addClass(hoverClass);
-      } else {
-          preventMouseover = false;
-      }
+    if (preventMouseover === false) {
+      $(this).addClass(hoverClass);
+    } else {
+      preventMouseover = false;
+    }
   }
 
   function forMouseout() {
-      $(this).removeClass(hoverClass);
+    $(this).removeClass(hoverClass);
   }
 
   function init() {
-      $target.on({
-          touchstart  : forTouchstart,
-          mouseover   : forMouseover,
-          mouseout    : forMouseout
-      });
+    $target.on({
+      touchstart: forTouchstart,
+      mouseover: forMouseover,
+      mouseout: forMouseout,
+    });
   }
 
   return {
-      init: init
+    init: init,
   };
-}();
+})();
 /* ==============================================  
     hover effects disabled on-touch END
 =============================================== */
