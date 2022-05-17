@@ -8,10 +8,10 @@
 * [Font Import]
 *
 ----------------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic"); */
 
-@font-face {
+/* @font-face {
   font-family: Montserrat-Regular;
   src: url("../fonts/montserrat/Montserrat-Regular.ttf");
 }
@@ -34,7 +34,7 @@
 @font-face {
   font-family: Montserrat-Medium;
   src: url("../fonts/montserrat/Montserrat-Medium.ttf");
-}
+} */
 /*----------------------------------------------
 
 ----------------------------------------------*/
@@ -1397,7 +1397,8 @@ iframe {
 .contact100-form-title {
   display: block;
   width: 100%;
-  font-family: Montserrat-Black;
+  /* font-family: Montserrat-Black; */
+  font-family: "Josefin Sans";
   font-size: 39px;
   color: #333333;
   line-height: 1.2;
@@ -1421,7 +1422,8 @@ iframe {
 }
 
 .label-input100 {
-  font-family: Montserrat-SemiBold;
+  /* font-family: Montserrat-SemiBold; */
+  font-family: "Josefin Sans";
   font-size: 10px;
   color: #393939;
   line-height: 1.5;
@@ -1432,7 +1434,8 @@ iframe {
   display: block;
   width: 100%;
   background: transparent;
-  font-family: Montserrat-SemiBold;
+  /* font-family: Montserrat-SemiBold; */
+  font-family: "Josefin Sans";
   font-size: 18px;
   color: #555555;
   line-height: 1.2;
@@ -1476,9 +1479,10 @@ textarea.input100 {
   padding: 0 45px 0 22px;
   pointer-events: none;
 
-  font-family: Montserrat-SemiBold;
+  /* font-family: Montserrat-SemiBold; */
+  font-family: "Josefin Sans";
   font-size: 12px;
-  font-weight: normal;
+  font-weight: bold;
   color: #fa4251;
   line-height: 1.2;
 }

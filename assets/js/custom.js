@@ -383,14 +383,14 @@ $(".read-more").click(function () {
 /* ==============================================  
            light Gallary start
 =============================================== */
-$(document).ready(function () {
-  var galleryBox = document.getElementById("gallery-container");
-  lightGallery(galleryBox, {
-    plugins: [lgThumbnail],
-    speed: 500,
-    mode: "fade",
-  });
-});
+// $(document).ready(function () {
+//   var galleryBox = document.getElementById("gallery-container");
+//   lightGallery(galleryBox, {
+//     plugins: [lgThumbnail],
+//     speed: 500,
+//     mode: "fade",
+//   });
+// });
 /* ==============================================  
             light Gallary end
 =============================================== */
