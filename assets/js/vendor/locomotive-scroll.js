@@ -398,7 +398,7 @@
       key: "checkContext",
       value: function checkContext() {
         if (!this.reloadOnContextChange) return;
-        this.isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1 || this.windowWidth < this.tablet.breakpoint;
+        this.isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || navigator.userAgentData.platform === 'MacIntel' && navigator.maxTouchPoints > 1 || this.windowWidth < this.tablet.breakpoint;
         this.isTablet = this.isMobile && this.windowWidth >= this.tablet.breakpoint;
         var oldContext = this.context;
 
@@ -2102,7 +2102,7 @@
         }, this.instance);
         this.vs = new src({
           el: this.scrollFromAnywhere ? document : this.el,
-          mouseMultiplier: navigator.platform.indexOf('Win') > -1 ? 1 : 0.4,
+          mouseMultiplier: navigator.userAgentData.platform.indexOf('Win') > -1 ? 1 : 0.4,
           firefoxMultiplier: this.firefoxMultiplier,
           touchMultiplier: this.touchMultiplier,
           useKeyboard: false,
@@ -3086,7 +3086,7 @@
     _createClass(Smooth, [{
       key: "init",
       value: function init() {
-        this.options.isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1 || window.innerWidth < this.tablet.breakpoint;
+        this.options.isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || navigator.userAgentData.platform === 'MacIntel' && navigator.maxTouchPoints > 1 || window.innerWidth < this.tablet.breakpoint;
         this.options.isTablet = this.options.isMobile && window.innerWidth >= this.tablet.breakpoint;
 
         if (this.smooth && !this.options.isMobile || this.tablet.smooth && this.options.isTablet || this.smartphone.smooth && this.options.isMobile && !this.options.isTablet) {
