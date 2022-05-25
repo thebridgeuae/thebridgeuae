@@ -32,14 +32,12 @@
     <meta name="msapplication-TileColor" content="#191919" />
     <meta name="msapplication-config" content="assets/images/icons/browserconfig.xml" />
     <meta name="theme-color" content="#ED4439" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
     <!-- Google Site Verification -->
     <meta name="google-site-verification" content="kVAvYZ8cf7r3S1cTKzEyHTZ8m19mG00I0eo_QhjMKLw" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMHN9YHRP7"></script>
-    <script>
+    <script async>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -65,61 +63,52 @@
     <!-- ==============================================
         Fonts & icons
         =============================================== -->
-    <link
+    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+
+    <!-- <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;1,500&family=Merriweather:wght@300;400;700&family=PT+Sans:wght@400;700&display=swap"
+      media="none"
+      onload="if(media!=='all')media='all'"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.2/font/bootstrap-icons.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
+      media="none"
+      onload="if(media!=='all')media='all'"
+    /> -->
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" /> -->
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" /> -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/bootstrap-icons.css" /> -->
     <!-- <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css" /> -->
     <!-- <link rel="stylesheet" href="assets/css/vendor/icons.min.css" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.2/font/bootstrap-icons.min.css"/> -->
 
     <!-- ==============================================
-        Vendor Stylesheet
-        =============================================== -->
-    <link rel="stylesheet" href="assets/css/vendor/locomotive-scroll.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="assets/css/vendor/cookie-notice.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css" type="text/css" media="all" />
+      Stylesheet
+      =============================================== -->
+    <link rel="stylesheet" href="assets/css/vendor/locomotive-scroll.min.css" type="text/css" media="none" onload="if(media!=='all')media='all'" />
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" type="text/css" media="none" onload="if(media!=='all')media='all'" />
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap-icons.css" type="text/css" media="none" onload="if(media!=='all')media='all'" />
+    <link rel="stylesheet" href="assets/css/vendor/cookie-notice.min.css" type="text/css" media="none" onload="if(media!=='all')media='all'" />
+    <link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css" type="text/css" media="none" onload="if(media!=='all')media='all'" />
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="assets/css/custom.css" type="text/css" media="all" />
     <!-- <link rel="stylesheet" href="assets/css/vendor/slider.min.css" type="text/css" media="all" /> -->
     <!-- <link rel="stylesheet" href="assets/css/vendor/animation.min.css" type="text/css" media="all" /> -->
     <!-- <link rel="stylesheet" href="assets/css/vendor/animate.min.css" type="text/css" media="all" /> -->
     <!-- <link rel="stylesheet" href="assets/css/vendor/animate.css" type="text/css" media="all" /> -->
     <!-- <link rel="stylesheet" href="assets/css/vendor/lightgallary/lightgallery.css" type="text/css" media="all" /> -->
     <!-- <link rel="stylesheet" href="assets/css/vendor/lightgallary/lg-thumbnail.css" type="text/css" media="all" /> -->
+    <!-- <link rel="stylesheet" href="assets/css/styles.pure.css" type="text/css" media="all" /> -->
 
-    <!-- ==============================================
-      Custom Stylesheet
-      =============================================== -->
-    <link rel="stylesheet" href="assets/css/main.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="assets/css/custom.css" type="text/css" media="all" />
-
-    <!-- <script>
-      (function(src, cb) {
-       var s = document.createElement('script'); s.setAttribute('src', src);
-       s.onload = cb; (document.head || document.body).appendChild(s);
-     })('https://ucarecdn.com/libs/blinkloader/3.x/blinkloader.min.js', function() {
-       window.Blinkloader.optimize({
-         pubkey:'e0f27cf64d3d2316b1e9',
-         fadeIn:true,
-         lazyload:true,
-         smartCompression:true,
-         responsive:true,
-         retina:true,
-         webp:true
-       });
-     })
-   </script> -->
     <!-- ==============================================
         Theme Settings
         =============================================== -->
     <!-- #startregion Root -->
     <style>
       :root {
-        --h1-font: "Default";
+        /* --h1-font: "Default"; */
+        --h1-font: "Poppins", "Josefin Sans", sans-serif;
         --h1-size: 3rem;
         --h1-weight: 900;
 
@@ -140,24 +129,8 @@
         --nav-brand-height: 55px;
 
         --section-1-bg-color: #f9f7e6;
-        /* --section-1-bg-color: #f5f5f5; */
-        /* --section-1-bg-color: #e7e7e7; */
-        /* --section-1-bg-color: #dfdfe1; */
-        /* --section-1-bg-color: #dbd5d3; */
-        /* --section-1-bg-color: #e2cfc7; */
-        /* --section-1-bg-color: #e6cbbf; */
-        /* --section-1-bg-color: #e8d0c6; */
-        /* --section-1-bg-color: #e8d0c6; */
-
         --section-2-bg-color: #f9f7e6;
-        /* --section-2-bg-color: #e6e8ed; */
-        /* --section-2-bg-color: #d0e0e8; */
-        /* --section-2-bg-color: #a7d1e5; */
-        /* --section-2-bg-color: #d8e2eb;  */
-        /* --section-2-bg-color: #d9e3eb; */
-
         --section-3-bg-color: #f9f7e6;
-
         --section-4-bg-color: #d9f6ef;
         --section-5-bg-color: #d9f6ef;
         --section-6-bg-color: #d9f6ef;
@@ -165,7 +138,7 @@
 
         --icons-color: #9b8e75;
         --color: 155, 142, 117;
-        --subhead-p-color: #9b8e75;
+        --subhead-p-color: #7c7468;
 
         --footer-bg-color: #2b9c76;
         --footer-brand-height: 80px;
@@ -176,7 +149,7 @@
 
         --primary-t-color: #2f323a;
         --secondary-t-color: #f5f5f5;
-        --primary-p-color: #6f6f6f;
+        --primary-p-color: #2f323a;
         --secondary-p-color: #fff;
 
         --primary-b-color: #6f6f6f;
@@ -267,7 +240,8 @@
 
             <!-- burger menue start-->
             <div class="menu-wrap" id="burgermenu">
-              <input id="checkbox" type="checkbox" class="toggler" />
+              <!-- <label for="checkbox" style="display: none"> Humberger Menue</label> -->
+              <input id="checkbox" type="checkbox" class="toggler" aria-label="Humberger Menue" />
               <div class="hamburger"><div></div></div>
               <div class="menu">
                 <div>
@@ -324,10 +298,10 @@
                   <div class="col-12 d-flex inner">
                     <div class="left align-self-center text-center text-md-left">
                       <!-- class: effect-static-text -->
-                      <h2 class="title">
+                      <h1 class="title">
                         CARING HANDS <br />
                         COMPASSIONATE HEARTS
-                      </h2>
+                      </h1>
                       <div class="teaser">
                         <p class="description">
                           Our compassionate and wrap around care envelops each child in a supportive and loving environment that helps them grow.
@@ -356,7 +330,7 @@
                   <div class="col-12 d-flex inner">
                     <div class="left align-self-center text-center text-md-left">
                       <!-- class: effect-static-text -->
-                      <h2 class="title">INNOVATION AND TRUST</h2>
+                      <h1 class="title">INNOVATION AND TRUST</h1>
                       <div class="teaser">
                         <p class="description">
                           We assemble the best innovative medical specialists, and educational methods and invest in the best techniques to deliver the
@@ -375,12 +349,12 @@
               <!-- hero img -->
               <!---------->
               <div class="hero-image-fit">
-                <!-- <img src="assets/images/img/05hero.jpg" /> -->
+                <!-- <img src="assets/images/img/04hero.jpg" width="1800px" height="1200px" class="lazyload" alt="hero" /> -->
                 <!-- <img src="https://zoombree.mo.cloudinary.net/thebridge-site/05hero.jpg" /> -->
                 <img
-                  src="https://ucarecdn.com/79b685d8-32ed-4046-9259-c89475f2b8fa/-/preview/-/quality/smart/05hero.jpg"
-                  width="100%"
-                  height="auto"
+                  data-src="https://ucarecdn.com/2cf191dd-be6a-47a7-81c9-2e54a6ba0779/-/preview/-/quality/smart/-/format/auto/05hero.svg"
+                  width="1920px"
+                  height="1080px"
                   alt="hero"
                 />
               </div>
@@ -428,7 +402,7 @@
 
           <!-- middle scroll icon-->
           <div class="mouse-field" id="mousescroll">
-            <a href="#who" class="mouse smooth-anchor"></a>
+            <a href="#who" class="mouse smooth-anchor" aria-label="Scroll down"></a>
           </div>
           <!---------->
 
@@ -450,9 +424,9 @@
         <div id="info" class="container">
           <div class="row">
             <div class="d-flex carousel-nav">
-              <a href="#" class="col active"><h4>Who We Are?</h4></a>
-              <a href="#" class="col"><h4>Our Mission</h4></a>
-              <a href="#" class="col"><h4>Why Us?</h4></a>
+              <a href="#" class="col active tab-title"><h2>Who We Are?</h2></a>
+              <a href="#" class="col tab-title"><h2>Our Mission</h2></a>
+              <a href="#" class="col tab-title"><h2>Why Us?</h2></a>
             </div>
             <div class="owl-carousel owl-1">
               <div class="media-29101 d-md-flex w-100">
@@ -460,11 +434,11 @@
                   <!-- <img src="assets/images/img/who-o.png" alt="who we are?" class="img-fluid" /> -->
                   <!-- <img src="https://zoombree.mo.cloudinary.net/thebridge-site/who-o.png" alt="who we are?" class="img-fluid" /> -->
                   <img
-                    src="https://ucarecdn.com/8bbd879d-eb91-4bd9-a8dd-1ee75b7a41de/-/format/auto/who-o.png"
-                    width="100%"
-                    height="auto"
-                    alt="who we are?"
                     class="img-fluid"
+                    src="https://ucarecdn.com/8bbd879d-eb91-4bd9-a8dd-1ee75b7a41de/-/preview/-/quality/smart/-/format/auto/who-o.png"
+                    width="410px"
+                    height="225px"
+                    alt="who we are?"
                   />
                 </div>
                 <div class="text">
@@ -487,11 +461,11 @@
                   <!-- <img src="assets/images/img/mission-o.png" alt="Thebridge Mission" class="img-fluid" /> -->
                   <!-- <img src="https://zoombree.mo.cloudinary.net/thebridge-site/mission-o.png" alt="Thebridge Mission" class="img-fluid" /> -->
                   <img
-                    src="https://ucarecdn.com/1cb9dfc5-0170-434e-9040-3468b8e48f1b/-/format/auto/why-o.png"
-                    width="100%"
-                    height="auto"
-                    alt="Thebridge Mission"
                     class="img-fluid"
+                    src="https://ucarecdn.com/1cb9dfc5-0170-434e-9040-3468b8e48f1b/-/format/auto/mission-o.png"
+                    width="412px"
+                    height="353px"
+                    alt="Thebridge Mission"
                   />
                 </div>
                 <div class="text">
@@ -514,11 +488,11 @@
                   <!-- <img src="assets/images/img/why-o.png" alt="Why Choose us?" class="img-fluid" /> -->
                   <!-- <img src="https://zoombree.mo.cloudinary.net/thebridge-site/why-o.png" alt="Why Choose us?" class="img-fluid" /> -->
                   <img
-                    src="https://ucarecdn.com/ee2909f6-c1fb-44ce-b4e7-f6944b5f0ff7/-/format/auto/why-o.png"
-                    width="100%"
-                    height="auto"
-                    alt="Why Choose us?"
                     class="img-fluid"
+                    src="https://ucarecdn.com/ee2909f6-c1fb-44ce-b4e7-f6944b5f0ff7/-/preview/-/quality/smart/-/format/auto/why-o.png"
+                    width="410px"
+                    height="301px"
+                    alt="Why Choose us?"
                   />
                 </div>
                 <div class="text">
@@ -569,11 +543,16 @@
                         data-wow-delay=".5s"
                         style="position: relative; margin-top: 50px; visibility: visible; animation-delay: 0.5s"
                       >
+                        <!-- <img src="https://zoombree.mo.cloudinary.net/thebridge-site/about1.jpg" data-fallback="asstes/images/img/about1s.jpg"
+                      width="237px"
+                      height="240px"
+                      alt="family centered services"/> -->
                         <!-- <img src="https://zoombree.mo.cloudinary.net/thebridge-site/about1.jpg" alt="" /> -->
+                        <!-- <img src="assets/images/img/about-s.svg" /> -->
                         <img
-                          src="https://ucarecdn.com/793c7e5a-d476-45d5-ace8-50bb54bfe519/-/preview/-/quality/smart/-/format/auto/about1.jpg"
-                          width="100%"
-                          height="auto"
+                          src="https://ucarecdn.com/534fd4bf-8683-453d-b536-98f45ad8a320/-/preview/-/quality/smart/-/format/auto/about1.svg"
+                          width="291px"
+                          height="200px"
                           alt="family centered services"
                         />
                       </div>
@@ -582,18 +561,18 @@
                       <div class="img2 wow imago animated" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s">
                         <!-- <img src="https://zoombree.mo.cloudinary.net/thebridge-site/about5.jpg" alt="" /> -->
                         <img
-                          src="https://ucarecdn.com/92d4cfc4-a9ab-474e-b08a-3df4e2e13deb/-/preview/-/quality/smart/-/format/auto/about5.jpg"
-                          width="100%"
-                          height="auto"
+                          src="https://ucarecdn.com/4f98611e-7c22-4f26-9330-f209b1f4225e/-/preview/-/quality/smart/-/format/auto/about5.svg"
+                          width="166px"
+                          height="200px"
                           alt="cultural safety"
                         />
                       </div>
                       <div class="img3 wow imago animated" data-wow-delay=".8s" style="visibility: visible; animation-delay: 0.8s">
                         <!-- <img src="https://zoombree.mo.cloudinary.net/thebridge-site/about9.jpg" alt="" /> -->
                         <img
-                          src="https://ucarecdn.com/6c22ddb5-a677-4337-abd9-e68f552dfc4d/-/preview/-/quality/smart/-/format/auto/about9.jpg"
-                          width="100%"
-                          height="auto"
+                          src="https://ucarecdn.com/b8bf385f-9ac9-473b-8f2c-64fb90d4ec08/-/preview/-/quality/smart/-/format/auto/about9.svg"
+                          width="178px"
+                          height="200px"
                           alt="innovation and responsiveness"
                         />
                       </div>
@@ -627,10 +606,10 @@
                     <div class="featureItem">
                       <div class="items">
                         <div class="image">
-                          <img src="assets/images/icons/item1-o.png" alt="family care" />
+                          <img src="assets/images/icons/item1-o.png" width="79px" height="auto" alt="family care" />
                         </div>
                         <div class="heading">
-                          <h5>Family Care</h5>
+                          <h4>Family Care</h4>
                         </div>
                         <!-- <div class="text">
                                 <p>If you want to change the world, one wish at a time, help kids like Ramesh and Sheetal reach their full potential.</p>
@@ -640,7 +619,7 @@
                     <div class="featureItem">
                       <div class="items">
                         <div class="image">
-                          <img src="assets/images/icons/item2-o.png" alt="quality first" />
+                          <img src="assets/images/icons/item2-o.png" width="79px" height="auto" alt="quality first" />
                         </div>
                         <div class="heading">
                           <h5>Quality First</h5>
@@ -653,7 +632,7 @@
                     <div class="featureItem">
                       <div class="items">
                         <div class="image">
-                          <img src="assets/images/icons/item3-o.png" alt="hand in hand" />
+                          <img src="assets/images/icons/item3-o.png" width="50px" height="auto" alt="hand in hand" />
                         </div>
                         <div class="heading">
                           <h5>Hand in Hand</h5>
@@ -666,7 +645,7 @@
                     <div class="featureItem">
                       <div class="items">
                         <div class="image">
-                          <img src="assets/images/icons/item4-o.png" alt="proven results" />
+                          <img src="assets/images/icons/item4-o.png" width="79px" height="auto" alt="proven results" />
                         </div>
                         <div class="heading">
                           <h5>Proven Results</h5>
@@ -1345,17 +1324,17 @@
                 <div class="row">
                   <div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
                     <label class="label-input100">FULL NAME *</label>
-                    <input class="input100" type="text" name="name" />
+                    <input class="input100" type="text" name="name" aria-label="full name" />
                   </div>
                   <!-- <div style="display:flex;flex-direction:row;margin:0 auto"> -->
                   <div id="email" class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Enter Your Email (e@a.x)">
                     <label class="label-input100">Email *</label>
-                    <input class="input100" type="text" name="email" />
+                    <input class="input100" type="text" name="email" aria-label="email" />
                   </div>
 
                   <div class="wrap-input100 bg1 rs1-wrap-input100">
                     <label class="label-input100">Phone</label>
-                    <input class="input100" type="text" name="phone" />
+                    <input class="input100" type="text" name="phone" aria-label="phone" />
                   </div>
                   <!-- </div> -->
                   <div class="wrap-input100 input100-select bg1">
@@ -1420,8 +1399,7 @@
       <!-- Footer -->
       <!-- <div class="sticky-footer">
         <div class="fixed-target" id="fixed-target"></div>
-        <div class="fixed-element" data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
-         -->
+        <div class="fixed-element" data-scroll data-scroll-sticky data-scroll-target="#fixed-target"> -->
       <footer id="foot" class="odd" data-scroll data-scroll-repeat data-scroll-call="toggleBackToTop">
         <section id="footer" class="footer">
           <!-- Footer [links] -->
@@ -1441,16 +1419,16 @@
                     </p>
                     <ul class="navbar-nav social share-list mt-0 ml-auto">
                       <li class="nav-item">
-                        <a href="#" class="nav-link"><i class="icon-social-instagram ml-0"></i></a>
+                        <a href="#" class="nav-link" aria-label="instagram"><i class="bi bi-instagram ml-0"></i></a>
                       </li>
                       <li class="nav-item">
-                        <a href="#" class="nav-link"><i class="icon-social-facebook"></i></a>
+                        <a href="#" class="nav-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                       </li>
                       <li class="nav-item">
-                        <a href="#" class="nav-link"><i class="icon-social-linkedin"></i></a>
+                        <a href="#" class="nav-link" aria-label="Linkedin"><i class="bi bi-linkedin"></i></a>
                       </li>
                       <li class="nav-item">
-                        <a href="#" class="nav-link"><i class="icon-social-twitter"></i></a>
+                        <a href="#" class="nav-link" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1463,7 +1441,7 @@
                     <ul class="navbar-nav">
                       <li class="nav-item">
                         <a href="tel:+971 56 5683172" class="nav-link">
-                          <i class="icon-phone mr-2"></i>
+                          <i class="bi bi-telephone mr-2"></i>
                           +971 56 5683172
                         </a>
                       </li>
@@ -1472,13 +1450,13 @@
                           href="mailto:info@thebridgeuae.com?subject=The%20Bridge%20Professional%20Service%20enquiry&body=How%20can%20we%20assisst%20you ?"
                           class="nav-link"
                         >
-                          <i class="icon-envelope mr-2"></i>
+                          <i class="bi bi-envelope-paper mr-2"></i>
                           info@thebridgeuae.com
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="https://www.google.com/maps/search/?api=1&query=24.49339098050116%2C54.36684905506596" class="nav-link">
-                          <i class="icon-location-pin mr-2"></i>
+                          <i class="bi bi-pin-map mr-2"></i>
                           <span>AUH, Plaza Tower, Office 805</span>
                         </a>
                       </li>
@@ -1510,7 +1488,7 @@
           <div class="container">
             <div class="row">
               <div class="col-12 p-3 text-center text-lg-center">
-                <p style="color: #dae2c5">
+                <p style="color: #f9f1e5">
                   © 2022 Thebridge is Made with love by
                   <a href="https://www.zoombree.com" target="_blank"><small style="color: #d0ac47">Zoombree Dev</small></a
                   >.
@@ -1520,8 +1498,8 @@
           </div>
         </section>
       </footer>
-      <!-- </div> -->
-      <!-- </div> -->
+      <!-- </div>
+      </div> -->
       <!----------->
 
       <!-- Scroll [to top] -->
@@ -1545,6 +1523,8 @@
     <script src="assets/js/vendor/progress-radial.min.js"></script>
     <script src="assets/js/vendor/cookie-notice.min.js"></script>
     <script src="assets/js/vendor/owl.carousel.min.js"></script>
+    <!-- <script src="assets/js/vendor/lazysizes.min.js" ></script> -->
+
     <!-- <script src="assets/js/vendor/popper.min.js"></script> -->
     <!-- <script src="assets/js/vendor/ponyfill.min.js"></script> -->
     <!-- <script src="assets/js/vendor/slider.min.js"></script> -->
@@ -1562,7 +1542,7 @@
      =============================================== -->
     <!-- <script src="assets/js/main.js"></script> -->
     <script src="assets/js/custom.js"></script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-625b7bbf5082e247"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-625b7bbf5082e247" async defer></script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoFSVRYsWu2jrufLnxrWap-JyEahAdhOE&callback=initMap&v=weekly&channel=2"
       async

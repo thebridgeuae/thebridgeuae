@@ -1,8 +1,20 @@
+// 1- ===============Preloader Start================================
+jQuery(function ($) {
+  "use strict";
+
+  let preloader = $(".preloader");
+
+  setTimeout(function () {
+    preloader.addClass("ready");
+  }, preloader.data("timeout"));
+});
+
+// 2- =====================Language picker==========================
 // $(function(){
 //   $('.selectpicker').selectpicker();
 // });
 
-
+// 3- ==================logo selection/media type==================
 // $(document).ready(function () {
 //   var viewportWidth = $(window).width();
 //   if (viewportWidth < 886) {
@@ -17,29 +29,8 @@
 //   }
 // });
 
-/* ==============================================  
-           Preloader Start
-=============================================== */
+// 4- ===============Locomotive scroll Start===============================
 
-jQuery(function ($) {
-
-  'use strict';
-
-  let preloader = $('.preloader');
-
-  setTimeout(function() {
-      preloader.addClass('ready');
-      
-  }, preloader.data('timeout'))
-})
-/* ==============================================  
-           Preloader End
-=============================================== */
-
-
-/* ==============================================  
-           Locomotive scroll Start
-=============================================== */
 // ------------------Global Selectors;--------------------
 const head = document.querySelector(".header");
 const nav = document.querySelector("nav");
@@ -49,14 +40,20 @@ const navbrand = document.querySelector(".navbar-brand");
 const toTop = document.getElementById("scroll-to-top");
 
 //initialize locomotive
+
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
+  name: "scroll",
+  offset: [0, 0],
   smooth: true,
+  reloadOnContextChange: true,
+  smoothMobile: false, // smooth scroll on mobile
   multiplier: 1.1,
   firefoxMultiplier: 50,
   touchMultiplier: 2,
   scrollbarContainer: false,
-  lerp: 0.04,
+  lerp: 0.03,
+  // loading:'lazy',
   smartphone: {
     smooth: false,
     // inertia: 0.8,
@@ -69,14 +66,23 @@ const locoScroll = new LocomotiveScroll({
     // getDirection: true,
     // breakpoint: 1024,
   },
-  smoothMobile: true,
   scrollFromAnywhere: false,
   getSpeed: true,
   getDirection: true,
   useKeyboard: true,
   class: "in-view",
-  reloadOnContextChange: true,
+  repeat: false,
+  direction: "vertical", // or horizontal
+  class: "is-inview",
+  scrollbarClass: "c-scrollbar",
+  scrollingClass: "has-scroll-scrolling",
+  draggingClass: "has-scroll-dragging",
+  smoothClass: "has-scroll-smooth",
+  initClass: "has-scroll-init",
 });
+setTimeout(() => {
+  locoScroll.update();
+}, 1000);
 
 //Locomotive navbar hide/show/shrink
 locoScroll.on("scroll", (args) => {
@@ -135,7 +141,7 @@ locoScroll.on("scroll", (args) => {
       }
       pos = scroll;
     }
-  } else{
+  } else {
     console.log("mobile screen");
     navbar.classList.add("navbar-sticky");
     nav.classList.add("navbarshrink-mob");
@@ -145,9 +151,9 @@ locoScroll.on("scroll", (args) => {
 });
 
 //Update
-$(window).on("load", function () {
-  locoScroll.update();
-});
+// $(window).on("load", function () {
+//   locoScroll.update();
+// });
 
 //Locomotive smooth Anchor Scroll
 const anchorLinks = document.querySelectorAll("a[href^=\\#]:not([href$=\\#])");
@@ -162,13 +168,8 @@ anchorLinks.forEach((anchorLink) => {
     locoScroll.scrollTo(target);
   });
 });
-/* ==============================================  
-           Locomotive scroll End
-=============================================== */
 
-/* ==============================================  
-           Hero Slider Start
-=============================================== */
+// 5- ================ Hero Slider Start==============================
 jQuery(document).ready(function ($) {
   const outerbtn = "#" + $("#sliderbtns").attr("id");
   // console.log(outerbtn)
@@ -299,13 +300,8 @@ jQuery(document).ready(function ($) {
     });
   }
 });
-/* ==============================================  
-           Hero Slider End
-=============================================== */
 
-/* ==============================================  
-            Form Validation Start
-=============================================== */
+// 6- =================Form Validation Start===========================
 (function ($) {
   "use strict";
 
@@ -381,13 +377,8 @@ jQuery(document).ready(function ($) {
     $(thisAlert).find(".btn-hide-validate").remove();
   }
 })(jQuery);
-/* =============================================  
-           Form Validation End
-=============================================== */
 
-/* ==============================================  
-           Expand/Collapse Text
-=============================================== */
+//7- ===========Expand/Collapse Text===================================
 $(".read-more").click(function () {
   $(this).prev().slideToggle();
   if ($(this).text() == "Read More") {
@@ -396,13 +387,8 @@ $(".read-more").click(function () {
     $(this).text("Read More");
   }
 });
-/* ==============================================  
-           Expand/Collapse Text end
-=============================================== */
 
-/* ==============================================  
-           light Gallary start
-=============================================== */
+//  8- ===============light Gallary start==============================
 // $(document).ready(function () {
 //   var galleryBox = document.getElementById("gallery-container");
 //   lightGallery(galleryBox, {
@@ -411,13 +397,8 @@ $(".read-more").click(function () {
 //     mode: "fade",
 //   });
 // });
-/* ==============================================  
-            light Gallary end
-=============================================== */
 
-/* ==============================================  
-        info Tabs carousal slider Start
-=============================================== */
+// 9- =============info Tabs carousal slider Start=========================
 $(function () {
   var owl = $(".owl-1");
   owl.owlCarousel({
@@ -447,13 +428,8 @@ $(function () {
     $(".carousel-nav a[data-num=" + event.item.index + "]").addClass("active");
   });
 });
-/* ==============================================  
-        info Tabs carousal slider End
-=============================================== */
 
-/* ==============================================  
-        vertical Tabs navigation start
-=============================================== */
+// 10- ==============vertical Tabs navigation start========================
 !(function () {
   var t = {
       611: function () {
@@ -538,23 +514,13 @@ $(function () {
       r(221), r(611);
     })();
 })();
-/* ==============================================  
-        vertical Tabs navigation start
-=============================================== */
 
-/* ==============================================  
-           Humberger Menue Start
-=============================================== */
+//11-  ===============  Humberger Menue Start==============================
 function closeNav() {
   document.getElementById("checkbox").checked = false;
 }
-/* ==============================================  
-           Humberger MEnue End
-=============================================== */
 
-/* ==============================================  
-            Initialize and add the map
-=============================================== */
+//12- ==============Initialize and add the map============================
 function initMap() {
   // The location of myLatLng
   const myLatLng = { lat: 24.49339098050116, lng: 54.36684905506596 };
@@ -596,13 +562,8 @@ function initMap() {
   infowindow.open(map, marker);
 }
 window.initMap = initMap;
-/* ==============================================  
-            Google Map End
-=============================================== */
 
-/* ==============================================  
-    hover effects disabled on-touch.
-=============================================== */
+//13- ============hover effects disabled on-touch.=======================
 var mobileNoHoverState = (function () {
   var hoverClass = "hover",
     $target = $(".foo"),
@@ -636,55 +597,66 @@ var mobileNoHoverState = (function () {
     init: init,
   };
 })();
-/* ==============================================  
-    hover effects disabled on-touch END
-=============================================== */
 
-
-/* ==============================================  
-    Cookies notice START
-=============================================== */
-
+//14- ==============Cookies notice START================================
 jQuery(function ($) {
-
-  'use strict';
+  "use strict";
 
   let cookieNotice = true;
 
-  if(cookieNotice) {
+  if (cookieNotice) {
+    // Translate
+    gdprCookieNoticeLocales.en = {
+      description:
+        "We use cookies to offer you a better browsing experience, personalise content and ads, to provide social media features and to analyse our traffic. Read about how we use cookies and how you can control them by clicking Cookie Settings. You consent to our cookies if you continue to use this website.",
+      settings: "Cookie settings",
+      accept: "Accept cookies",
+      statement: "Our cookie statement",
+      save: "Save settings",
+      always_on: "Always on",
+      cookie_essential_title: "Essential website cookies",
+      cookie_essential_desc:
+        "Necessary cookies help make a website usable by enabling basic functions like page navigation and access to secure areas of the website. The website cannot function properly without these cookies.",
+      cookie_performance_title: "Performance cookies",
+      cookie_performance_desc:
+        "These cookies are used to enhance the performance and functionality of our websites but are non-essential to their use. For example it stores your preferred language or the region that you are in.",
+      cookie_analytics_title: "Analytics cookies",
+      cookie_analytics_desc:
+        "We use analytics cookies to help us measure how users interact with website content, which helps us customize our websites and application for you in order to enhance your experience.",
+      cookie_marketing_title: "Marketing cookies",
+      cookie_marketing_desc:
+        "These cookies are used to make advertising messages more relevant to you and your interests. The intention is to display ads that are relevant and engaging for the individual user and thereby more valuable for publishers and third party advertisers.",
+    };
 
-      // Translate
-      gdprCookieNoticeLocales.en = {
-          description: 'We use cookies to offer you a better browsing experience, personalise content and ads, to provide social media features and to analyse our traffic. Read about how we use cookies and how you can control them by clicking Cookie Settings. You consent to our cookies if you continue to use this website.',
-          settings: 'Cookie settings',
-          accept: 'Accept cookies',
-          statement: 'Our cookie statement',
-          save: 'Save settings',
-          always_on: 'Always on',
-          cookie_essential_title: 'Essential website cookies',
-          cookie_essential_desc: 'Necessary cookies help make a website usable by enabling basic functions like page navigation and access to secure areas of the website. The website cannot function properly without these cookies.',
-          cookie_performance_title: 'Performance cookies',
-          cookie_performance_desc: 'These cookies are used to enhance the performance and functionality of our websites but are non-essential to their use. For example it stores your preferred language or the region that you are in.',
-          cookie_analytics_title: 'Analytics cookies',
-          cookie_analytics_desc: 'We use analytics cookies to help us measure how users interact with website content, which helps us customize our websites and application for you in order to enhance your experience.',
-          cookie_marketing_title: 'Marketing cookies',
-          cookie_marketing_desc: 'These cookies are used to make advertising messages more relevant to you and your interests. The intention is to display ads that are relevant and engaging for the individual user and thereby more valuable for publishers and third party advertisers.'
-      }
-
-      gdprCookieNotice({
-          locale: 'en', // This is the default value
-          timeout: 2000, // Time until the cookie bar appears
-          expiration: 30, // This is the default value, in days
-          domain: window.location.hostname, // If you run the same cookie notice on all subdomains, define the main domain starting with a .
-          implicit: true, // Accept cookies on page scroll automatically
-          statement: 'https://leverage.codings.dev', // Link to your cookie statement page
-          performance: ['JSESSIONID'], // Cookies in the performance category.
-          analytics: ['ga'], // Cookies in the analytics category.
-          marketing: ['SSID'] // Cookies in the marketing category.
-      })
+    gdprCookieNotice({
+      locale: "en", // This is the default value
+      timeout: 2000, // Time until the cookie bar appears
+      expiration: 30, // This is the default value, in days
+      domain: window.location.hostname, // If you run the same cookie notice on all subdomains, define the main domain starting with a .
+      implicit: true, // Accept cookies on page scroll automatically
+      statement: "https://leverage.codings.dev", // Link to your cookie statement page
+      performance: ["JSESSIONID"], // Cookies in the performance category.
+      analytics: ["ga"], // Cookies in the analytics category.
+      marketing: ["SSID"], // Cookies in the marketing category.
+    });
   }
-})
+});
 
-/* ==============================================  
-    Cookies notice END
-=============================================== */
+//14- ==============Cookies notice START================================
+// $("img[data-fallback]").error(function() {
+
+//   console.log("Image CDN Failed");
+
+//   var imgFallback = $(this).data("fallback");
+
+//   if (this.src != imgFallback) {
+//     this.src = imgFallback;
+//   }
+
+// });
+
+// $( "img[data-fallback]" )
+// .error(function() {
+//   $( this ).attr( "src", "https://zoombree.mo.cloudinary.net/thebridge-site/about1.jpg" );
+// })
+// .attr( "src", "asstes/images/img/about1s.jpg" );
