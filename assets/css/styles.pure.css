@@ -124,14 +124,13 @@ html.touch :hover {
 }
 @font-face {
   font-family: bootstrap-icons;
-  src: url(https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.2/font/fonts/bootstrap-icons.woff2?08efbba7c53d8c5413793eecb19b20bb) format("woff2"),
-    url(https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.2/font/fonts/bootstrap-icons.woff?08efbba7c53d8c5413793eecb19b20bb) format("woff");
+  src: url(fonts/bootstrap-icons.woff2?524846017b983fc8ded9325d94ed40f3) format("woff2"),
+    url(fonts/bootstrap-icons.woff?524846017b983fc8ded9325d94ed40f3) format("woff");
 }
 .bi::before,
 [class*=" bi-"]::before,
 [class^="bi-"]::before {
   display: inline-block;
-  font-display: block;
   font-family: bootstrap-icons !important;
   font-style: normal;
   font-weight: 400 !important;
@@ -166,6 +165,9 @@ html.touch :hover {
 .bi-alt::before {
   content: "\f109";
 }
+.bi-arrow-bar-down::before {
+  content: "\f112";
+}
 .bi-arrow-bar-left::before {
   content: "\f113";
 }
@@ -174,6 +176,27 @@ html.touch :hover {
 }
 .bi-arrow-bar-up::before {
   content: "\f115";
+}
+.bi-arrow-down-circle::before {
+  content: "\f119";
+}
+.bi-arrow-down-left-circle::before {
+  content: "\f11b";
+}
+.bi-arrow-down-left::before {
+  content: "\f11e";
+}
+.bi-arrow-down-right-circle::before {
+  content: "\f120";
+}
+.bi-arrow-down-right::before {
+  content: "\f123";
+}
+.bi-arrow-down-up::before {
+  content: "\f127";
+}
+.bi-arrow-down::before {
+  content: "\f128";
 }
 .bi-arrow-left-circle::before {
   content: "\f12a";
@@ -216,6 +239,9 @@ html.touch :hover {
 }
 .bi-badge-3d::before {
   content: "\f15b";
+}
+.bi-badge-ad::before {
+  content: "\f161";
 }
 .bi-badge-ar::before {
   content: "\f163";
@@ -388,6 +414,9 @@ html.touch :hover {
 .bi-menu-button::before {
   content: "\f48a";
 }
+.bi-menu-down::before {
+  content: "\f48b";
+}
 .bi-menu-up::before {
   content: "\f48c";
 }
@@ -444,6 +473,12 @@ html.touch :hover {
 }
 .bi-tags::before {
   content: "\f5b2";
+}
+.bi-telephone-x::before {
+  content: "\f5c0";
+}
+.bi-telephone::before {
+  content: "\f5c1";
 }
 .bi-text-center::before {
   content: "\f5c4";
@@ -561,6 +596,12 @@ html.touch :hover {
 }
 .bi-envelope-open-heart::before {
   content: "\f739";
+}
+.bi-envelope-paper-heart::before {
+  content: "\f73c";
+}
+.bi-envelope-paper::before {
+  content: "\f73d";
 }
 .bi-heart-arrow::before {
   content: "\f76d";
@@ -5021,7 +5062,7 @@ a.text-dark:hover {
   @page {
     size: a3;
   }
- 
+
   .container {
     min-width: 992px !important;
   }
@@ -5149,7 +5190,6 @@ a.text-dark:hover {
 .owl-carousel .owl-video-playing .owl-video-play-icon {
   display: none;
 }
-
 
 a,
 address,
@@ -7146,64 +7186,64 @@ footer .copyright a:not(.btn) {
 * 
 ----------------------------------------------*/
 #logo {
-    z-index: 100;
-    width: 7.5rem;
-    height: auto;
-    transition: all 0.7s linear;
-  }
-  
-  .minilogo {
-    width: 6rem !important;
-    height: auto !important;
-    transition: all 0.7s linear;
-  }
-  
-  .minilogo-mob {
-    -webkit-transform: scale(0.75);
-    -moz-transform: scale(0.75);
-    -ms-transform: scale(0.75);
-    transform: scale(0.75);
-    -webkit-transform-origin: 50% 0 0;
-    -moz-transform-origin: 50% 0 0;
-    -ms-transform-origin: 50% 0 0;
-    transform-origin: 50% 0 0;
-    transform-origin: center;
-    vertical-align: middle;
-    transition: all 0.7s linear;
-  }
-  
-  .logoshadow {
-    filter: drop-shadow(0.5px 0.5px 0.5px rgb(87, 87, 87));
-    -webkit-filter: drop-shadow(1px 1px 0.5px rgb(87, 87, 87));
-    image-rendering: auto;
-  }
-  
-  .navbarshrink-onscroll {
-    top: 0;
-    height: 9vh;
-    will-change: transform;
-    filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.555));
-    -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
-    box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
-    -webkit-transition: all 0.15s ease-out 0s !important;
-    -o-transition: all 0.15s ease-out 0s !important;
-    -moz-transition: all 0.15s ease-out 0s !important;
-    transition: all 0.15s ease-out 0s !important;
-  }
-  
-  .navbarshrink-mob {
-    top: 0;
-    height: 6vh;
-    will-change: transform;
-    filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.555));
-    -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
-    box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
-    -webkit-transition: all 0.15s ease-out 0s !important;
-    -o-transition: all 0.15s ease-out 0s !important;
-    -moz-transition: all 0.15s ease-out 0s !important;
-    transition: all 0.15s ease-out 0s !important;
-  }
-  
+  z-index: 100;
+  width: 7.5rem;
+  height: auto;
+  transition: all 0.7s linear;
+}
+
+.minilogo {
+  width: 6rem !important;
+  height: auto !important;
+  transition: all 0.7s linear;
+}
+
+.minilogo-mob {
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
+  -webkit-transform-origin: 50% 0 0;
+  -moz-transform-origin: 50% 0 0;
+  -ms-transform-origin: 50% 0 0;
+  transform-origin: 50% 0 0;
+  transform-origin: center;
+  vertical-align: middle;
+  transition: all 0.7s linear;
+}
+
+.logoshadow {
+  filter: drop-shadow(0.5px 0.5px 0.5px rgb(87, 87, 87));
+  -webkit-filter: drop-shadow(1px 1px 0.5px rgb(87, 87, 87));
+  image-rendering: auto;
+}
+
+.navbarshrink-onscroll {
+  top: 0;
+  height: 9vh;
+  will-change: transform;
+  filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.555));
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+  -webkit-transition: all 0.15s ease-out 0s !important;
+  -o-transition: all 0.15s ease-out 0s !important;
+  -moz-transition: all 0.15s ease-out 0s !important;
+  transition: all 0.15s ease-out 0s !important;
+}
+
+.navbarshrink-mob {
+  top: 0;
+  height: 6vh;
+  will-change: transform;
+  filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.555));
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+  -webkit-transition: all 0.15s ease-out 0s !important;
+  -o-transition: all 0.15s ease-out 0s !important;
+  -moz-transition: all 0.15s ease-out 0s !important;
+  transition: all 0.15s ease-out 0s !important;
+}
+
 .moretext {
   display: none;
 }

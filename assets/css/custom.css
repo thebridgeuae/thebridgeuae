@@ -1,15 +1,167 @@
-/*----------------------------------------------
-*
-* [Custom Stylesheet]
-----------------------------------------------*/
+/* 1- Fonts/Icons */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic&display=swap"); */
+/* @import url("vendor/default-font.min.css?family=Default:300,400,600,700,800,900&display=swap"); */
 
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/josefinsans/v24/Qw3JZQNVED7rKGKxtqIqX5EUCGZ2dIn0FyA96fCThoJhKg.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/josefinsans/v24/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQXME.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/josefinsans/v24/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_ArQXME.ttf) format("truetype");
+}
+@font-face {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l521wRpXw.ttf) format("truetype");
+}
+@font-face {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-440qyriQwlOrhSvowK_l5Oew.ttf) format("truetype");
+}
+@font-face {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52xwNpXw.ttf) format("truetype");
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79P0U.ttf) format("truetype");
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh4Ok.ttf) format("truetype");
+}
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("../fonts/montserrat/Montserrat-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url("../fonts/montserrat/Montserrat-Bold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat-Black;
+  src: url("../fonts/montserrat/Montserrat-Black.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat-SemiBold;
+  src: url("../fonts/montserrat/Montserrat-SemiBold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("../fonts/montserrat/Montserrat-Medium.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: Material-Design-Iconic-Font;
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0) format("woff2"),
+    url(https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.woff?v=2.2.0) format("woff"),
+    url(https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.ttf?v=2.2.0) format("truetype");
+}
+@-webkit-keyframes zmdi-spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes zmdi-spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes zmdi-spin-reverse {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-359deg);
+    transform: rotate(-359deg);
+  }
+}
+@keyframes zmdi-spin-reverse {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-359deg);
+    transform: rotate(-359deg);
+  }
+}
+
+/* 2- locomotive */
+/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  display: inline-block;
+  height: 100vh;
+  white-space: nowrap;
+}
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  white-space: nowrap;
+}
 /* ==============================================  
           GENERAL settings Section
 =============================================== */
-
 /* [collapse/expand/Underline text button ] */
-
-/* hide long paragraph text for readmore action*/
 .moretext {
   display: none;
 }
@@ -434,7 +586,7 @@ blockquote span {
   color: var(--nav-item-color) !important;
 }
 
-.tab-title{
+.tab-title {
   font-weight: 600;
   line-height: 1.5;
   /* font-size: 1rem; */
@@ -442,7 +594,8 @@ blockquote span {
 /* =============================================================== */
 
 /* ====[slider background color change ]====*/
-/* @keyframes color {
+/* body keyframes */
+@keyframes color {
   0% {
     background: #b9fbc0;
   }
@@ -461,15 +614,13 @@ blockquote span {
   100% {
     background: #b9fbc0;
   }
-} */
+}
 
 body {
-  /* Fallback */
   background: #2b9c76;
   animation: color 13s infinite linear;
 }
 #slider {
-  /* Fallback */
   background: #90dbf4;
   animation: color 13s infinite linear;
 }

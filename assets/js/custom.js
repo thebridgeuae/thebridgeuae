@@ -9,6 +9,8 @@ jQuery(function ($) {
   }, preloader.data("timeout"));
 });
 
+window.onresize = function(){ location.reload(); }
+
 // 2- =====================Language picker==========================
 // $(function(){
 //   $('.selectpicker').selectpicker();
