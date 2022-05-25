@@ -9,6 +9,7 @@ jQuery(function ($) {
   }, preloader.data("timeout"));
 });
 
+// window.onresize = function(){ location.reload(); }
 // 2- =====================Language picker==========================
 // $(function(){
 //   $('.selectpicker').selectpicker();
@@ -80,9 +81,6 @@ const locoScroll = new LocomotiveScroll({
   smoothClass: "has-scroll-smooth",
   initClass: "has-scroll-init",
 });
-setTimeout(() => {
-  locoScroll.update();
-}, 1000);
 
 //Locomotive navbar hide/show/shrink
 locoScroll.on("scroll", (args) => {
@@ -151,9 +149,9 @@ locoScroll.on("scroll", (args) => {
 });
 
 //Update
-// $(window).on("load", function () {
-//   locoScroll.update();
-// });
+$(window).on("load", function () {
+  locoScroll.update();
+});
 
 //Locomotive smooth Anchor Scroll
 const anchorLinks = document.querySelectorAll("a[href^=\\#]:not([href$=\\#])");
@@ -642,21 +640,3 @@ jQuery(function ($) {
   }
 });
 
-//14- ==============Cookies notice START================================
-// $("img[data-fallback]").error(function() {
-
-//   console.log("Image CDN Failed");
-
-//   var imgFallback = $(this).data("fallback");
-
-//   if (this.src != imgFallback) {
-//     this.src = imgFallback;
-//   }
-
-// });
-
-// $( "img[data-fallback]" )
-// .error(function() {
-//   $( this ).attr( "src", "https://zoombree.mo.cloudinary.net/thebridge-site/about1.jpg" );
-// })
-// .attr( "src", "asstes/images/img/about1s.jpg" );
