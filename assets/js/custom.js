@@ -153,9 +153,9 @@ locoScroll.on("scroll", (args) => {
 });
 
 //Update
-// $(window).on("load", function () {
-//   locoScroll.update();
-// });
+$(window).on("load", function () {
+  locoScroll.update();
+});
 
 //Locomotive smooth Anchor Scroll
 const anchorLinks = document.querySelectorAll("a[href^=\\#]:not([href$=\\#])");
@@ -522,50 +522,7 @@ function closeNav() {
   document.getElementById("checkbox").checked = false;
 }
 
-//12- ==============Initialize and add the map============================
-function initMap() {
-  // The location of myLatLng
-  const myLatLng = { lat: 24.49339098050116, lng: 54.36684905506596 };
-  // The map, centered at myLatLng
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 18,
-    center: myLatLng,
-  });
-
-  // infowindow tooltip
-  const contentString =
-    // '<div id="content">' +
-    // '<div id="siteNotice">' +
-    // "</div>" +
-    // '<img src="./assets/images/icons/thebw_64_icon.ico">'+
-    '<h4 id="firstHeading" class="firstHeading" style="font-weight:600">The Bridge</h4>' +
-    '<div id="bodyContent">' +
-    "<p> The Bridge Center for Skills Development. Specialized in supporting and rehabilitating children and young people. ";
-  // "</div>" +
-  // "</div>";
-  const infowindow = new google.maps.InfoWindow({
-    content: contentString,
-  });
-
-  // The marker, positioned at myLatLng
-  const marker = new google.maps.Marker({
-    position: myLatLng,
-    map,
-    title: "The Bridge Center",
-  });
-
-  marker.addListener("click", () => {
-    infowindow.open({
-      anchor: marker,
-      map,
-      shouldFocus: false,
-    });
-  });
-  infowindow.open(map, marker);
-}
-window.initMap = initMap;
-
-//13- ============hover effects disabled on-touch.=======================
+//12- ============hover effects disabled on-touch.=======================
 var mobileNoHoverState = (function () {
   var hoverClass = "hover",
     $target = $(".foo"),
@@ -600,7 +557,7 @@ var mobileNoHoverState = (function () {
   };
 })();
 
-//14- ==============Cookies notice START================================
+//13- ==============Cookies notice START================================
 jQuery(function ($) {
   "use strict";
 
@@ -636,7 +593,7 @@ jQuery(function ($) {
       expiration: 30, // This is the default value, in days
       domain: window.location.hostname, // If you run the same cookie notice on all subdomains, define the main domain starting with a .
       implicit: true, // Accept cookies on page scroll automatically
-      statement: "https://leverage.codings.dev", // Link to your cookie statement page
+      statement: "https://zoombree.com", // Link to your cookie statement page
       performance: ["JSESSIONID"], // Cookies in the performance category.
       analytics: ["ga"], // Cookies in the analytics category.
       marketing: ["SSID"], // Cookies in the marketing category.
@@ -644,21 +601,47 @@ jQuery(function ($) {
   }
 });
 
-//14- ==============Cookies notice START================================
-// $("img[data-fallback]").error(function() {
+//12- ==============Initialize and add the map============================
+// function initMap() {
+//   // The location of myLatLng
+//   const myLatLng = { lat: 24.49339098050116, lng: 54.36684905506596 };
+//   // The map, centered at myLatLng
+//   const map = new google.maps.Map(document.getElementById("map"), {
+//     zoom: 18,
+//     center: myLatLng,
+//   });
 
-//   console.log("Image CDN Failed");
+//   // infowindow tooltip
+//   const contentString =
+//     // '<div id="content">' +
+//     // '<div id="siteNotice">' +
+//     // "</div>" +
+//     // '<img src="./assets/images/icons/thebw_64_icon.ico">'+
+//     '<h4 id="firstHeading" class="firstHeading" style="font-weight:600">The Bridge</h4>' +
+//     '<div id="bodyContent">' +
+//     "<p> The Bridge Center for Skills Development. Specialized in supporting and rehabilitating children and young people. ";
+//   // "</div>" +
+//   // "</div>";
+//   const infowindow = new google.maps.InfoWindow({
+//     content: contentString,
+//   });
 
-//   var imgFallback = $(this).data("fallback");
+//   // The marker, positioned at myLatLng
+//   const marker = new google.maps.Marker({
+//     position: myLatLng,
+//     map,
+//     title: "The Bridge Center",
+//   });
 
-//   if (this.src != imgFallback) {
-//     this.src = imgFallback;
-//   }
+//   marker.addListener("click", () => {
+//     infowindow.open({
+//       anchor: marker,
+//       map,
+//       shouldFocus: false,
+//     });
+//   });
+//   infowindow.open(map, marker);
+// }
+// window.initMap = initMap;
 
-// });
 
-// $( "img[data-fallback]" )
-// .error(function() {
-//   $( this ).attr( "src", "https://zoombree.mo.cloudinary.net/thebridge-site/about1.jpg" );
-// })
-// .attr( "src", "asstes/images/img/about1s.jpg" );

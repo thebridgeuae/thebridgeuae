@@ -64,8 +64,8 @@
         Stylesheet & Fonts & icons
         =============================================== -->
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="assets/css/main.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="assets/css/custom.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="assets/css/main.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="assets/css/custom.min.css" type="text/css" media="all" />
     <link rel="preload" href="assets/css/vendor/cookie-notice.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="assets/css/vendor/cookie-notice.min.css" /></noscript>
     <link rel="preload" href="assets/css/vendor/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
@@ -1541,7 +1541,7 @@
     <script defer rel="preconnect" src="assets/js/vendor/progress-radial.min.js"></script>
     <script defer rel="preconnect" src="assets/js/vendor/cookie-notice.min.js"></script>
     <script defer rel="preconnect" src="assets/js/vendor/owl.carousel.min.js"></script>
-    <script defer rel="preconnect" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-625b7bbf5082e247"></script>
+    <script defer type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-625b7bbf5082e247" async="async"></script>
     <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoFSVRYsWu2jrufLnxrWap-JyEahAdhOE&callback=initMap&v=weekly&channel=2"></script> -->
     <!-- <script src="assets/js/main.js"></script> -->
     <!-- <script src="assets/js/vendor/jquery.easing.min.js"></script> -->
@@ -1597,9 +1597,7 @@
     <script>
       function google_maps_init() {
         "use strict";
-
         var roemerberg = { lat: 24.49339098050116, lng: 54.36684905506596 };
-
         var map = new google.maps.Map(document.getElementById("map"), {
           zoom: 15,
           center: roemerberg,
@@ -1636,15 +1634,12 @@
 
       function google_maps_lazyload(api_key) {
         "use strict";
-
         if (api_key) {
           var options = {
             rootMargin: "100px",
             threshold: 0,
           };
-
           var map = document.getElementById("map");
-
           var observer = new IntersectionObserver(function (entries, self) {
             // Intersecting with Edge workaround https://calendar.perfplanet.com/2017/progressive-image-loading-using-intersection-observer-and-sqip/#comment-102838
             var isIntersecting = typeof entries[0].isIntersecting === "boolean" ? entries[0].isIntersecting : entries[0].intersectionRatio > 0;
@@ -1655,11 +1650,9 @@
               self.unobserve(map);
             }
           }, options);
-
           observer.observe(map);
         }
       }
-
       google_maps_lazyload("AIzaSyCoFSVRYsWu2jrufLnxrWap-JyEahAdhOE");
     </script>
   </body>
