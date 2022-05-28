@@ -50,7 +50,7 @@ const locoScroll = new LocomotiveScroll({
   name: "scroll",
   offset: [0, 0],
   smooth: true,
-  reloadOnContextChange: true,
+  // reloadOnContextChange: true,
   smoothMobile: false, // smooth scroll on mobile
   multiplier: 1.1,
   firefoxMultiplier: 50,
