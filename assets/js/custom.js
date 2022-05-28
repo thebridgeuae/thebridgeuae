@@ -47,10 +47,10 @@ const toTop = document.getElementById("scroll-to-top");
 
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
-  // name: "scroll",
-  // offset: [0, 0],
+  name: "scroll",
+  offset: [0, 0],
   smooth: true,
-  // reloadOnContextChange: true,
+  reloadOnContextChange: true,
   smoothMobile: false, // smooth scroll on mobile
   multiplier: 1.1,
   firefoxMultiplier: 50,
@@ -64,24 +64,24 @@ const locoScroll = new LocomotiveScroll({
     // breakpoint: 767,
   },
   tablet: {
-    smooth: true,
-    inertia: 0.5,
-    getDirection: true,
-    breakpoint: 1024,
+    smooth: false,
+    // inertia: 0.5,
+    // getDirection: true,
+    // breakpoint: 1024,
   },
   scrollFromAnywhere: false,
   getSpeed: true,
   getDirection: true,
   useKeyboard: true,
-  // class: "in-view",
-  // repeat: false,
+  repeat: false,
   direction: "vertical", // or horizontal
-  // class: "is-inview",
-  // scrollbarClass: "c-scrollbar",
-  // scrollingClass: "has-scroll-scrolling",
-  // draggingClass: "has-scroll-dragging",
-  // smoothClass: "has-scroll-smooth",
-  // initClass: "has-scroll-init",
+  // class: "in-view",
+  class: "is-inview",
+  scrollbarClass: "c-scrollbar",
+  scrollingClass: "has-scroll-scrolling",
+  draggingClass: "has-scroll-dragging",
+  smoothClass: "has-scroll-smooth",
+  initClass: "has-scroll-init",
 });
 // setTimeout(() => {
 //   locoScroll.update();
