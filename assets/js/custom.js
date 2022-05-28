@@ -47,8 +47,8 @@ const toTop = document.getElementById("scroll-to-top");
 
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
-  name: "scroll",
-  offset: [0, 0],
+  // name: "scroll",
+  // offset: [0, 0],
   smooth: true,
   // reloadOnContextChange: true,
   smoothMobile: false, // smooth scroll on mobile
