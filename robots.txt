@@ -19,4 +19,4 @@ Allow: /
 User-agent: Googlebot
 Disallow: /nogooglebot/
 
-Sitemap: http://www.thebridgeuae.com/sitemap.xml
+Sitemap: https://www.thebridgeuae.com/sitemap.xml

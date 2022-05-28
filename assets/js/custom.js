@@ -132,7 +132,7 @@ locoScroll.on("scroll", (args) => {
             nav.classList.add("navbarshrink-onscroll");
             log.classList.add("minilogo-mob");
           // $(".navbar .navbar-brand img").attr("src", "https://ucarecdn.com/f91576a9-dc8c-43bb-8bc3-87fb3cd9c730/-/preview/-/quality/smart/-/format/auto/Thebridgebw-big-lg.svg");
-            $(".navbar .navbar-brand img").attr("src", "https://ucarecdn.com/1d3584ce-293e-44c0-bd33-ff58e1627f68/-/preview/-/quality/smart/-/format/auto/Thebridgebw-sm-lg.svg");
+            $(".navbar .navbar-brand img").attr("src", "https://ucarecdn.com/ac9eb344-2458-439c-a0a1-1f186ce4560e/-/preview/-/quality/smart/-/format/auto/Thebridgebw-sm-lg-min.svg");
           }
         }
 
