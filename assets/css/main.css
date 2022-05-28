@@ -25,9 +25,9 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  /* --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; */
 }
 
 /*----------------------------------------------
@@ -4038,10 +4038,14 @@ footer .copyright a:not(.btn) {
 ----------------------------------------------*/
 
 /* #region All Media Queries */
+@media only screen and (max-width: 580px) {   
+  #who blockquote {
+    display: none;
+  }
+}
 
 @media (max-width: 1199px) {
   /* #region Header */
-
   body header .navbar-expand .navbar-nav.toggle {
     display: flex;
   }
@@ -4051,11 +4055,9 @@ footer .copyright a:not(.btn) {
   body header .navbar-expand .navbar-nav.icons .social {
     display: none;
   }
-
   /* #endregion Header */
-  #who blockquote {
-    display: none;
-  }
+
+  /* #hide moretext/expand on big screen */
   #tabs-section .moretext {
     display: block;
   }

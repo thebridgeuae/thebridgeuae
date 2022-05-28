@@ -91,8 +91,8 @@ locoScroll.on("scroll", (args) => {
   var pos = args.scroll.y;
   var viewportWidth = $(window).width();
 
-  if (viewportWidth > 700) {
-    console.log("large screen");
+  if (viewportWidth > 730) {
+    // console.log("large screen");
     if (pos > 0) {
       navbar.classList.add("navbar-sticky");
     }
@@ -106,7 +106,7 @@ locoScroll.on("scroll", (args) => {
       // Down
       if (scroll > pos) {
         navbar.classList.add("navbar-sticky");
-        if (navbar.contains("navbar-fixed") || window.innerWidth <= 528) {
+        if (navbar.contains("navbar-fixed") || window.innerWidth <= 558) {
           navbar.classList.toggle("hidden");
         } else {
           if (args.scroll.y >= window.innerHeight) {
@@ -124,7 +124,7 @@ locoScroll.on("scroll", (args) => {
         }
 
         // Top
-        if (args.scroll.y <= 50 && $(".navbar-holder").length == 0) {
+        if (args.scroll.y <= 80 && $(".navbar-holder").length == 0) {
           navbar.classList.remove("navbar-sticky");
         } else {
           if (!navbar.classList.contains("navbar-no-fixed")) {
@@ -144,7 +144,7 @@ locoScroll.on("scroll", (args) => {
       pos = scroll;
     }
   } else {
-    console.log("mobile screen");
+    // console.log("mobile screen");
     navbar.classList.add("navbar-sticky");
     nav.classList.add("navbarshrink-mob");
     log.classList.add("minilogo-mob");
