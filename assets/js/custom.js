@@ -84,9 +84,9 @@ const locoScroll = new LocomotiveScroll({
   smoothClass: "has-scroll-smooth",
   initClass: "has-scroll-init",
 });
-setTimeout(() => {
-  locoScroll.update();
-}, 1000);
+// setTimeout(() => {
+//   locoScroll.update();
+// }, 1000);
 
 //Locomotive navbar hide/show/shrink
 locoScroll.on("scroll", (args) => {
