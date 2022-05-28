@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap);
-@font-face {
+/* @font-face {
   font-family: "Josefin Sans";
   font-style: italic;
   font-weight: 500;
@@ -54,7 +54,7 @@
   font-weight: 700;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh4Ok.ttf) format("truetype");
-}
+} */
 @font-face {
   font-family: Montserrat-Regular;
   src: url(../fonts/montserrat/Montserrat-Regular.ttf);
