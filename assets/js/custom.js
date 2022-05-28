@@ -9,7 +9,9 @@ jQuery(function ($) {
   }, preloader.data("timeout"));
 });
 
-window.onresize = function(){ location.reload(); }
+window.onresize = function () {
+  location.reload();
+};
 
 // 2- =====================Language picker==========================
 // $(function(){
@@ -644,4 +646,63 @@ jQuery(function ($) {
 // }
 // window.initMap = initMap;
 
+//13- ==============Initialize and add the map============================
+function google_maps_init() {
+  "use strict";
+  var roemerberg = { lat: 24.49339098050116, lng: 54.36684905506596 };
+  var map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 15,
+    center: roemerberg,
+  });
+  // infowindow tooltip
+  const contentString =
+    // '<div id="content">' +
+    // '<div id="siteNotice">' +
+    // "</div>" +
+    // '<img src="./assets/images/icons/thebw_64_icon.ico">'+
+    '<h4 id="firstHeading" class="firstHeading" style="font-weight:600">The Bridge</h4>' +
+    '<div id="bodyContent">' +
+    "<p> The Bridge Center for Skills Development. Specialized in supporting and rehabilitating children and young people. ";
+  // "</div>" +
+  // "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+  });
 
+  var marker = new google.maps.Marker({
+    position: roemerberg,
+    map: map,
+    title: "The Bridge Center",
+  });
+  marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  infowindow.open(map, marker);
+}
+
+function google_maps_lazyload(api_key) {
+  "use strict";
+  if (api_key) {
+    var options = {
+      rootMargin: "100px",
+      threshold: 0,
+    };
+    var map = document.getElementById("map");
+    var observer = new IntersectionObserver(function (entries, self) {
+      // Intersecting with Edge workaround https://calendar.perfplanet.com/2017/progressive-image-loading-using-intersection-observer-and-sqip/#comment-102838
+      var isIntersecting = typeof entries[0].isIntersecting === "boolean" ? entries[0].isIntersecting : entries[0].intersectionRatio > 0;
+      if (isIntersecting) {
+        var mapsJS = document.createElement("script");
+        mapsJS.src = "https://maps.googleapis.com/maps/api/js?callback=google_maps_init&key=" + api_key;
+        document.getElementsByTagName("head")[0].appendChild(mapsJS);
+        self.unobserve(map);
+      }
+    }, options);
+    observer.observe(map);
+  }
+}
+google_maps_lazyload("AIzaSyCoFSVRYsWu2jrufLnxrWap-JyEahAdhOE");
