@@ -7,8 +7,7 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu7GxKOzY.woff2") format("woff2"), 
-  url("https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxK.woff2") format("woff2");
+  src: url("https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu7GxKOzY.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
   font-style: Roboto;

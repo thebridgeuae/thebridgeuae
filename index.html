@@ -36,7 +36,7 @@
     <!-- Google Site Verification -->
     <meta name="google-site-verification" content="kVAvYZ8cf7r3S1cTKzEyHTZ8m19mG00I0eo_QhjMKLw" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FMHN9YHRP7"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-FMHN9YHRP7" defer></script>
     <script defer>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -63,23 +63,13 @@
     <!-- ==============================================
         Stylesheet & Fonts & icons
         =============================================== -->
-        <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" type="text/css" media="all" />
-        <link rel="stylesheet" href="assets/css/main.css" type="text/css" media="all" />
-        <link rel="stylesheet" href="assets/css/custom.css" type="text/css" media="all" />
-        <!-- <link rel="stylesheet" href="assets/css/vendor/cookie-notice.min.css" type="text/css" media="all" /> -->
-        <!-- <link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css" type="text/css" media="all" /> -->
-        <!-- <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" crossorigin />
-        <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" crossorigin> -->
-        <link rel="preload" href="https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu7GxKOzY.woff2" as="font" crossorigin="anonymous"/>
-        <link rel="preload" href="https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxK.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="assets/css/custom.css" type="text/css" media="all" />
     <link rel="preload" href="assets/css/vendor/cookie-notice.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="assets/css/vendor/cookie-notice.min.css" /></noscript>
     <link rel="preload" href="assets/css/vendor/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css" /></noscript>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;1,500&family=Merriweather:wght@300;400;700&family=PT+Sans:wght@400;700&display=swap"/> -->
-    <!-- <link rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.2/font/bootstrap-icons.min.css"/> -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com/icon?family=Material+Icons" /> -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Lato" /> -->
     <!-- <link rel="preconnect" href="assets/css/vendor/font-awesome.min.css" /> -->
     <!-- <link rel="preconnect" href="assets/css/vendor/icons.min.css" /> -->
     <!-- <link rel="stylesheet" href="assets/css/vendor/locomotive-scroll.min.css" type="text/css" media="none" onload="if(media!=='all')media='all'" /> -->
@@ -1548,16 +1538,11 @@
     <script rel="preconnect" src="assets/js/vendor/jquery.min.js"></script>
     <script rel="preconnect" src="assets/js/vendor/bootstrap.min.js"></script>
     <script rel="preconnect" src="assets/js/custom.js"></script>
-    <script rel="preconnect" src="assets/js/vendor/progress-radial.min.js" defer></script>
-    <script rel="preconnect" src="assets/js/vendor/cookie-notice.min.js" defer></script>
-    <script rel="preconnect" src="assets/js/vendor/owl.carousel.min.js" defer></script>
-    <script rel="preconnect" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-625b7bbf5082e247" defer></script>
-    <script
-      rel="preconnect"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoFSVRYsWu2jrufLnxrWap-JyEahAdhOE&callback=initMap&v=weekly&channel=2"
-      async
-      defer
-    ></script>
+    <script defer rel="preconnect" src="assets/js/vendor/progress-radial.min.js"></script>
+    <script defer rel="preconnect" src="assets/js/vendor/cookie-notice.min.js"></script>
+    <script defer rel="preconnect" src="assets/js/vendor/owl.carousel.min.js"></script>
+    <script defer rel="preconnect" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-625b7bbf5082e247"></script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoFSVRYsWu2jrufLnxrWap-JyEahAdhOE&callback=initMap&v=weekly&channel=2"></script> -->
     <!-- <script src="assets/js/main.js"></script> -->
     <!-- <script src="assets/js/vendor/jquery.easing.min.js"></script> -->
     <!-- <script src="assets/js/vendor/jquery.inview.min.js"></script> -->
@@ -1609,5 +1594,73 @@
         },
       });
     </script> -->
+    <script>
+      function google_maps_init() {
+        "use strict";
+
+        var roemerberg = { lat: 24.49339098050116, lng: 54.36684905506596 };
+
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: roemerberg,
+        });
+        // infowindow tooltip
+        const contentString =
+          // '<div id="content">' +
+          // '<div id="siteNotice">' +
+          // "</div>" +
+          // '<img src="./assets/images/icons/thebw_64_icon.ico">'+
+          '<h4 id="firstHeading" class="firstHeading" style="font-weight:600">The Bridge</h4>' +
+          '<div id="bodyContent">' +
+          "<p> The Bridge Center for Skills Development. Specialized in supporting and rehabilitating children and young people. ";
+        // "</div>" +
+        // "</div>";
+        const infowindow = new google.maps.InfoWindow({
+          content: contentString,
+        });
+
+        var marker = new google.maps.Marker({
+          position: roemerberg,
+          map: map,
+          title: "The Bridge Center",
+        });
+        marker.addListener("click", () => {
+          infowindow.open({
+            anchor: marker,
+            map,
+            shouldFocus: false,
+          });
+        });
+        infowindow.open(map, marker);
+      }
+
+      function google_maps_lazyload(api_key) {
+        "use strict";
+
+        if (api_key) {
+          var options = {
+            rootMargin: "100px",
+            threshold: 0,
+          };
+
+          var map = document.getElementById("map");
+
+          var observer = new IntersectionObserver(function (entries, self) {
+            // Intersecting with Edge workaround https://calendar.perfplanet.com/2017/progressive-image-loading-using-intersection-observer-and-sqip/#comment-102838
+            var isIntersecting = typeof entries[0].isIntersecting === "boolean" ? entries[0].isIntersecting : entries[0].intersectionRatio > 0;
+            if (isIntersecting) {
+              var mapsJS = document.createElement("script");
+              mapsJS.src = "https://maps.googleapis.com/maps/api/js?callback=google_maps_init&key=" + api_key;
+              document.getElementsByTagName("head")[0].appendChild(mapsJS);
+              self.unobserve(map);
+            }
+          }, options);
+
+          observer.observe(map);
+        }
+      }
+
+      google_maps_lazyload("AIzaSyCoFSVRYsWu2jrufLnxrWap-JyEahAdhOE");
+    </script>
   </body>
 </html>
