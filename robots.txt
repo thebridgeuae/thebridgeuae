@@ -15,3 +15,8 @@ Allow: /
 
 User-agent: Googlebot-Mobile
 Allow: /
+
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+Sitemap: http://www.thebridgeuae.com/sitemap.xml
