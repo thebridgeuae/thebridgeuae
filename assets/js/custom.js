@@ -57,7 +57,6 @@ const locoScroll = new LocomotiveScroll({
   touchMultiplier: 2,
   scrollbarContainer: false,
   lerp: 0.03,
-  // loading:'lazy',
   smartphone: {
     smooth: false,
     // inertia: 0.8,
@@ -74,15 +73,15 @@ const locoScroll = new LocomotiveScroll({
   getSpeed: true,
   getDirection: true,
   useKeyboard: true,
-  class: "in-view",
-  repeat: false,
+  // class: "in-view",
+  // repeat: false,
   direction: "vertical", // or horizontal
-  class: "is-inview",
-  scrollbarClass: "c-scrollbar",
-  scrollingClass: "has-scroll-scrolling",
-  draggingClass: "has-scroll-dragging",
-  smoothClass: "has-scroll-smooth",
-  initClass: "has-scroll-init",
+  // class: "is-inview",
+  // scrollbarClass: "c-scrollbar",
+  // scrollingClass: "has-scroll-scrolling",
+  // draggingClass: "has-scroll-dragging",
+  // smoothClass: "has-scroll-smooth",
+  // initClass: "has-scroll-init",
 });
 // setTimeout(() => {
 //   locoScroll.update();
