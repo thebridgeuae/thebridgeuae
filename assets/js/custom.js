@@ -132,7 +132,7 @@ locoScroll.on("scroll", (args) => {
           if (!navbar.classList.contains("navbar-no-fixed")) {
             nav.classList.add("navbarshrink-onscroll");
             log.classList.add("minilogo-mob");
-          $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm-min-optimized.svg");
+          $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm-optimized.svg");
             // $(".navbar .navbar-brand img").attr("src", "https://ucarecdn.com/ac9eb344-2458-439c-a0a1-1f186ce4560e/-/preview/-/quality/smart/-/format/auto/Thebridgebw-sm-lg-min.svg");
           }
         }
@@ -151,7 +151,7 @@ locoScroll.on("scroll", (args) => {
     navbar.classList.add("navbar-sticky");
     nav.classList.add("navbarshrink-mob");
     log.classList.add("minilogo-mob");
-    $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm-min-optimized.svg");
+    $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm-optimized.svg");
   }
 });
 
