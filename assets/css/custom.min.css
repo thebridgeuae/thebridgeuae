@@ -1835,7 +1835,7 @@ textarea.input100 {
     height: 450px;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 767px) {
   .contactform {
     margin-bottom: 90px;
   }
