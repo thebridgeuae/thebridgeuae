@@ -14,7 +14,7 @@
 html.touch :hover {
   pointer-events: none !important;
 }
-/* :root {
+:root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -44,7 +44,7 @@ html.touch :hover {
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-} */
+}
 a,
 address,
 b,
@@ -101,7 +101,7 @@ html {
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
-  font-family: sans-serif;
+  font-family: default;
   line-height: 1.15;
   -webkit-tap-highlight-color: transparent;
 }

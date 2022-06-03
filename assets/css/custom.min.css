@@ -1,83 +1,28 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap);
-/* @font-face {
-  font-family: "Josefin Sans";
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/josefinsans/v24/Qw3JZQNVED7rKGKxtqIqX5EUCGZ2dIn0FyA96fCThoJhKg.ttf) format("truetype");
-}
+
 @font-face {
-  font-family: "Josefin Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/josefinsans/v24/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQXME.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Josefin Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/josefinsans/v24/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_ArQXME.ttf) format("truetype");
-}
-@font-face {
-  font-family: Merriweather;
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l521wRpXw.ttf) format("truetype");
-}
-@font-face {
-  font-family: Merriweather;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-440qyriQwlOrhSvowK_l5Oew.ttf) format("truetype");
-}
-@font-face {
-  font-family: Merriweather;
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52xwNpXw.ttf) format("truetype");
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79P0U.ttf) format("truetype");
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh4Ok.ttf) format("truetype");
-} */
-@font-face {
-  font-family: Montserrat-Regular;
-  src: url(../fonts/montserrat/Montserrat-Regular.ttf);
+  font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  src: url(../fonts/default-font/Default-Regular.ttf);
   font-display: swap;
 }
 @font-face {
-  font-family: Montserrat-Bold;
-  src: url(../fonts/montserrat/Montserrat-Bold.ttf);
+  font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  src: url(../fonts/default-font/Default-Bold.ttf);
   font-display: swap;
 }
 @font-face {
-  font-family: Montserrat-Black;
-  src: url(../fonts/montserrat/Montserrat-Black.ttf);
+  font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  src: url(../fonts/default-font/Default-Black.ttf);
   font-display: swap;
 }
 @font-face {
-  font-family: Montserrat-SemiBold;
-  src: url(../fonts/montserrat/Montserrat-SemiBold.ttf);
+  font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  src: url(../fonts/default-font/Default-Light.ttf);
   font-display: swap;
 }
 @font-face {
-  font-family: Montserrat-Medium;
-  src: url(../fonts/montserrat/Montserrat-Medium.ttf);
+  font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  src: url(../fonts/default-font/Default-Heavy.ttf);
   font-display: swap;
 }
 @font-face {
@@ -1169,7 +1114,7 @@ button.control_next {
   line-height: 1.5em;
   color: rgb(248, 246, 246);
   font-weight: 700;
-  font-family: "Josefin Sans", sans-serif;
+  /* font-family: "Josefin Sans", sans-serif; */
   justify-content: left;
   text-align: left;
   padding-left: 18vw;
@@ -1177,7 +1122,7 @@ button.control_next {
 .teaser h3 {
   font-weight: 700;
   font-size: 5em;
-  font-family: "Josefin Sans", sans-serif;
+  /* font-family: "Josefin Sans", sans-serif; */
   width: 33%;
   padding: 1.5rem 0;
   margin: 0rem auto;
@@ -1474,7 +1419,6 @@ section.section-3.sec-card {
   will-change: transform;
   border-radius: 15px !important;
 }
-
 .card-grow {
   /* display: inline-block; */
   vertical-align: middle;
@@ -1489,7 +1433,9 @@ section.section-3.sec-card {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
-.card-grow:hover, .card-grow:focus, .card-grow:active {
+.card-grow:hover,
+.card-grow:focus,
+.card-grow:active {
   -webkit-transform: scale(1.01);
   transform: scale(1.01);
 }
@@ -1501,7 +1447,6 @@ section.section-3.sec-card {
   padding: 70px;
   }
 } */
-
 
 .careFeatures {
   margin-top: 0;
@@ -1824,8 +1769,6 @@ textarea.input100 {
   .wrap-input100 {
     padding: 10px 10px 9px 10px;
   }
-}
-@media (max-width: 576px) {
   .alert-validate::before {
     padding: 0 10px 0 10px;
   }
@@ -1834,8 +1777,6 @@ textarea.input100 {
     right: 0;
     width: 30px;
   }
-}
-@media (max-width: 576px) {
   .wrap-contact100-form-range {
     padding: 20px 0 57px 0;
   }
@@ -1843,6 +1784,24 @@ textarea.input100 {
     padding: 15px 0 0 0;
   }
 }
+/* @media (max-width: 576px) {
+  .alert-validate::before {
+    padding: 0 10px 0 10px;
+  }
+  .true-validate::after,
+  .btn-hide-validate {
+    right: 0;
+    width: 30px;
+  }
+} */
+/* @media (max-width: 576px) {
+  .wrap-contact100-form-range {
+    padding: 20px 0 57px 0;
+  }
+  .wrap-contact100-form-radio {
+    padding: 15px 0 0 0;
+  }
+} */
 #email.wrap-input100 {
   margin-right: 5px !important;
 }
@@ -1874,6 +1833,11 @@ textarea.input100 {
   .map-area {
     width: 100%;
     height: 450px;
+  }
+}
+@media (max-width: 390px) {
+  .contactform {
+    margin-bottom: 90px;
   }
   #contact .col-md-6 {
     /* padding-top: 60px; */
