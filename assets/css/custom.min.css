@@ -1459,7 +1459,23 @@ ul {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
     0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07) !important;
 }
-.hvr-card-grow {
+section.section-1.sec-card {
+  will-change: transform;
+  border-radius: 0 0 15px 15px !important;
+}
+section.section-2.sec-card {
+  margin-top: 75px !important;
+  will-change: transform;
+  border-radius: 15px  !important;
+}
+section.section-3.sec-card {
+  margin-top: 75px !important;
+  margin-bottom: 0px !important;
+  will-change: transform;
+  border-radius: 15px  !important;
+}
+
+.card-grow {
   /* display: inline-block; */
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -1473,34 +1489,20 @@ ul {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
-.hvr-card-grow:hover, .hvr-card-grow:focus, .hvr-card-grow:active {
+.card-grow:hover, .card-grow:focus, .card-grow:active {
   -webkit-transform: scale(1.01);
   transform: scale(1.01);
 }
-section.section-1.sec-card {
-  will-change: transform;
-  border-radius: 0 0 10px 10px !important;
-}
-section.section-2.sec-card {
-  margin-top: 75px !important;
-  will-change: transform;
-  border-radius: 15px 15px 10px 10px !important;
-}
-section.section-3.sec-card {
-  margin-top: 75px !important;
-  margin-bottom: 0px !important;
-  will-change: transform;
-  border-radius: 10px 10px 0 0px !important;
-}
-section.section-00 {
-  padding: 0;
-}
-section.section-01 {
-  padding: 0;
-}
-/* section.foot {
-  padding: 140px;
+/* #footer.container{
+  margin-top:50px;
 } */
+/* @media (min-width: 800px) {
+ #footer section {
+  padding: 70px;
+  }
+} */
+
+
 .careFeatures {
   margin-top: 0;
 }
@@ -1871,10 +1873,10 @@ textarea.input100 {
 @media (max-width: 991px) {
   .map-area {
     width: 100%;
-    height: 400px;
+    height: 450px;
   }
   #contact .col-md-6 {
-    padding-top: 60px;
+    /* padding-top: 60px; */
     width: 100%;
     max-width: 100%;
     height: 30%;
