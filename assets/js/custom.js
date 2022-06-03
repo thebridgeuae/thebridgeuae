@@ -61,9 +61,9 @@ $(function(){
     break breakme;
   }else{
     window.onresize = function () {
-      if (window.innerWidth > 1000) {
+      // if (window.innerWidth > 1000) {
         location.reload();
-      }
+      // }
     };
   }
 })
