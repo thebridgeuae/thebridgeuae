@@ -57,11 +57,10 @@ jQuery(function ($) {
 $(function(){
   breakme: if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgentData))
   {
-    console.log('mobile')
     break breakme;
   }else{
     window.onresize = function () {
-      if (window.innerWidth > 1000) {
+      if (window.innerWidth > 1334) {
         location.reload();
       }
     };
@@ -147,7 +146,7 @@ locoScroll.on("scroll", (args) => {
   var pos = args.scroll.y;
   var viewportWidth = $(window).width();
 
-  if (viewportWidth > 730) {
+  if (viewportWidth > 800) {
     // console.log("large screen");
     if (pos > 0) {
       navbar.classList.add("navbar-sticky");
@@ -201,8 +200,9 @@ locoScroll.on("scroll", (args) => {
       }
       pos = scroll;
     }
-  } else {
-    // console.log("mobile screen");
+  } 
+  else {
+    console.log("mobile screen");
     navbar.classList.add("navbar-sticky");
     nav.classList.add("navbarshrink-mob");
     log.classList.add("minilogo-mob");

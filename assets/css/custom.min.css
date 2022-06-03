@@ -1466,13 +1466,13 @@ section.section-1.sec-card {
 section.section-2.sec-card {
   margin-top: 75px !important;
   will-change: transform;
-  border-radius: 15px  !important;
+  border-radius: 15px !important;
 }
 section.section-3.sec-card {
   margin-top: 75px !important;
   margin-bottom: 0px !important;
   will-change: transform;
-  border-radius: 15px  !important;
+  border-radius: 15px !important;
 }
 
 .card-grow {
