@@ -9,9 +9,64 @@ jQuery(function ($) {
   }, preloader.data("timeout"));
 });
 
-// window.onresize = function () {
-//   location.reload();
-// };
+// $('.tab-click').click(function(){
+//   console.log('clicked')
+//   $('#vtabs .tab-link > li a[href="'+this.href+'"]').parent().click();
+// });
+
+// const e = t("#vtabs .tab-link"),
+// r = t("#vtabs .tab-body");
+// let n;
+// const o = () => {
+// e.off("click").on("click", function (o) {
+//   o.preventDefault(),
+//     o.stopPropagation(),
+//     window.clearTimeout(n),
+//     e.removeClass("active "),
+//     r.removeClass("active "),
+//     r.removeClass("active-content"),
+//     t(this).addClass("active"),
+//     t(t(this).attr("href")).addClass("active"),
+
+// $(document).ready(function() {
+//   $('#vtabs .tab-link > li > a').click(function(event){
+//   event.preventDefault();//stop browser to take action for clicked anchor
+        
+//   //get displaying tab content jQuery selector
+//   var active_tab_selector = $('#vtabs .tab-link > li.active > a').attr('href');	
+//   consoloe.log(active_tab_selector)				
+        
+//   //find actived navigation and remove 'active' css
+//   var actived_nav = $('#vtabs .tab-link > li.active');
+//   actived_nav.removeClass('active');
+        
+//   //add 'active' css into clicked navigation
+//   $(this).parents('li').addClass('active');
+        
+//   //hide displaying tab content
+//   $(active_tab_selector).removeClass('active');
+//   $(active_tab_selector).addClass('hide');
+        
+//   //show target tab content
+//   var target_tab_selector = $(this).attr('href');
+//   $(target_tab_selector).removeClass('hide');
+//   $(target_tab_selector).addClass('active');
+//      });
+//   });
+// 2- =====================reload on  window resize==========================
+$(function(){
+  breakme: if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgentData))
+  {
+    console.log('mobile')
+    break breakme;
+  }else{
+    window.onresize = function () {
+      if (window.innerWidth > 1000) {
+        location.reload();
+      }
+    };
+  }
+})
 
 // 2- =====================Language picker==========================
 // $(function(){
@@ -126,7 +181,7 @@ locoScroll.on("scroll", (args) => {
         }
 
         // Top
-        if (args.scroll.y <= 80 && $(".navbar-holder").length == 0) {
+        if (args.scroll.y <= 50 && $(".navbar-holder").length == 0) {
           navbar.classList.remove("navbar-sticky");
         } else {
           if (!navbar.classList.contains("navbar-no-fixed")) {

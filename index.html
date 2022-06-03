@@ -70,17 +70,6 @@
     <noscript><link rel="stylesheet" href="assets/css/vendor/cookie-notice.min.css" /></noscript>
     <link rel="preload" href="assets/css/vendor/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css" /></noscript>
-    <!-- <link rel="preconnect" href="assets/css/vendor/font-awesome.min.css" /> -->
-    <!-- <link rel="preconnect" href="assets/css/vendor/icons.min.css" /> -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/locomotive-scroll.min.css" type="text/css" media="none" onload="if(media!=='all')media='all'" /> -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/bootstrap-icons.css" type="text/css" media="none" onload="if(media!=='all')media='all'" /> -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/slider.min.css" type="text/css" media="all" /> -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/animation.min.css" type="text/css" media="all" /> -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/animate.min.css" type="text/css" media="all" /> -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/animate.css" type="text/css" media="all" /> -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/lightgallary/lightgallery.css" type="text/css" media="all" /> -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/lightgallary/lg-thumbnail.css" type="text/css" media="all" /> -->
-    <!-- <link rel="stylesheet" href="assets/css/styles.pure.css" type="text/css" media="all" /> -->
 
     <!-- ==============================================
         Theme Settings
@@ -112,16 +101,17 @@
         --section-1-bg-color: #f9f7e6;
         --section-2-bg-color: #f9f7e6;
         --section-3-bg-color: #f9f7e6;
-        --section-4-bg-color: #d9f6ef;
+        /* --section-4-bg-color: #d9f6ef;
         --section-5-bg-color: #d9f6ef;
         --section-6-bg-color: #d9f6ef;
-        --section-7-bg-color: #d9f6ef;
+        --section-7-bg-color: #d9f6ef; */
 
         --icons-color: #9b8e75;
         --color: 155, 142, 117;
         --subhead-p-color: #7c7468;
 
         --footer-bg-color: #2b9c76;
+        /* --footer-bg-color: #00bda5; */
         --footer-brand-height: 80px;
 
         --white-color: #f9f9f9;
@@ -676,7 +666,14 @@
 
       <!-- Services Section Start -->
       <!---------------------------->
-      <section id="services" class="section-2 offers sec-card" data-scroll data-scroll-repeat data-scroll-call="toggleBackToTop" data-anchor="services">
+      <section
+        id="services"
+        class="section-2 offers sec-card hvr-card-grow"
+        data-scroll
+        data-scroll-repeat
+        data-scroll-call="toggleBackToTop"
+        data-anchor="services"
+      >
         <!-- top banner-->
         <!---------->
         <div class="top-banner-container">
@@ -708,28 +705,28 @@
             <div class="tabs">
               <ul class="tab-head">
                 <li>
-                  <a href="#tab-1" class="post tab-link active"><span class="tab-label post-title">Applied Behavioral Analysis</span></a>
+                  <a href="#tab-1" class="post tab-link active" id="ABA"><span class="tab-label post-title">Applied Behavioral Analysis</span></a>
                 </li>
                 <li>
-                  <a href="#tab-2" class="post tab-link"><span class="tab-label post-title">Speech and Language Therapy</span></a>
+                  <a href="#tab-2" class="post tab-link" id="speech"><span class="tab-label post-title">Speech and Language Therapy</span></a>
                 </li>
                 <li>
-                  <a href="#tab-3" class="post tab-link"><span class="tab-label post-title">Early Intervention </span></a>
+                  <a href="#tab-3" class="post tab-link" id="einter"><span class="tab-label post-title">Early Intervention </span></a>
                 </li>
                 <li>
-                  <a href="#tab-4" class="post tab-link"><span class="tab-label post-title">Special Educational Programs</span></a>
+                  <a href="#tab-4" class="post tab-link" id="special"><span class="tab-label post-title">Special Educational Programs</span></a>
                 </li>
                 <li>
-                  <a href="#tab-5" class="post tab-link"><span class="tab-label post-title">Vocational Program</span></a>
+                  <a href="#tab-5" class="post tab-link" id="voca"><span class="tab-label post-title">Vocational Program</span></a>
                 </li>
                 <li>
-                  <a href="#tab-6" class="post tab-link"><span class="tab-label post-title">Occupational and Sensory Therapy </span></a>
+                  <a href="#tab-6" class="post tab-link" id="sensory"><span class="tab-label post-title">Occupational and Sensory Therapy </span></a>
                 </li>
                 <li>
-                  <a href="#tab-7" class="post tab-link"><span class="tab-label post-title">Programs For Schools and Nursery</span></a>
+                  <a href="#tab-7" class="post tab-link" id="nursery"><span class="tab-label post-title">Programs For Schools and Nursery</span></a>
                 </li>
                 <li>
-                  <a href="#tab-8" class="post tab-link"><span class="tab-label post-title">Programs For Parents</span></a>
+                  <a href="#tab-8" class="post tab-link" id="parents"><span class="tab-label post-title">Programs For Parents</span></a>
                 </li>
               </ul>
 
@@ -1181,7 +1178,7 @@
                   </div>
 
                   <input type="radio" name="tabs" id="tab7" />
-                  <label for="tab7">Programs For Schools and Nursery</label>
+                  <label for="tab7">Programs For Schools & Nursery</label>
                   <div class="tab">
                     <ul>
                       <li>Screening</li>
@@ -1486,16 +1483,16 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="col-12 col-lg-4 p-3 text-center text-lg-left item">
+                  <div class="col-12 col-lg-4 p-3 text-center text-lg-left item" id="tags">
                     <h4 class="title" style="font-weight: 600">Popular Tags</h4>
-                    <a href="#" class="badge tag">Family Centered Services</a>
-                    <a href="#" class="badge tag">ABA therapy</a>
+                    <a href="#parents" class="badge tag">Family Centered Services</a>
+                    <a href="#ABA" class="badge tag">ABA therapy</a>
                     <!-- <a href="#" class="badge tag">Group Therapy</a> -->
-                    <a href="#" class="badge tag">Special Education</a>
-                    <a href="#" class="badge tag">Speech Therapy </a>
-                    <a href="#" class="badge tag">Early Intervention Program</a>
+                    <a href="#special" class="badge tag">Special Education</a>
+                    <a href="#speech" class="badge tag">Speech Therapy </a>
+                    <a href="#einter" class="badge tag">Early Intervention Program</a>
                     <!-- <a href="#" class="badge tag">Family Counseling</a> -->
-                    <a href="#" class="badge tag">Vocational Program</a>
+                    <a href="#voca" class="badge tag">Vocational Program</a>
                   </div>
                 </div>
               </div>
@@ -1538,10 +1535,10 @@
     <script rel="preconnect" src="assets/js/vendor/jquery.min.js"></script>
     <script rel="preconnect" src="assets/js/vendor/bootstrap.min.js"></script>
     <script rel="preconnect" src="assets/js/custom.js"></script>
-    <script defer rel="preconnect" src="assets/js/vendor/progress-radial.min.js"></script>
-    <script defer rel="preconnect" src="assets/js/vendor/cookie-notice.min.js"></script>
-    <script defer rel="preconnect" src="assets/js/vendor/owl.carousel.min.js"></script>
-    <script defer type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-625b7bbf5082e247" async="async"></script>
+    <script rel="preconnect" src="assets/js/vendor/progress-radial.min.js" defer></script>
+    <script rel="preconnect" src="assets/js/vendor/cookie-notice.min.js" defer></script>
+    <script rel="preconnect" src="assets/js/vendor/owl.carousel.min.js" defer></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-625b7bbf5082e247" async="async" defer></script>
     <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoFSVRYsWu2jrufLnxrWap-JyEahAdhOE&callback=initMap&v=weekly&channel=2"></script> -->
     <!-- <script src="assets/js/main.js"></script> -->
     <!-- <script src="assets/js/vendor/jquery.easing.min.js"></script> -->
@@ -1558,6 +1555,7 @@
     <!-- <script src="assets/js/vendor/lightgallary/lightgallery.umd.js"></script> -->
     <!-- <script src="assets/js/vendor/lightgallary/thumbnail/lg-thumbnail.min.js"></script> -->
     <!-- <script src="assets/js/vendor/lightgallary/fullscreen/lg-fullscreen.min.js"></script> -->
+
     <!-- <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
     <script>
       window.formbutton =
@@ -1593,67 +1591,6 @@
           },
         },
       });
-    </script> -->
-    <!-- <script>
-      function google_maps_init() {
-        "use strict";
-        var roemerberg = { lat: 24.49339098050116, lng: 54.36684905506596 };
-        var map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 15,
-          center: roemerberg,
-        });
-        // infowindow tooltip
-        const contentString =
-          // '<div id="content">' +
-          // '<div id="siteNotice">' +
-          // "</div>" +
-          // '<img src="./assets/images/icons/thebw_64_icon.ico">'+
-          '<h4 id="firstHeading" class="firstHeading" style="font-weight:600">The Bridge</h4>' +
-          '<div id="bodyContent">' +
-          "<p> The Bridge Center for Skills Development. Specialized in supporting and rehabilitating children and young people. ";
-        // "</div>" +
-        // "</div>";
-        const infowindow = new google.maps.InfoWindow({
-          content: contentString,
-        });
-
-        var marker = new google.maps.Marker({
-          position: roemerberg,
-          map: map,
-          title: "The Bridge Center",
-        });
-        marker.addListener("click", () => {
-          infowindow.open({
-            anchor: marker,
-            map,
-            shouldFocus: false,
-          });
-        });
-        infowindow.open(map, marker);
-      }
-
-      function google_maps_lazyload(api_key) {
-        "use strict";
-        if (api_key) {
-          var options = {
-            rootMargin: "100px",
-            threshold: 0,
-          };
-          var map = document.getElementById("map");
-          var observer = new IntersectionObserver(function (entries, self) {
-            // Intersecting with Edge workaround https://calendar.perfplanet.com/2017/progressive-image-loading-using-intersection-observer-and-sqip/#comment-102838
-            var isIntersecting = typeof entries[0].isIntersecting === "boolean" ? entries[0].isIntersecting : entries[0].intersectionRatio > 0;
-            if (isIntersecting) {
-              var mapsJS = document.createElement("script");
-              mapsJS.src = "https://maps.googleapis.com/maps/api/js?callback=google_maps_init&key=" + api_key;
-              document.getElementsByTagName("head")[0].appendChild(mapsJS);
-              self.unobserve(map);
-            }
-          }, options);
-          observer.observe(map);
-        }
-      }
-      google_maps_lazyload("AIzaSyCoFSVRYsWu2jrufLnxrWap-JyEahAdhOE");
     </script> -->
   </body>
 </html>
