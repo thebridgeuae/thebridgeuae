@@ -285,8 +285,8 @@
     <!--------------->
 
     <!-- backhground music -->
-    <audio id="audio" controls="controls" autoplay  hidden="" preload="auto" type="audio/mp3">
-      <source src="assets/vids/warm.mp3">
+    <audio id="audio" controls autoplay hidden="" preload="auto" type="audio/mp3">
+      <source src="assets/vids/warm.mp3" />
       Your browser does not support the
       <code>audio</code> element.
     </audio>
@@ -1588,8 +1588,10 @@
       // var audio = new Audio();
       // audio.autoplay = true;
       var myAudio = document.getElementById("audio");
+      myAudio.autoplay= true;
       myAudio.loop = true;
-      myAudio.volume = 0.2;
+      myAudio.volume = 0.3;
+      myAudio.load()
     </script>
     <!-- Start of HubSpot Embed Code -->
     <!-- <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25924149.js"></script> -->
