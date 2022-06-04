@@ -107,7 +107,7 @@
         --section-7-bg-color: #d9f6ef; */
 
         --icons-color: #9b8e75;
-        --icons-color2: #302f2d;
+        --icons-color2: #20201f;
         --color: 155, 142, 117;
         --subhead-p-color: #7c7468;
 
@@ -261,10 +261,11 @@
     <!-- Header End-->
 
     <div class="whatsapp divTo" style="width: 100px; height: 100px; position: fixed; right: 1vw; top: 79%; z-index: 99999" id="divTo">
-      <a href="https://api.whatsapp.com/send?phone=971501474736&text=THE%20BRIDGE%20-%20REHAB%20CENTER" target="_blank">
+      <a href="https://api.whatsapp.com/send?phone=971501474736&text=THE%20BRIDGE%20-%20REHAB%20CENTER" aria-label="whatsapp-chat" target="_blank">
         <img
           src="https://ucarecdn.com/5c006ac5-5aaa-40ee-b6b7-e41f7c7a2cbe/-/preview/-/quality/smart/-/format/auto/icons8-whatsprank-100.svg"
           style="width: 100%; height: 100%"
+          alt="whatsapp-chat"
         />
       </a>
     </div>
@@ -1384,7 +1385,7 @@
                     <textarea class="input100" name="message" placeholder="Our door is always open for a good cup of coffee!"></textarea>
                   </div>
                   <div class="btn primary-button">
-                    <button id="reload" aria-label="submit form" style="color: #ffffff; font-size: 18px; font-weight: 600 .">
+                    <button id="reload" aria-label="submit form" style="color: rgb(24, 24, 24); font-size: 18px; font-weight: 600">
                       <span>
                         Submit
                         <i class="bi bi-arrow-right-circle" aria-hidden="true" style="margin-left: 10px"></i>
@@ -1424,39 +1425,9 @@
       <!-- Footer Start-->
       <!----------->
       <footer id="foot" class="odd" data-scroll data-scroll-repeat data-scroll-call="toggleBackToTop">
-        <section id="footer" class="footer">
+        <section id="footer" class="footer" style="margin-top: 200px">
           <!-- Footer [links] -->
           <div class="container">
-            <!-- <div class="links display-flex flex-row flex-nowrap justify-start responsive">
-              <a href="https://www.berlinrehabilitation.com/contact-us" class="link display-flex flex-row flex-nowrap justify-start">
-                <div class="icon"><div class="icon-location"></div></div>
-
-                <div class="content">
-                  <div class="second">Book An Appointment</div>
-                </div>
-              </a>
-
-              <div href="#" class="link display-flex flex-row flex-nowrap justify-start link-call">
-                <div class="icon"><div class="icon-call"></div></div>
-
-                <div class="content">
-                  <a href="tel:0097123057000" class="second">(971) 02 305 7000</a>
-
-                  <a href="tel:0097123057015" class="second">(971) 02 305 7015</a>
-
-                  <a href="tel:0097137084999" class="second">(971) 03 708 4999</a>
-                </div>
-              </div>
-
-              <a href="mailto:info@bmnr.ae" class="link display-flex flex-row flex-nowrap justify-start">
-                <div class="icon"><div class="icon-mail"></div></div>
-
-                <div class="content">
-                  <div class="first">Drop us an email</div>
-                  <div class="second">info@bmnr.ae</div>
-                </div>
-              </a>
-            </div> -->
             <div class="row items footer-widget">
               <div class="col-12 col-lg-3 p-0">
                 <div class="row">
@@ -1590,42 +1561,5 @@
     <!-- Start of Google Map Embed Code -->
     <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoFSVRYsWu2jrufLnxrWap-JyEahAdhOE&callback=initMap&v=weekly&channel=2"></script> -->
     <!-- End of Google Map Embed Code -->
-
-    <!-- <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-    <script>
-      window.formbutton =
-        window.formbutton ||
-        function () {
-          (formbutton.q = formbutton.q || []).push(arguments);
-        };
-      formbutton("create", {
-        action: "https://formspree.io/f/mzbojbpw",
-        title: "How can we help?",
-        fields: [
-          {
-            type: "email",
-            label: "Email:",
-            name: "email",
-            required: true,
-            placeholder: "your@email.com",
-          },
-          {
-            type: "textarea",
-            label: "Message:",
-            name: "message",
-            placeholder: "What's on your mind?",
-          },
-          { type: "submit" },
-        ],
-        styles: {
-          title: {
-            backgroundColor: "gray",
-          },
-          button: {
-            backgroundColor: "gray",
-          },
-        },
-      });
-    </script> -->
   </body>
 </html>
