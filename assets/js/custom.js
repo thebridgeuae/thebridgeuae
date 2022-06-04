@@ -10,32 +10,34 @@ jQuery(function ($) {
 });
 
 // 1- ===============hide whats chat on mobile devices================================
-// $( document ).ready(function() {      
-//   try{ 
+// $( document ).ready(function() {
+//   try{
 //     document.createEvent("TouchEvent");
-//     $('#divTo').hide() 
+//     $('#divTo').hide()
 //   }
 //   catch(e){ return false; }
 // });
 // 1-===================auto play audio===========================
 $(document).ready(function () {
-var source = "assets/vids/mindfulness.mp3"
-var audio = new Audio();
-audio.src = source;
-audio.autoplay = true;
-// $("#playBtn").click(function() {
-//   audio.play();
-// });
+  var source = "assets/vids/mindfulness.mp3";
+  var myAudio = document.getElementById("audio");
+  var audio = new Audio();
+  audio.src = source;
+  audio.autoplay = true;
+  myAudio.volume = 0.1;
+  // $("#playBtn").click(function() {
+  //   audio.play();
+  // });
 
-// $("#pauseBtn").click(function() {
-//   audio.pause();
-// });
+  // $("#pauseBtn").click(function() {
+  //   audio.pause();
+  // });
 
-// $("#stopBtn").click(function() {
-//   audio.pause();
-//   audio.currentTime = 0;
-// });
-})
+  // $("#stopBtn").click(function() {
+  //   audio.pause();
+  //   audio.currentTime = 0;
+  // });
+});
 // 2- ====================reload on  window resize==========================
 $(function () {
   breakme: if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgentData)) {
@@ -191,12 +193,12 @@ locoScroll.on("scroll", (args) => {
     $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm-optimized.svg");
   }
   //Detect locoscroll Pos whole number value where scroll stopped and show/hide action_whatsapp_icon
-// if (pos - Math.floor(pos) !== 0) {
-//     console.log(pos);
-//     $(".divTo").fadeOut(3000);
-//   } else {
-//     $(".divTo").fadeIn(100);
-//   }
+  // if (pos - Math.floor(pos) !== 0) {
+  //     console.log(pos);
+  //     $(".divTo").fadeOut(3000);
+  //   } else {
+  //     $(".divTo").fadeIn(100);
+  //   }
 });
 
 //Update
