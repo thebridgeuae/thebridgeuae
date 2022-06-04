@@ -603,6 +603,7 @@ html.has-scroll-smooth {
 }
 
 /*! General styles */
+audio { display:none;}
 .moretext {
   display: none;
 }
