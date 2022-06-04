@@ -584,26 +584,11 @@ html.has-scroll-smooth {
   vertical-align: top;
   white-space: nowrap;
 }
-/* .divTo{
-  display: block;
-} */
-/* Smartphones ----------- */
-/* @media only screen and (max-width: 760px) {
-  #divTo { display: none; }
-} */
-.sticky {
-  background: #cfc20f;
-  color: #fff;
-  position: sticky;
-  bottom: 0px;
-  padding: 1em 0;
-  width:100%;
-  text-align: center;
-  visibility: visible;
-}
 
 /*! General styles */
-audio { display:none;}
+audio {
+  display: none;
+}
 .moretext {
   display: none;
 }
@@ -664,6 +649,7 @@ audio { display:none;}
   font-weight: 700;
   text-transform: uppercase;
 }
+/* !--------------image scale up/down  */
 .scaleDown {
   -webkit-transform: scale(0.85);
   -moz-transform: scale(0.85);
@@ -688,6 +674,7 @@ audio { display:none;}
   transform-origin: center;
   vertical-align: middle;
 }
+/* !------------------blackQuote */
 blockquote {
   font-size: 1.2em;
   width: 70%;
@@ -719,6 +706,7 @@ blockquote span {
   font-style: normal;
   font-weight: 700;
 }
+/* !--------------Humberger Menu */
 .menu-wrap {
   position: relative;
   z-index: 10;
@@ -845,6 +833,7 @@ blockquote span {
   text-decoration: none;
   transition: color 0.4s ease;
 }
+/* !---------------logo/nav shrink/expand */
 #logo {
   z-index: 100;
   width: 7.5rem;
@@ -898,6 +887,7 @@ blockquote span {
   -moz-transition: all 0.15s ease-out 0s !important;
   transition: all 0.15s ease-out 0s !important;
 }
+/* !---------------- Nav hover underline */
 .underline {
   padding-bottom: 2px;
   --bg-h: 2px;
@@ -930,10 +920,7 @@ blockquote span {
   font-size: 1.1em !important;
   color: var(--nav-item-color) !important;
 }
-.tab-title {
-  font-weight: 600;
-  line-height: 1.5;
-}
+/* !----------------body bg color animation */
 /* @keyframes color {
   0% {
     background: #b9fbc0;
@@ -967,6 +954,7 @@ body {
   /* background: -webkit-gradient(linear, left top, left bottom, from(#2b9c76), to(#90e0ef)) fixed; */
   /* animation: color 13s infinite linear; */
 }
+/* !----------------slider hero images/text/videos */
 .hero-image-fit {
   position: absolute;
   right: 0;
@@ -1100,6 +1088,7 @@ button.control_next {
   font-size: 35px;
   left: 140px;
 }
+/* !----------------Progress bar */
 .top-progress-bar {
   width: 95% !important;
   height: 80px !important;
@@ -1123,6 +1112,7 @@ button.control_next {
   width: 0%;
   background: linear-gradient(to right, #bda77f 20%, #ac8f5b 100%);
 }
+/* !-----------hero text/description */
 .teaser {
   position: relative;
 }
@@ -1191,6 +1181,7 @@ button.control_next {
     max-width: 100vw;
   }
 }
+/* !---------------mouse indication/slider btn container */
 .top-banner-container {
   width: 100%;
   display: flex;
@@ -1332,6 +1323,7 @@ button.control_next {
     display: none;
   }
 }
+/* !--------------social share container */
 .container-share {
   display: flex;
   justify-content: flex-end;
@@ -1401,6 +1393,7 @@ button.control_next {
     color: var(--icons-color);
   }
 }
+/* !---------------featured images/titles */
 .about ul,
 li {
   list-style: none;
@@ -1414,6 +1407,7 @@ ul {
   top: 100px !important;
   right: 130px;
 }
+/* !------------------main sections style */
 .sec-card {
   margin: auto !important;
   width: 95%;
@@ -1458,15 +1452,8 @@ section.section-3.sec-card {
   -webkit-transform: scale(1.01);
   transform: scale(1.01);
 }
-/* #footer.container{
-  margin-top:50px;
-} */
-/* @media (min-width: 800px) {
- #footer section {
-  padding: 70px;
-  }
-} */
 
+/* !------------------featured items/values style */
 .careFeatures {
   margin-top: 0;
 }
@@ -1534,6 +1521,7 @@ section.section-3.sec-card {
   display: block;
   margin-top: 15px;
 }
+/* !------------------image demo gallary */
 .demo-gallary-cont {
   text-align: center;
 }
@@ -1563,6 +1551,7 @@ section.section-3.sec-card {
 .img-hover-zoom:hover img {
   transform: scale(1.2);
 }
+/* !------------contact form */
 input {
   outline: none;
   border: none;
@@ -1868,6 +1857,7 @@ textarea.input100 {
     margin-right: 0px !important;
   }
 }
+/* !-------------------footer style */
 footer {
   bottom: 0 !important;
 }
@@ -1877,7 +1867,7 @@ footer .branding p {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-.sticky-footer {
+/* .sticky-footer {
   position: relative;
   overflow: hidden;
   height: 100vh;
@@ -1898,8 +1888,9 @@ footer .branding p {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-}
-.primary-button span:hover{
+} */
+/* !---------------all action buttons styles */
+.primary-button span:hover {
   color: #ffff !important;
 }
 .primary-button,
@@ -1972,7 +1963,7 @@ footer .branding p {
 footer .dark-button {
   background-color: var(--footer-bg-color);
 }
-.effect-static-text {
+/* .effect-static-text {
   background-image: -webkit-linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
   background-image: linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
   -webkit-background-clip: text;
@@ -2008,7 +1999,7 @@ footer .dark-button {
   background-size: 200% auto;
   -webkit-animation: effect 1s linear infinite;
   animation: effect 1s linear infinite;
-}
+} */
 .action-btn a {
   position: relative;
   text-decoration: none;
@@ -2064,7 +2055,7 @@ footer .dark-button {
   box-shadow: 0 0 1px rgba(95, 94, 94, 0.2);
   border-bottom: none;
 }
-.sec-head {
+/* .sec-head {
   position: relative;
   margin: 0 auto 80px;
 }
@@ -2101,6 +2092,14 @@ footer .dark-button {
 }
 .sec-head.tr-head .tbg {
   text-align: left;
+} */
+.main-title {
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+/* .extra-title {
+  font-weight: 700;
 }
 .sub-title {
   position: relative;
@@ -2129,14 +2128,6 @@ footer .dark-button {
 .sub-title span:last-of-type {
   left: 0;
 }
-.main-title {
-  font-weight: 600;
-  line-height: 1.5;
-  margin-bottom: 15px;
-}
-.extra-title {
-  font-weight: 700;
-}
 .sm-title {
   font-size: 14px;
   font-weight: 600;
@@ -2163,7 +2154,8 @@ footer .dark-button {
 }
 .smore i {
   margin-left: 10px;
-}
+} */
+/* !--------------------featured images main section */
 .about .content .co-tit {
   color: #75dab4;
   font-weight: 400;
@@ -2359,6 +2351,7 @@ footer .dark-button {
 .tab-content {
   padding-top: 3rem;
 }
+/* !-----------------carusoal tabs/section style */
 #who h2 {
   font-size: 2rem 0;
 }
@@ -2491,6 +2484,10 @@ footer .dark-button {
 }
 .article-block .entry-content > p {
   color: #666;
+}
+.tab-title {
+  font-weight: 600;
+  line-height: 1.5;
 }
 .tabs-block {
   display: flex;
@@ -2652,6 +2649,7 @@ footer .dark-button {
     width: 100%;
   }
 }
+/* !-----------------service tabs mobile/vertical section style */
 @media only screen and (max-width: 576px) {
   #vtabs {
     display: none;
@@ -2807,7 +2805,7 @@ footer .dark-button {
   font-weight: 600;
   font-size: 1.1em;
 }
-#container {
+/* #container {
   background: skyblue;
   height: 100%;
   width: 100%;
@@ -2885,4 +2883,4 @@ footer .dark-button {
   margin-left: 0%;
   margin-right: 0%;
   z-index: 100;
-}
+} */
