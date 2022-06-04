@@ -125,6 +125,7 @@
         --secondary-p-color: #fff;
 
         --primary-b-color: #272626;
+        /* --primary-b-color: #c50a0a; */
         --primary-l-color: rgba(0, 0, 0, 0.25);
         --secondary-l-color: rgba(255, 255, 255, 0.25);
 
@@ -260,24 +261,30 @@
     <!------------->
     <!-- Header End-->
 
-     <!-- WhatsApp Action button-->
+    <!-- WhatsApp Action button-->
     <!--------------->
-    <div class="whatsapp divTo" style="position: fixed; right: 1vw; top: 82%; z-index: 99999" id="divTo">
-      <a href="https://api.whatsapp.com/send?phone=971565683172&text=THE%20BRIDGE%20-%20REHAB%20CENTER" aria-label="whatsapp-chat" target="_blank">
+    <div class="whatsapp divTo" style="position: fixed; right: 1vw; top: 78%; z-index: 99999" id="divTo">
+      <a
+        href="https://api.whatsapp.com/send?phone=971565683172&text=WELCOME%20TO%20THE%20BRIDGE%20REHAB%20CENTER%20-%20How%20can%20we%20help%20you%20?"
+        aria-label="whatsapp-chat"
+        target="_blank"
+      >
         <img
-          src="https://ucarecdn.com/5c006ac5-5aaa-40ee-b6b7-e41f7c7a2cbe/-/preview/-/quality/smart/-/format/auto/icons8-whatsprank-100.svg"
+          src="https://ucarecdn.com/cccb808c-4d8f-40d8-bd1d-710d30c25300/-/preview/-/quality/smart/-/format/auto/wats.png"
           width="85px"
           height="85px"
           alt="whatsapp-chat"
         />
         <!-- <img
-          src="assets/images/icons/wats.svg"
+          src="assets/images/icons/wats.png"
+          width="85px"
+          height="85px"
           alt="whatsapp-chat"
         /> -->
       </a>
     </div>
     <!--------------->
-    <audio id="audio" loop hidden="" src="assets/vids/mindfulness.mp3" type ="audio/mp3"></audio>
+    <audio id="audio" loop hidden="" src="assets/vids/mindfulness.mp3" type="audio/mp3" autoplay controls></audio>
 
     <!-- Main locomotive scroll container -->
     <!-------------------------->
@@ -1394,10 +1401,10 @@
                     <textarea class="input100" name="message" placeholder="Our door is always open for a good cup of coffee!"></textarea>
                   </div>
                   <div class="btn primary-button">
-                    <button id="reload" aria-label="submit form" style="color: rgb(24, 24, 24); font-size: 18px; font-weight: 600">
+                    <button id="reload" aria-label="submit form" style="font-size: 18px; font-weight: 600">
                       <span>
-                        Submit
-                        <i class="bi bi-arrow-right-circle" aria-hidden="true" style="margin-left: 10px"></i>
+                        Send Me
+                        <i class="bi bi-arrow-right-circle" aria-hidden="true"></i>
                       </span>
                     </button>
                   </div>
@@ -1571,10 +1578,10 @@
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-625b7bbf5082e247" defer></script>
     <script>
       function setHalfVolume() {
-          var myAudio = document.getElementById("audio");
-          myAudio.volume = 0.0005;
+        var myAudio = document.getElementById("audio");
+        myAudio.volume = 0.0005;
       }
-  </script>
+    </script>
     <!-- Start of HubSpot Embed Code -->
     <!-- <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25924149.js"></script> -->
     <!-- End of HubSpot Embed Code -->

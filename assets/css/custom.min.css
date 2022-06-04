@@ -1899,14 +1899,18 @@ footer .branding p {
   background-repeat: no-repeat;
   background-position: center center;
 }
+.primary-button span:hover{
+  color: #ffff !important;
+}
 .primary-button,
 .primary-button:visited,
 .primary-button:active {
   position: relative;
   z-index: 2;
   background-color: var(--primary-color);
-  border-radius: 2px;
-  color: var(--primary-b-color);
+  border-radius: 13px;
+  /* color: var(--primary-b-color); */
+  /* color: var(--white-color); */
   font-weight: 400;
 }
 .primary-button:hover,
@@ -1914,7 +1918,8 @@ footer .branding p {
   background-color: var(--primary-color);
   background-image: -webkit-linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
   background-image: linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
-  color: var(--primary-b-color);
+  /* color: var(--primary-b-color); */
+  color: var(--white-color) !important;
 }
 .dark-button,
 .dark-button:visited,
