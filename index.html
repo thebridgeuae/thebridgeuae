@@ -285,7 +285,11 @@
     <!--------------->
 
     <!-- backhground music -->
-    <audio id="audio" loop hidden="" src="assets/vids/mindfulness.mp3" type="audio/mp3" autoplay controls></audio>
+    <audio id="audio" controls="controls" autoplay  hidden="" preload="auto" type="audio/mp3">
+      <source src="assets/vids/warm.mp3">
+      Your browser does not support the
+      <code>audio</code> element.
+    </audio>
     <!--------------->
 
     <!-- Main locomotive scroll container -->
@@ -1578,11 +1582,14 @@
     <script rel="preconnect" src="assets/js/vendor/cookie-notice.min.js" defer></script>
     <script rel="preconnect" src="assets/js/vendor/owl.carousel.min.js" defer></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-625b7bbf5082e247" defer></script>
-    <script>
-      function setHalfVolume() {
-        var myAudio = document.getElementById("audio");
-        myAudio.volume = 0.0005;
-      }
+    <script type="text/javascript" defer>
+      // var source = "assets/vids/mindfulness.mp3";
+      // audio.src = source;
+      // var audio = new Audio();
+      // audio.autoplay = true;
+      var myAudio = document.getElementById("audio");
+      myAudio.loop = true;
+      myAudio.volume = 0.2;
     </script>
     <!-- Start of HubSpot Embed Code -->
     <!-- <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25924149.js"></script> -->

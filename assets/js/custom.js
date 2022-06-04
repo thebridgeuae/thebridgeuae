@@ -18,26 +18,26 @@ jQuery(function ($) {
 //   catch(e){ return false; }
 // });
 // 1-===================auto play audio===========================
-$(document).ready(function () {
-  var source = "assets/vids/mindfulness.mp3";
-  var myAudio = document.getElementById("audio");
-  var audio = new Audio();
-  audio.src = source;
-  audio.autoplay = true;
-  myAudio.volume = 0.1;
-  // $("#playBtn").click(function() {
-  //   audio.play();
-  // });
+// $(document).ready(function () {
+//   // var source = "assets/vids/mindfulness.mp3";
+//   var myAudio = document.getElementById("audio");
+//   var audio = new Audio();
+//   // audio.src = source;
+//   audio.autoplay = true;
+//   myAudio.volume = 0.1;
+//   // $("#playBtn").click(function() {
+//   //   audio.play();
+//   // });
 
-  // $("#pauseBtn").click(function() {
-  //   audio.pause();
-  // });
+//   // $("#pauseBtn").click(function() {
+//   //   audio.pause();
+//   // });
 
-  // $("#stopBtn").click(function() {
-  //   audio.pause();
-  //   audio.currentTime = 0;
-  // });
-});
+//   // $("#stopBtn").click(function() {
+//   //   audio.pause();
+//   //   audio.currentTime = 0;
+//   // });
+// });
 // 2- ====================reload on  window resize==========================
 $(function () {
   breakme: if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgentData)) {
