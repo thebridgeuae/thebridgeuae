@@ -10,14 +10,13 @@ jQuery(function ($) {
 });
 
 // 1- ===============hide whats chat on mobile devices================================
-$( document ).ready(function() {      
-  try{ 
-    document.createEvent("TouchEvent");
-    // console.log('touch') 
-    $('#divTo').hide() 
-  }
-  catch(e){ return false; }
-});
+// $( document ).ready(function() {      
+//   try{ 
+//     document.createEvent("TouchEvent");
+//     $('#divTo').hide() 
+//   }
+//   catch(e){ return false; }
+// });
 
 // 2- ====================reload on  window resize==========================
 $(function () {

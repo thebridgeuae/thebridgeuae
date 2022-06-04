@@ -591,6 +591,17 @@ html.has-scroll-smooth {
 /* @media only screen and (max-width: 760px) {
   #divTo { display: none; }
 } */
+.sticky {
+  background: #cfc20f;
+  color: #fff;
+  position: sticky;
+  bottom: 0px;
+  padding: 1em 0;
+  width:100%;
+  text-align: center;
+  visibility: visible;
+}
+
 /*! General styles */
 .moretext {
   display: none;
