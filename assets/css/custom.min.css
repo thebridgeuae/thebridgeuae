@@ -584,7 +584,13 @@ html.has-scroll-smooth {
   vertical-align: top;
   white-space: nowrap;
 }
-
+/* .divTo{
+  display: block;
+} */
+/* Smartphones ----------- */
+/* @media only screen and (max-width: 760px) {
+  #divTo { display: none; }
+} */
 /*! General styles */
 .moretext {
   display: none;
@@ -1415,9 +1421,10 @@ section.section-2.sec-card {
 }
 section.section-3.sec-card {
   margin-top: 75px !important;
-  margin-bottom: 0px !important;
+  margin-bottom: 75px !important;
   will-change: transform;
   border-radius: 15px !important;
+  padding: 70px 0 !important;
 }
 .card-grow {
   /* display: inline-block; */

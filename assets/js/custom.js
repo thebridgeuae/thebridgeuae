@@ -9,63 +9,28 @@ jQuery(function ($) {
   }, preloader.data("timeout"));
 });
 
-// $('.tab-click').click(function(){
-//   console.log('clicked')
-//   $('#vtabs .tab-link > li a[href="'+this.href+'"]').parent().click();
-// });
+// 1- ===============hide whats chat on mobile devices================================
+$( document ).ready(function() {      
+  try{ 
+    document.createEvent("TouchEvent");
+    // console.log('touch') 
+    $('#divTo').hide() 
+  }
+  catch(e){ return false; }
+});
 
-// const e = t("#vtabs .tab-link"),
-// r = t("#vtabs .tab-body");
-// let n;
-// const o = () => {
-// e.off("click").on("click", function (o) {
-//   o.preventDefault(),
-//     o.stopPropagation(),
-//     window.clearTimeout(n),
-//     e.removeClass("active "),
-//     r.removeClass("active "),
-//     r.removeClass("active-content"),
-//     t(this).addClass("active"),
-//     t(t(this).attr("href")).addClass("active"),
-
-// $(document).ready(function() {
-//   $('#vtabs .tab-link > li > a').click(function(event){
-//   event.preventDefault();//stop browser to take action for clicked anchor
-        
-//   //get displaying tab content jQuery selector
-//   var active_tab_selector = $('#vtabs .tab-link > li.active > a').attr('href');	
-//   consoloe.log(active_tab_selector)				
-        
-//   //find actived navigation and remove 'active' css
-//   var actived_nav = $('#vtabs .tab-link > li.active');
-//   actived_nav.removeClass('active');
-        
-//   //add 'active' css into clicked navigation
-//   $(this).parents('li').addClass('active');
-        
-//   //hide displaying tab content
-//   $(active_tab_selector).removeClass('active');
-//   $(active_tab_selector).addClass('hide');
-        
-//   //show target tab content
-//   var target_tab_selector = $(this).attr('href');
-//   $(target_tab_selector).removeClass('hide');
-//   $(target_tab_selector).addClass('active');
-//      });
-//   });
-// 2- =====================reload on  window resize==========================
-$(function(){
-  breakme: if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgentData))
-  {
+// 2- ====================reload on  window resize==========================
+$(function () {
+  breakme: if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgentData)) {
     break breakme;
-  }else{
+  } else {
     window.onresize = function () {
       if (window.innerWidth > 1334) {
         location.reload();
       }
     };
   }
-})
+});
 
 // 2- =====================Language picker==========================
 // $(function(){
@@ -95,6 +60,7 @@ const nav = document.querySelector("nav");
 const log = document.getElementById("logo");
 const navbar = document.querySelector(".navbar");
 const navbrand = document.querySelector(".navbar-brand");
+const wats = document.querySelector(".divTo");
 const toTop = document.getElementById("scroll-to-top");
 
 //initialize locomotive
@@ -186,7 +152,7 @@ locoScroll.on("scroll", (args) => {
           if (!navbar.classList.contains("navbar-no-fixed")) {
             nav.classList.add("navbarshrink-onscroll");
             log.classList.add("minilogo-mob");
-          $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm-optimized.svg");
+            $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm-optimized.svg");
             // $(".navbar .navbar-brand img").attr("src", "https://ucarecdn.com/ac9eb344-2458-439c-a0a1-1f186ce4560e/-/preview/-/quality/smart/-/format/auto/Thebridgebw-sm-lg-min.svg");
           }
         }
@@ -200,14 +166,20 @@ locoScroll.on("scroll", (args) => {
       }
       pos = scroll;
     }
-  } 
-  else {
-    console.log("mobile screen");
+  } else {
+    // console.log("mobile screen");
     navbar.classList.add("navbar-sticky");
     nav.classList.add("navbarshrink-mob");
     log.classList.add("minilogo-mob");
     $(".navbar .navbar-brand img").attr("src", "./assets/images/logo/Thebridgebw-sm-optimized.svg");
   }
+  //Detect locoscroll Pos whole number value where scroll stopped and show/hide action_whatsapp_icon
+// if (pos - Math.floor(pos) !== 0) {
+//     console.log(pos);
+//     $(".divTo").fadeOut(3000);
+//   } else {
+//     $(".divTo").fadeIn(100);
+//   }
 });
 
 //Update
