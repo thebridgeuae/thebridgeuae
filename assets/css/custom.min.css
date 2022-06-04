@@ -589,6 +589,9 @@ html.has-scroll-smooth {
 audio {
   display: none;
 }
+@media (hover: none) {
+  a:hover { color: inherit; }
+}
 .moretext {
   display: none;
 }
