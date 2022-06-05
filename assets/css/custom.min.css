@@ -590,7 +590,7 @@ audio {
   display: none;
 }
 
-a:link,
+/* a:link,
 a:visited {
   color: var(--primary-b-color);
 }
@@ -604,7 +604,7 @@ a:hover {
   a:visited {
     color: var(--primary-b-color);
   }
-}
+} */
 
 .moretext {
   display: none;
