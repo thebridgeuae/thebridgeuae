@@ -220,6 +220,16 @@ anchorLinks.forEach((anchorLink) => {
   });
 });
 
+// $(function(){
+//   document.addEventListener('touchstart', onTouchStart, {passive: true});
+//   console.log('mobile')
+// addEventListener(document, "touchstart", function(e) {
+//   console.log(e.defaultPrevented);  // will be false
+//   e.preventDefault();   // does nothing since the listener is passive
+//   console.log(e.defaultPrevented);  // still false
+// }, Modernizr.passiveeventlisteners ? {passive: true} : false);
+// })
+
 // 5- ================ Hero Slider Start==============================
 jQuery(document).ready(function ($) {
   const outerbtn = "#" + $("#sliderbtns").attr("id");
